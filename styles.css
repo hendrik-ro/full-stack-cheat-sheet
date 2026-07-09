@@ -7,7 +7,7 @@ nav {
     position: fixed;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding-top: 10px;
 }
@@ -16,16 +16,23 @@ h2 {
     color: steelblue;
 }
 
+h3, h4 {
+    color: lightsteelblue;
+}
+
 p {
     text-align: center;
 }
 
-a {
-    color: steelblue;
+code {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h3 {
-    color: lightsteelblue
+a {
+    color: steelblue;
 }
 
 table {
