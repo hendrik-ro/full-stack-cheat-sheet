@@ -33,6 +33,11 @@ code {
 
 a {
     color: steelblue;
+    cursor: pointer;
+}
+
+a:hover {
+    color: lightsalmon;
 }
 
 table {
@@ -58,10 +63,6 @@ table tbody tr td {
     top: 25px;
     margin: 0 auto;
     text-align: center;
-}
-
-.home a {
-    color: steelblue;
 }
 
 #sheet {
