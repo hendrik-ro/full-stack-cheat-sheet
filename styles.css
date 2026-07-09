@@ -1,26 +1,10 @@
 * {
-    background-color: black;
-    color: white
-}
-
-.home {
-    position: relative;
-    top: 25px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.home a {
-    color: steelblue;
+    background-color: hsl(235, 95%, 3.5%);
+    color: whitesmoke;
 }
 
 nav {
     position: fixed;
-}
-
-#sheet {
-    position: relative;
-    top: 25px;
 }
 
 h1, h2, h3 {
@@ -29,6 +13,14 @@ h1, h2, h3 {
 }
 
 h2 {
+    color: steelblue;
+}
+
+p {
+    text-align: center;
+}
+
+a {
     color: steelblue;
 }
 
@@ -52,4 +44,20 @@ table tbody tr td {
 
 .code {
     background-color: dimgray;
+}
+
+.home {
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home a {
+    color: steelblue;
+}
+
+#sheet {
+    position: relative;
+    top: 25px;
 }
