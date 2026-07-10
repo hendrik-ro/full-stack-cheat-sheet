@@ -53,7 +53,8 @@ table code {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 250;
+    z-index: 750;
+    border-top: 2px solid darkslategray;
 }
 
 .footer p {
@@ -78,15 +79,15 @@ table code {
 }
 
 .content {
-    position: relative;
-    top: 10px; /* Adjust based on the height of your navigation bar */
-    left: auto;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    padding-bottom: 50px;
-    overflow: scroll;
-    width: fit-content;
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 20px;
+  overflow: auto;
+  margin-left: 250px; /* Match the SideNav width to avoid overlap */
+  margin-bottom: 25px;
 }
 
 .sidebar {
