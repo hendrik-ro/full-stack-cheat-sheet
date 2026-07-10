@@ -3,21 +3,6 @@
     color: whitesmoke;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    z-index: 1;
-    box-shadow: 0px 2px darkslategray;
-}
-
-nav a {
-    margin: 5px 5px;
-}
-
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding-top: 10px;
@@ -50,13 +35,13 @@ div {
     text-align: center;
 }
 
-a {
+a, .sidebarLink {
     color: steelblue;
     cursor: pointer;
     margin: 3px;
 }
 
-a:hover {
+a:hover, .sidebar p:hover {
     color: lightsalmon;
 }
 
@@ -75,10 +60,31 @@ table code {
     width: 250px;
 }
 
-footer {
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.footer p {
+    font-size: 10px;
+    color: hsl(0, 0%, 50%);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 1000;
+    box-shadow: 0px 2px darkslategray;
+    text-align: left;
+}
+
+.nav a {
+    margin: 5px 5px;
 }
 
 .content {
@@ -88,6 +94,17 @@ footer {
     text-align: center;
     padding: 20px;
     overflow: scroll;
+}
+
+.sidebar {
+    position: fixed;
+    top: 15;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 500;
+    border-right: 2px solid darkslategray;
 }
 
 .code {
