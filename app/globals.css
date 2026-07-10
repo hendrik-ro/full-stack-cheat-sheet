@@ -1,5 +1,5 @@
 * {
-    background-color: hsl(235, 95%, 3.5%);
+    background-color: hsl(235, 95%, 2%);
     color: whitesmoke;
 }
 
@@ -53,6 +53,7 @@ div {
 a {
     color: steelblue;
     cursor: pointer;
+    margin: 3px;
 }
 
 a:hover {
@@ -72,6 +73,21 @@ table tbody tr td {
 
 table code {
     width: 250px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.content {
+    position: relative;
+    top: 10px; /* Adjust based on the height of your navigation bar */
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    overflow: scroll;
 }
 
 .code {
@@ -100,12 +116,12 @@ table code {
     box-shadow: 0px 5px;
 }
 
-button:hover {
+#button:hover {
     cursor: pointer;
     color: lightsalmon;
 }
 
-button:active {
+#button:active {
     margin-top: 5px;
     color: lightsalmon;
     box-shadow: 0px 0px;
