@@ -2,19 +2,13 @@
 
 import Link from 'next/link';
 
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
-const links = [
-  {
-    name: 'Golang',
-    href: '/language/golang',
-  },
-];
+interface NavLinksProps {
+  links: Array<{ name: string; href: string }>;
+}
 
-export default function NavLinks() {
+export default function NavLinks({ links }: NavLinksProps) {
   return (
     <>
-      <p style={{color: 'white'}}>Content</p>
       {links.map((link) => {
         return (
           <Link

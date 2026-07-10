@@ -101,6 +101,18 @@ table code {
     border-right: 2px solid darkslategray;
 }
 
+.sidebarLink {
+  color: steelblue;
+  padding: 1px;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebarLink:hover {
+  background-color: darkslategray;
+}
+
+
 .codeSnippet {
     padding: 5px;
     display: inline-block;

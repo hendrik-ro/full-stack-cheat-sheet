@@ -10,7 +10,7 @@ export default function Page() {
       <p>The server receives requests from clients (e.g., web browsers or mobile apps), processes them, interacts with databases or other services, and returns responses, often in the form of JSON or HTML.</p>
       <p>It manages authentication, data validation, and core application functionality, ensuring the system operates securely and efficiently.</p>
     </div>
-    <div id="boilerPlate">
+    <div id="boiler-plate">
       <h2>Boiler Plate</h2>
       <p>A boiler plate is a starting point or template for a project, providing a basic structure and code that can be customized for specific needs.</p>
       <p>JavaScript</p>
