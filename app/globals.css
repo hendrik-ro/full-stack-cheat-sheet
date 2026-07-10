@@ -1,0 +1,167 @@
+* {
+    background-color: hsl(235, 95%, 2%);
+    color: whitesmoke;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+h2 {
+    color: steelblue;
+}
+
+h3, h4 {
+    color: lightsteelblue;
+}
+
+p {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+a, .sidebarLink {
+    color: steelblue;
+    cursor: pointer;
+    margin: 3px;
+}
+
+a:hover, .sidebar p:hover {
+    color: lightsalmon;
+}
+
+table, th {
+    border: 2px solid darkslategrey;
+    margin: 0 auto;
+    color: steelblue;
+}
+
+table tbody tr td {
+    border: 1px solid darkslategray;
+    padding: 0px 5px;
+}
+
+table code {
+    width: 250px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 750;
+    border-top: 2px solid darkslategray;
+}
+
+.footer p {
+    font-size: 10px;
+    color: hsl(0, 0%, 50%);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 1000;
+    box-shadow: 0px 2px darkslategray;
+    text-align: left;
+}
+
+.nav a {
+    margin: 5px 5px;
+}
+
+.content {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 20px;
+  overflow: auto;
+  margin-left: 250px; /* Match the SideNav width to avoid overlap */
+  margin-bottom: 25px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 15;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 500;
+    border-right: 2px solid darkslategray;
+}
+
+.codeSnippet {
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    white-space: pre;
+    text-align: left !important;
+}
+
+.home {
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#sheet {
+    position: relative;
+    top: 25px;
+}
+
+#button {
+    padding: 5px;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0px 5px;
+}
+
+#button:hover {
+    cursor: pointer;
+    color: lightsalmon;
+}
+
+#button:active {
+    margin-top: 5px;
+    color: lightsalmon;
+    box-shadow: 0px 0px;
+}
+
+#button2 {
+padding: 5px;
+border: 1px solid steelblue;
+border-radius: 5px;
+text-decoration: none;
+box-shadow: 0px 5px;
+}
+
+#button2:hover {
+background-color: #fff;
+cursor: pointer;
+color: lightsalmon;
+transition: color .1s ease-in, background-color .1s ease-in;
+}
+
+#button2:active {
+margin-top: 5px;
+color: lightsalmon;
+box-shadow: 0px 0px;
+font-size: 18px;
+transition: font-size .1s ease-in-out;
+}
