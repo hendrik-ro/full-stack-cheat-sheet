@@ -11,13 +11,15 @@
          <a href="#selectors">Selectors</a>
          <a href="#properties">Properties</a>
          <a href="#skeuomorphism">Skeuomorphism</a>
+         <a href="#transition">Transitions</a>
      </nav>
  </header>
  <div id="css">
      <h1>CSS</h1>
      <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">Cascading Style Sheets</a> are used to specify the presentation and styling of a document written in a markup language such as HTML.</p>
      <div>
-         <h2 id="selectors">Selectors</h2>
+         <div id="selectors">
+         <h2>Selectors</h2>
          <table>
              <thead>
                  <th>Selector</th>
@@ -62,7 +64,9 @@
                  </tr>
              </tbody>
          </table>
-         <h2 id="properties">Properties</h2>
+         </div>
+         <div id="properties">
+         <h2>Properties</h2>
          <table>
              <thead>
                  <th>Property</th>
@@ -83,7 +87,7 @@
      <div id="skeuomorphism">
          <h2>Skeuomorphism</h2>
          <p>Skeuomorphic design imitates real life. This lowers the user's learning curve and allows for intuitive design.</p>
-         <code style="width: 450px;">button {
+         <code style="width: 400px;">button {
     padding: 5px;
     border: 1px solid steelblue;
     border-radius: 5px;
@@ -103,6 +107,33 @@ button:active {
 }</code><br>
          <p>The CSS above renders the following button.</p>
          <button id="button">Button</button>
+     </div>
+     <div id="transition">
+         <h2>Transitions</h2>
+         <code style="width: 500px;">.button {
+    padding: 5px;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0px 5px;
+}
+
+.button:hover {
+    background-color: #fff;
+    cursor: pointer;
+    color: lightsalmon;
+    transition: color .1s ease-in, background-color .1s ease-in;
+}
+
+.button:active {
+    margin-top: 5px;
+    color: lightsalmon;
+    box-shadow: 0px 0px;
+    font-size: 18px;
+    transition: font-size .1s ease-in-out;
+}</code><br>
+         <button id="button2">Button</button>
+         <p></p>
      </div>
  </div>
  </body>
