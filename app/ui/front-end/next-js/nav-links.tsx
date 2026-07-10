@@ -6,12 +6,12 @@ import Link from 'next/link';
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   {
-    name: 'APIs',
-    href: '/back-end/api',
+    name: 'Next.js',
+    href: '/front-end/next-js',
   },
   {
-    name: 'ToBeImplemented',
-    href: '/back-end/api/',
+    name: 'Setup',
+    href: '/front-end/next-js/#setup',
   },
 ];
 

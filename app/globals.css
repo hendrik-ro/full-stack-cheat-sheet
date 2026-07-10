@@ -53,6 +53,7 @@ table code {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 250;
 }
 
 .footer p {
@@ -83,6 +84,7 @@ table code {
     margin: 0 auto;
     text-align: center;
     padding: 20px;
+    padding-bottom: 50px;
     overflow: scroll;
     width: fit-content;
 }

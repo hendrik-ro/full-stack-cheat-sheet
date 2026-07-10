@@ -100,7 +100,7 @@ export default function Page() {
           <p>The CSS above renders the following button.</p>
           <button id="button">Button</button>
       </div>
-      <div id="transition">
+      <div id="transitions">
           <h2>Transitions</h2>
           <SyntaxHighlighter language="css" style={atomDark}>{`
 .button {
@@ -130,7 +130,7 @@ export default function Page() {
           <p></p>
       </div>
   </div>
-    </div>;
+    </div>
       </div>
     )
 }

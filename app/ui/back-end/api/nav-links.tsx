@@ -9,10 +9,6 @@ const links = [
     name: 'APIs',
     href: '/back-end/api',
   },
-  {
-    name: 'ToBeImplemented',
-    href: '/back-end/api/',
-  },
 ];
 
 export default function NavLinks() {

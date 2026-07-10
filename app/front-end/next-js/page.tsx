@@ -13,7 +13,7 @@ export default function Page() {
         <SyntaxHighlighter language='bash' style={atomDark}>$ npm install -g pnpm</SyntaxHighlighter>
         <p>1. Create a new NextJS app:</p>
         <SyntaxHighlighter language='bash' style={atomDark}>$ npx create-next-app@latest project-name</SyntaxHighlighter>
-        <p>Where <em>project-name</em> is your project`s name.</p>
+        <p style={{fontSize: '15px'}}>Where <em>project-name</em> is your project`s name.</p>
         <p>2. Customize settings or use defaults:</p>
         <SyntaxHighlighter language='bash' style={atomDark}>{`? Would you like to use the recommended Next.js defaults? › - Use arrow-keys. Return to submit.
 ❯   Yes, use recommended defaults

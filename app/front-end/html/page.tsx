@@ -2,9 +2,8 @@ export default function Page() {
   return (<div id="head">
       <h1>HTML</h1>
       <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> is a markup language for structuring web content in browsers.</p>
-      <div id="styles">
-          <h2>HTML Head</h2>
-          <h3>Head</h3>
+      <div id="head">
+          <h2>Head</h2>
           <table>
               <thead>
                   <th>Tag</th>
