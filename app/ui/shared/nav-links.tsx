@@ -15,7 +15,7 @@ export default function NavLinks({ links }: NavLinksProps) {
             key={link.name}
             href={link.href}
           >
-            <p className="sidebarLink hidden md:block">{link.name}</p>
+            <p className="sidebarLink">{link.name}</p>
           </Link>
         );
       })}
