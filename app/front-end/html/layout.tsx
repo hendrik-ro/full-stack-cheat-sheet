@@ -6,6 +6,10 @@ const htmlLinks = [
     href: '/front-end/html',
   },
   {
+    name: 'Breadcrumbs',
+    href: '/front-end/html#breadcrumbsHTML',
+  },
+  {
     name: 'Head',
     href: '/front-end/html#head',
   },

@@ -3,15 +3,19 @@ import SideNav from '@/app/ui/shared/sidenav';
 const cssLinks = [
   {
     name: 'CSS',
-    href: '/front-end/css',
+    href: '#',
   },
   {
-    name: 'Selectors',
-    href: '/front-end/css#selectors',
+    name: 'Breadcrumbs',
+    href: '/front-end/css#breadcrumbCSS',
   },
   {
     name: 'Properties',
     href: '/front-end/css#properties',
+  },
+  {
+    name: 'Selectors',
+    href: '/front-end/css#selectors',
   },
   {
     name: 'Skeuomorphism',
