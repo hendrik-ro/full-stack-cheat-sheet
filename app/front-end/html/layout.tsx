@@ -10,6 +10,10 @@ const htmlLinks = [
     href: '/front-end/html#breadcrumbsHTML',
   },
   {
+    name: 'Column Grid',
+    href: '/front-end/html#column-grid',
+  },
+  {
     name: 'Head',
     href: '/front-end/html#head',
   },
