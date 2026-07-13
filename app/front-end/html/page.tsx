@@ -3,7 +3,7 @@ import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function Page() {
   return (<div>
-    <div id="head">
+    <div>
       <h1>HTML</h1>
       <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> is a markup language for structuring web content in browsers.</p>
       <BreadcrumbsHTML />
@@ -103,79 +103,166 @@ function ColumnGridTemplate() {
 function Flexbox() {
   return (<div id="flexbox">
     <h2>Flexbox</h2>
-    <h3>Display</h3>
-    <p>A div with the declaration display: flex; will remain block level — no other elements will appear on the same line as it.</p>
-    <p>However, it will change the behavior of its child elements. Child elements will not begin on new lines.</p>
-    <SyntaxHighlighter language='css' style={atomDark}>{`div.container {
-      display: flex;
-    }`}</SyntaxHighlighter>
-    <p>With display property <em>inline-flex</em>, divs will display inline with each other if the page is wide enough.</p>
-    <p>The child containers` width will shrink to their parents` container`s width.</p>
-    <SyntaxHighlighter language='css' style={atomDark}>{`.container {
-      width: 150px;
-      border: 1px solid grey;
-      display: inline-flex;
-    }
+    <FlexboxDisplay />
+    <FlexboxJustifyContent />
+    <FlexboxFlex />
+  </div>
+  );
+}
 
-    .box {
-      background-color: dodgerblue;
-      height: 75px;
-      width: 75px;
-      border: 1px solid turquoise;
-    }`}</SyntaxHighlighter>
-    <SyntaxHighlighter language='React' style={atomDark}>{`<div className='container-inline-flex'>
-        <div className='box'>
-          <h3>1</h3>
-        </div>
-        <div className='box'>
-          <h3>2</h3>
-        </div>
-        <div className='box'>
-          <h3>3</h3>
-        </div>
+function FlexboxDisplay() {
+  return (
+    <div>
+    <h3>Display</h3>
+  <p>A div with the declaration display: flex; will remain block level — no other elements will appear on the same line as it.</p>
+  <p>However, it will change the behavior of its child elements. Child elements will not begin on new lines.</p>
+  <SyntaxHighlighter language='css' style={atomDark}>{`div.container {
+    display: flex;
+  }`}</SyntaxHighlighter>
+  <p>With display property <em>inline-flex</em>, divs will display inline with each other if the page is wide enough.</p>
+  <p>The child containers` width will shrink to their parents` container`s width.</p>
+  <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+    width: 150px;
+    border: 1px solid grey;
+    display: inline-flex;
+  }
+
+  .box {
+    background-color: dodgerblue;
+    height: 75px;
+    width: 75px;
+    border: 1px solid turquoise;
+  }`}</SyntaxHighlighter>
+  <SyntaxHighlighter language='React' style={atomDark}>{`<div className='container-inline-flex'>
+      <div className='box'>
+        <h3>1</h3>
       </div>
-      <div className='container-inline-flex'>
-        <div className='box'>
-          <h3>1</h3>
-        </div>
-        <div className='box'>
-          <h3>2</h3>
-        </div>
-        <div className='box'>
-          <h3>3</h3>
-        </div>
+      <div className='box'>
+        <h3>2</h3>
       </div>
-  </div>`}</SyntaxHighlighter>
-    <div className='container-inline-flex'>
-        <div className='box'>
-          <h3>1</h3>
-        </div>
-        <div className='box'>
-          <h3>2</h3>
-        </div>
-        <div className='box'>
-          <h3>3</h3>
-        </div>
+      <div className='box'>
+        <h3>3</h3>
       </div>
-      <div className='container-inline-flex'>
-        <div className='box'>
-          <h3>1</h3>
-        </div>
-        <div className='box'>
-          <h3>2</h3>
-        </div>
-        <div className='box'>
-          <h3>3</h3>
-        </div>
     </div>
-    <p>With a display value <em>flex</em> or <em>inline-flex</em> of parent containers, all of the child elements (flex items) are moved toward the upper left corner of the parent container.</p>
-    <p>To position the items from left to right, we use a property called justify-content.</p>
-    <SyntaxHighlighter language='css' style={atomDark}>{`.container {
-      display: flex;
-      justify-content: flex-end;
-    }
-`}</SyntaxHighlighter>
-    <p>This will cause all of the flex items to shift to the right side of the flex container.</p>
+    <div className='container-inline-flex'>
+      <div className='box'>
+        <h3>1</h3>
+      </div>
+      <div className='box'>
+        <h3>2</h3>
+      </div>
+      <div className='box'>
+        <h3>3</h3>
+      </div>
+    </div>
+</div>`}</SyntaxHighlighter>
+  <div className='container-inline-flex'>
+      <div className='box'>
+        <h3>1</h3>
+      </div>
+      <div className='box'>
+        <h3>2</h3>
+      </div>
+      <div className='box'>
+        <h3>3</h3>
+      </div>
+    </div>
+    <div className='container-inline-flex'>
+      <div className='box'>
+        <h3>1</h3>
+      </div>
+      <div className='box'>
+        <h3>2</h3>
+      </div>
+      <div className='box'>
+        <h3>3</h3>
+      </div>
+  </div>
+  <p>With a display value <em>flex</em> or <em>inline-flex</em> of parent containers, all of the child elements (flex items) are moved toward the upper left corner of the parent container.</p>
+  <p>To position the items from left to right, we use a property called justify-content.</p>
+  <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+    display: flex;
+    justify-content: flex-end;
+  }`}</SyntaxHighlighter>
+  <p>This will cause all of the flex items to shift to the right side of the flex container.</p>
+  <h3>Display</h3>
+  <p>A div with the declaration display: flex; will remain block level — no other elements will appear on the same line as it.</p>
+  <p>However, it will change the behavior of its child elements. Child elements will not begin on new lines.</p>
+  <SyntaxHighlighter language='css' style={atomDark}>{`div.container {
+    display: flex;
+  }`}</SyntaxHighlighter>
+  <p>With display property <em>inline-flex</em>, divs will display inline with each other if the page is wide enough.</p>
+  <p>The child containers` width will shrink to their parents` container`s width.</p>
+  <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+    width: 150px;
+    border: 1px solid grey;
+    display: inline-flex;
+  }
+
+  .box {
+    background-color: dodgerblue;
+    height: 75px;
+    width: 75px;
+    border: 1px solid turquoise;
+  }`}</SyntaxHighlighter>
+  <SyntaxHighlighter language='React' style={atomDark}>{`<div className='container-inline-flex'>
+      <div className='box'>
+        <h3>1</h3>
+      </div>
+      <div className='box'>
+        <h3>2</h3>
+      </div>
+      <div className='box'>
+        <h3>3</h3>
+      </div>
+    </div>
+    <div className='container-inline-flex'>
+      <div className='box'>
+        <h3>1</h3>
+      </div>
+      <div className='box'>
+        <h3>2</h3>
+      </div>
+      <div className='box'>
+        <h3>3</h3>
+      </div>
+    </div>
+</div>`}</SyntaxHighlighter>
+  <div className='container-inline-flex'>
+      <div className='box'>
+        <h3>1</h3>
+      </div>
+      <div className='box'>
+        <h3>2</h3>
+      </div>
+      <div className='box'>
+        <h3>3</h3>
+      </div>
+    </div>
+    <div className='container-inline-flex'>
+      <div className='box'>
+        <h3>1</h3>
+      </div>
+      <div className='box'>
+        <h3>2</h3>
+      </div>
+      <div className='box'>
+        <h3>3</h3>
+      </div>
+  </div>
+  <p>With a display value <em>flex</em> or <em>inline-flex</em> of parent containers, all of the child elements (flex items) are moved toward the upper left corner of the parent container.</p>
+  <p>To position the items from left to right, we use a property called justify-content.</p>
+  <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+    display: flex;
+    justify-content: flex-end;
+  }`}</SyntaxHighlighter>
+  <p>This will cause all of the flex items to shift to the right side of the flex container.</p>
+  </div>
+  );
+}
+
+function FlexboxJustifyContent() {
+  <div>
     <h3>Justify-content</h3>
     <p>This property will align items horizontally within the parent container.</p>
     <p>To adjust a flex container`s content, we can use:</p>
@@ -195,6 +282,12 @@ function Flexbox() {
       <li><strong>baseline</strong> — the bottom of the content of all items will be aligned with each other.</li>
       <li><strong>stretch</strong> — if possible, the items will stretch from top to bottom of the container (this is the default value; elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch).</li>
     </ul>
+  </div>
+}
+
+function FlexboxFlex() {
+  return (
+  <div>
     <h3>Flex-grow</h3>
     <p>Allows child containers to grow into a bigger parent container.</p>
     <SyntaxHighlighter language='css' style={atomDark}>{`.container {
@@ -210,8 +303,7 @@ function Flexbox() {
     .center {
       width: 100px;
       flex-grow: 2;
-    }
-`}</SyntaxHighlighter>
+    }`}</SyntaxHighlighter>
     <p>In this example the .center div will stretch twice as much as the .side divs.</p>
     <p>If a max-width is set for an element, it will not grow larger than that even if there is more space for it to absorb.</p>
     <h3>Flex-shrink</h3>
@@ -230,11 +322,32 @@ function Flexbox() {
     .center {
       flex-grow: 2;
       flex-basis: 150px;
-    }
-`}</SyntaxHighlighter>
+    }`}</SyntaxHighlighter>
     <p>In the example above, the .side divs will be 100 pixels wide and the .center div will be 150 pixels wide if the .container div has just the right amount of space (350 pixels, plus a little extra for margins and borders).</p>
     <p>If the .container div is larger, the .center div will absorb twice as much space as the .side divs.</p>
+    <h3>Flex</h3>
+    <p><em>flex</em> is a shorthand property that allows to set flex-grow, flex-shrink, and flex-basis in one line.</p>
+    <p><strong>Note:</strong> The flex property is different from the flex value used for the display property.</p>
+    <SyntaxHighlighter language='css' style={atomDark}>{`.big {
+      flex: 2 1 150px; /* flex-grow: 2; flex-shrink: 1; flex-basis: 150px; */
+    }
+
+    .small {
+      flex: 1 2 100px; /* flex-grow: 1; flex-shrink: 2; flex-basis: 100px; */
+    }`}</SyntaxHighlighter>
+    <p>You can ommit flex-shrink and/or flex-basis, but there is no way to ommit flex-grow.</p>
   </div>
+  );
+}
+
+function FlexboxFlexWrap() {
+  return (
+    <div>
+      <p>Allows for child containers to wrap around lines rather than shrinking.</p>
+      <ul>
+      <li></li>
+      </ul>
+    </div>
   );
 }
 
