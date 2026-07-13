@@ -198,7 +198,7 @@ function FlexboxJustifyContent() {
   return (
     <div>
       <h3>Justify-content</h3>
-      <p>This property will align items horizontally within the parent container.</p>
+      <p>This property will align items along the main axis within the parent container.</p>
       <p>To adjust a flex container`s content, we can use:</p>
       <ul className='leftList'>
         <li><strong>flex-start</strong> — all items will be positioned in order, starting from the left of the parent container, with no extra space between or before them. </li>
@@ -215,7 +215,7 @@ function FlexboxAlignItems() {
   return (
     <div>
       <h3>Align-items</h3>
-      <p>This property will align items horizontally within the parent container.</p>
+      <p>This property is used to align items within a single row or column along the cross axis.</p>
       <ul className='leftList'>
         <li><strong>flex-start</strong> — all elements will be positioned at the top of the parent container.</li>
         <li><strong>flex-end</strong> — all elements will be positioned at the bottom of the parent container.</li>
@@ -300,7 +300,7 @@ function FlexboxAlignContent() {
   return (
     <div>
       <h3>Align-content</h3>
-      <p>This property will align items vertically within the parent container.</p>
+      <p>This property will align items along the cross axis within the parent container.</p>
       <p>align-items is for aligning elements within a single row. If a flex container has multiple rows of content, we can use align-content to space the rows from top to bottom.</p>
       <ul className='leftList'>
         <li><strong>flex-start</strong> — all rows of elements will be positioned at the top of the parent container with no extra space between.</li>
