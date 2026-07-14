@@ -3,11 +3,11 @@ import SideNav from '@/app/ui/shared/sidenav';
 const nextJsLinks = [
   {
     name: 'Next.js',
-    href: '/front-end/next-js',
+    href: '#',
   },
   {
     name: 'Setup',
-    href: '/front-end/next-js#setup',
+    href: '#setup',
   },
 ];
 
