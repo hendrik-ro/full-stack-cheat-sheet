@@ -3,11 +3,11 @@ import SideNav from '@/app/ui/shared/sidenav';
 const reactLinks = [
   {
     name: 'React',
-    href: '/front-end/react',
+    href: '#',
   },
   {
     name: 'DOM',
-    href: '/front-end/react#dom',
+    href: '#dom',
   },
 ];
 

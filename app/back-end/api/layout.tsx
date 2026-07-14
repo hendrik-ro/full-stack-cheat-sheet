@@ -3,15 +3,15 @@ import SideNav from '@/app/ui/shared/sidenav';
 const apiLinks = [
   {
     name: 'APIs',
-    href: '/back-end/api',
+    href: '#',
   },
   {
     name: 'REST',
-    href: '/back-end/api#rest',
+    href: '#rest',
   },
   {
     name: 'WebSockets',
-    href: '/back-end/api#websockets',
+    href: '#websockets',
   },
 ];
 

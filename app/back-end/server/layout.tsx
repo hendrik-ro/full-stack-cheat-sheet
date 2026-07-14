@@ -3,11 +3,11 @@ import SideNav from '@/app/ui/shared/sidenav';
 const serverLinks = [
   {
     name: 'Server',
-    href: '/back-end/server',
+    href: '#',
   },
   {
     name: 'Boiler Plate',
-    href: '/back-end/server#boiler-plate',
+    href: '#boiler-plate',
   },
 ];
 

@@ -7,23 +7,27 @@ const cssLinks = [
   },
   {
     name: 'Breadcrumbs',
-    href: '/front-end/css#breadcrumbCSS',
+    href: '#breadcrumbCSS',
+  },
+  {
+    name: 'Flexbox',
+    href: '#flexbox',
   },
   {
     name: 'Properties',
-    href: '/front-end/css#properties',
+    href: '#properties',
   },
   {
     name: 'Selectors',
-    href: '/front-end/css#selectors',
+    href: '#selectors',
   },
   {
     name: 'Skeuomorphism',
-    href: '/front-end/css#skeuomorphism',
+    href: '#skeuomorphism',
   },
   {
     name: 'Transitions',
-    href: '/front-end/css#transitions',
+    href: '#transitions',
   },
 ];
 

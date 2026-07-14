@@ -3,27 +3,23 @@ import SideNav from '@/app/ui/shared/sidenav';
 const htmlLinks = [
   {
     name: 'HTML',
-    href: '/front-end/html',
+    href: '#',
   },
   {
     name: 'Breadcrumbs',
-    href: '/front-end/html#breadcrumbsHTML',
+    href: '#breadcrumbsHTML',
   },
   {
     name: 'Column Grid',
-    href: '/front-end/html#column-grid',
-  },
-  {
-    name: 'Flexbox',
-    href: '/front-end/html#flexbox',
+    href: '#column-grid',
   },
   {
     name: 'Head',
-    href: '/front-end/html#head',
+    href: '#head',
   },
   {
     name: 'Tables',
-    href: '/front-end/html#tables',
+    href: '#tables',
   },
 ];
 

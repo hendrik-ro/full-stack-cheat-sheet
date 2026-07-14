@@ -3,7 +3,7 @@ import SideNav from '@/app/ui/shared/sidenav';
 const golangLinks = [
   {
     name: 'Golang',
-    href: '/language/golang',
+    href: '#',
   },
 ];
 

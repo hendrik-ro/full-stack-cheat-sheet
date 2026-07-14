@@ -3,19 +3,19 @@ import SideNav from '@/app/ui/shared/sidenav';
 const dbLinks = [
   {
     name: 'Database',
-    href: '/back-end/database',
+    href: '#',
   },
   {
     name: 'PostgreSQL',
-    href: '/back-end/database/#postgres',
+    href: '#postgres',
   },
   {
     name: 'SQLite',
-    href: '/back-end/database/#sqlite',
+    href: '#sqlite',
   },
   {
     name: 'SQLi',
-    href: '/back-end/database/#sqli',
+    href: '#sqli',
   },
 ];
 
