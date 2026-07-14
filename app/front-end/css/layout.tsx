@@ -3,35 +3,35 @@ import SideNav from '@/app/ui/shared/sidenav';
 const cssLinks = [
   {
     name: 'CSS',
-    href: '#',
+    href: '/front-end/css',
   },
   {
     name: 'Breadcrumbs',
-    href: '#breadcrumbCSS',
+    href: '/front-end/css/breadcrumbs',
   },
   {
     name: 'Flexbox',
-    href: '#flexbox',
+    href: '/front-end/css/flexbox',
   },
   {
     name: 'Grid',
-    href: '#grid',
+    href: '/front-end/css/grid',
   },
   {
     name: 'Properties',
-    href: '#properties',
+    href: '/front-end/css/properties',
   },
   {
     name: 'Selectors',
-    href: '#selectors',
+    href: '/front-end/css/selectors',
   },
   {
     name: 'Skeuomorphism',
-    href: '#skeuomorphism',
+    href: '/front-end/css/skeuomorphism',
   },
   {
     name: 'Transitions',
-    href: '#transitions',
+    href: '/front-end/css/transitions',
   },
 ];
 
