@@ -14,6 +14,10 @@ const cssLinks = [
     href: '#flexbox',
   },
   {
+    name: 'Grid',
+    href: '#grid',
+  },
+  {
     name: 'Properties',
     href: '#properties',
   },

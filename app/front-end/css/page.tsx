@@ -1,5 +1,6 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import Image from 'next/image';
 
 export default function Page() {
   return (<div>
@@ -9,6 +10,7 @@ export default function Page() {
     </div>
     <BreadcrumbCSS />
     <Flexbox />
+    <Grid />
     <Properties />
     <Selectors />
     <Skeuomorphism />
@@ -290,6 +292,30 @@ function FlexboxFlexFlow() {
   );
 }
 
+function Grid() {
+  return (
+    <div id="grid">
+      <h2>Grid</h2>
+      <Image src="/assets/css_grid_diagram_2.svg" alt="grid diagram" width={800} height={600} />
+      <p>Grid is a two-dimensional layout system that allows us to create complex layouts with rows and columns.</p>
+      <p>To set up a grid, you need to have both a grid <em>container</em> and grid <em>items</em>.</p>
+      <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+  display: grid; /* for block-level grid layout or 'inline-grid' for an inline grid layout */
+  grid-template-columns: 250px repeat(3, 1fr); /* 250px for the first column, then 1 'fraction' for the rest */
+  grid-template-rows: repeat(2, 1fr); /* 1 'fraction' for each row */
+  gap: 10px 10px; /* gap between grid items (rows and columns) */
+}`}</SyntaxHighlighter>
+      <p><em>grid-template</em> is shorthand for <em>grid-template-columns</em> and <em>grid-template-rows</em>.</p>
+      <p><em>minmax()</em> is a function that allows you to specify a minimum and maximum size for a grid item.</p>
+      <SyntaxHighlighter language='css' style={atomDark}>{`.item {
+  grid-column: 100px minmax(100px, 200px) 1fr;
+  grid-row: 1fr minmax(50px, 100px) repeat(2, 1fr);
+}`}</SyntaxHighlighter>
+      <p>The grid needs to have a variable width and/or height for minmax() to work.</p>
+    </div>
+  );
+}
+
 function Transitions() {
     return (
       <div id="transitions">
@@ -359,11 +385,11 @@ function Properties() {
     <div id="properties">
   <h2>Properties</h2>
   <table>
-      <thead>
+      <tr>
           <th>Property</th>
           <th>Code example</th>
           <th>Description</th>
-      </thead>
+      </tr>
       <tbody>
           <tr>
               <td><span className="codeSnippet">color</span></td>
