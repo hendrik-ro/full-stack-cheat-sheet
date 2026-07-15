@@ -1,13 +1,15 @@
 'use client';
 
+import styles from './topnav.module.css';
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function TopNav() {
   const path = GetPath();
   return (
-    <div className="nav">
-      <ul className="breadcrumb">
+    <div className={styles.nav}>
+      <ul className={styles.breadcrumb}>
         <li><Link href="/" title="Cheat Sheet Content">Full Stack Engineer Cheat Sheet</Link></li>
         {path.map((p) => <li key={p}>{p.toUpperCase()}</li>)}
       </ul>

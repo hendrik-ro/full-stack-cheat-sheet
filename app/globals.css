@@ -108,33 +108,6 @@ ul {
   color: hsl(0, 0%, 50%);
 }
 
-/* Nav */
-.nav a {
-    margin: 5px;
-}
-
-/* Nav breadcrumb */
-.breadcrumb {
-    margin: 0;
-}
-
-.breadcrumb > li {
-    display: inline;
-}
-
-.breadcrumb li+li::before {
-    content: ">";
-    margin: 0 5px;
-}
-
-.breadcrumb a {
-	text-decoration: none;
-}
-
-.breadcrumb a:hover {
-	color: red;
-}
-
 /* Sidebar */
 .sidebarButton {
     float: right;
