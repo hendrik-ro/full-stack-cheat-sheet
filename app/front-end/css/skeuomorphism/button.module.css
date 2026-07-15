@@ -1,0 +1,18 @@
+#button {
+  padding: 5px;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 5px;
+}
+
+#button:hover {
+  cursor: pointer;
+  color: lightsalmon;
+}
+
+#button:active {
+  margin-top: 5px;
+  color: lightsalmon;
+  box-shadow: 0px 0px;
+}

@@ -1,5 +1,6 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import styles from './button.module.css';
 
 export default function SkeuomorphismPage() {
   return (<div id="skeuomorphism-page">
@@ -32,7 +33,7 @@ function Skeuomorphism() {
  }
 }`}</SyntaxHighlighter>
           <p>The CSS above renders the following button.</p>
-          <button id="button">Button</button>
+          <button id={styles.button}>Button</button>
       </div>
     );
 }
