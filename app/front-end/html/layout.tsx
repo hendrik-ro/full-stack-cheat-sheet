@@ -11,15 +11,15 @@ const htmlLinks = [
   },
   {
     name: 'Column Grid',
-    href: '#column-grid',
+    href: '/front-end/html/grid',
   },
   {
     name: 'Head',
-    href: '#head',
+    href: '/front-end/html/head',
   },
   {
     name: 'Tables',
-    href: '#tables',
+    href: '/front-end/html/tables',
   },
 ];
 
