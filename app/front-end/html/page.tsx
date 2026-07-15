@@ -6,7 +6,6 @@ export default function Page() {
     <div>
       <h1>HTML</h1>
       <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> is a markup language for structuring web content in browsers.</p>
-      <BreadcrumbsHTML />
       <ColumnGridTemplate />
       <Head />
       <Tables />
@@ -16,25 +15,7 @@ export default function Page() {
 }
 
 
-function BreadcrumbsHTML() {
-  return (
-    <div id="breadcrumbsHTML">
-      <h2>Breadcrumbs</h2>
-      <p>Breadcrumbs are a navigation aid that shows the user`s current location within a website`s hierarchy.</p>
-      <SyntaxHighlighter language="html" style={atomDark}>{`<ul class="breadcrumb">
-          <li>
-            <a href="shoes.html">Shoes</a>
-          </li>
-          <li>
-            <a href="flats.html">Flats</a>
-          </li>
-          <li>
-            <a href="#">Brown</a>
-          </li>
-        </ul>`}</SyntaxHighlighter>
-    </div>
-  );
-}
+
 
 function ColumnGridTemplate() {
   return (<div id="column-grid">

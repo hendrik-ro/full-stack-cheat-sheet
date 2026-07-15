@@ -7,7 +7,7 @@ const htmlLinks = [
   },
   {
     name: 'Breadcrumbs',
-    href: '#breadcrumbsHTML',
+    href: '/front-end/html/breadcrumbs',
   },
   {
     name: 'Column Grid',
@@ -25,8 +25,8 @@ const htmlLinks = [
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='gridLevelTwo'>
-      <div className="itemsidebar">
+    <div className="gridLevelTwo">
+      <div className="itemSidebar">
         <SideNav links={htmlLinks} />
       </div>
       <div className="itemContent">{children}</div>

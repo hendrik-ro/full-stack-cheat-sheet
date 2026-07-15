@@ -18,7 +18,7 @@ const apiLinks = [
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='gridLevelTwo'>
+    <div className="gridLevelTwo">
       <div className="itemSidebar">
         <SideNav links={apiLinks} />
       </div>
