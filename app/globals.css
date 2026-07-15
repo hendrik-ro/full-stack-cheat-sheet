@@ -3,7 +3,7 @@
   color: whitesmoke;
 }
 
-h1, h2, h3, h4, h5, h6, p, div {
+h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
@@ -49,33 +49,58 @@ ul {
     line-height: 1.5;
 }
 
+/* Main grid */
 .grid {
     display: grid;
-    grid-template: 50px 1fr 50px / 200px 1fr;
-    grid-auto-flow: column;
+    grid-template: 25px 1fr 25px / 1fr;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .itemNav {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 1;
-  border: 1px solid green;
+  grid-row: 1;
+  border-bottom: 1px solid darkslategrey;
 }
 
 .itemMain {
-  grid-column: 2 / span 1;
-  grid-row: 1 / span 1;
-  border: 1px solid red;
+  grid-row: 2;
+  overflow-y: auto;
+  text-align: center;
 }
 
 .itemFooter {
-  grid-column: 1 / span 2;
-  grid-row: 3 / span 1;
-  border: 1px solid blue;
+  grid-row: 3;
+  position: sticky;
+  bottom: 0;
+  text-align: right;
 }
 
+/* Nested grid */
+.gridLevelTwo {
+  display: grid;
+  grid-template: 1fr / 200px 1fr;
+  grid-auto-flow: column;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.5s grid-template ease; /* test this */
+}
+
+.itemSidebar {
+  grid-column: 1;
+  overflow-y: auto;
+  border-right: 2px solid darkslategray;
+}
+
+.itemContent {
+    grid-column: 2;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+/* Footer */
 .footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   z-index: 750;
   border-top: 2px solid darkslategray;
@@ -83,21 +108,12 @@ ul {
   color: hsl(0, 0%, 50%);
 }
 
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 5px 0;
-  z-index: 1000;
-  box-shadow: 0 2px darkslategray;
-  text-align: left;
-}
-
+/* Nav */
 .nav a {
     margin: 5px;
 }
 
+/* Nav breadcrumb */
 .breadcrumb {
     margin: 0;
 }
@@ -119,65 +135,15 @@ ul {
 	color: red;
 }
 
-.column-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.column-item {
-    color: black;
-  background-color: #f3f4f6;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
-  overflow: auto;
-  margin: 0px 0px 25px 200px;
-  transition: margin 0.3s ease;
-}
-
-.container-inline-flex {
-    display: inline-flex;
-    border: 1px solid grey;
-    width: 150px;
-}
-
-.box {
-  background-color: dodgerblue;
-  height: 75px;
-  width: 75px;
-  border: 1px solid turquoise;
-}
-
-.sidebar {
-  position: fixed;
-  top: 15px;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 500;
-  border-right: 2px solid darkslategray;
-  flex: 0 0 auto;
-  transition: width 0.3s ease;
-}
-
-.buttonRight {
+/* Sidebar */
+.sidebarButton {
     float: right;
     margin-right: 10px;
     border: 1px solid darkslategray;
     color: slategray;
 }
 
+/* Short code snippets */
 .codeSnippet {
   padding: 5px;
   display: inline-block;
@@ -189,22 +155,7 @@ ul {
   text-align: left !important;
 }
 
-.home {
-  position: relative;
-  top: 25px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.leftList {
-    text-align: left;
-}
-
-#sheet {
-  position: relative;
-  top: 25px;
-}
-
+/* Button examples */
 #button, #button2 {
   padding: 5px;
   border: 1px solid steelblue;
@@ -234,62 +185,27 @@ ul {
   transition: font-size 0.1s ease-in-out;
 }
 
+/* Media queries */
 @media (min-width: 640px) {
-  .column-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .sidebar {
-    width: 50px;
     overflow: hidden;
-  }
-
-  .content {
-    margin-left: 50px;
   }
 }
 
 @media (min-width: 768px) {
-  .column-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .sidebar {
-    width: 50px;
     overflow: hidden;
-  }
-
-  .content {
-    margin-left: 50px;
   }
 }
 
 @media (min-width: 1024px) {
-  .column-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   .sidebar {
-    width: 200px;
     overflow: auto;
-  }
-
-  .content {
-    margin-left: 200px;
   }
 }
 
 @media (min-width: 1280px) {
-  .column-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
   .sidebar {
-    width: 200px;
     overflow: auto;
-  }
-
-  .content {
-    margin-left: 200px;
   }
 }

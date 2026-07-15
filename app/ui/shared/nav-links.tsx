@@ -46,7 +46,7 @@ function ButtonCollapse() {
   };
 
   return (
-    <button className="buttonRight" onClick={toggleSidebar}>
+    <button className="sidebarButton" onClick={toggleSidebar}>
       {isSidebarOpen ? '<<' : '>>'}
     </button>
   );
