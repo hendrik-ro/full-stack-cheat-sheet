@@ -1,0 +1,16 @@
+.containerInlineFlex {
+  width: 150px;
+  border: 1px solid grey;
+  display: inline-flex;
+}
+
+.box {
+  background-color: dodgerblue;
+  height: 75px;
+  width: 75px;
+  border: 1px solid turquoise;
+}
+
+ul.leftList {
+    text-align: left;
+}
