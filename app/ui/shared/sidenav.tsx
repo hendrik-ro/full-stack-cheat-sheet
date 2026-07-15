@@ -7,7 +7,6 @@ interface SideNavProps {
 export default function SideNav({ links }: SideNavProps) {
   return (
     <div>
-      <p style={{margin: '25px 0px 0px 0px'}}></p>
       <NavLinks links={links} />
     </div>
   );
