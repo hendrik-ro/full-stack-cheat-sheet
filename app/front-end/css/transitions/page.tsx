@@ -1,5 +1,6 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import styles from './button.module.css';
 
 export default function TransitionsPage() {
   return (<div id="transitions-page">
@@ -35,7 +36,7 @@ function Transitions() {
      transition: font-size .1s ease-in-out;
  }
 }`}</SyntaxHighlighter>
-          <button id="button2">Button</button>
+          <button id={styles.button}>Button</button>
           <p></p>
       </div>
     );

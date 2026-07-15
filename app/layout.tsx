@@ -29,9 +29,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <TopNav />
-      <body>{children}</body>
-      <HomeFooter />
+      <body className="grid">
+        <div className="itemNav"><TopNav /></div>
+        <div className="itemMain">{children}</div>
+        <div className="itemFooter"><HomeFooter /></div>
+      </body>
     </html>
   );
 }

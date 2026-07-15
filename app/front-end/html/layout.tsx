@@ -25,11 +25,11 @@ const htmlLinks = [
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <div className="sidebar">
+    <div className='gridLevelTwo'>
+      <div className="itemsidebar">
         <SideNav links={htmlLinks} />
       </div>
-      <div className="content">{children}</div>
+      <div className="itemContent">{children}</div>
     </div>
   );
 }

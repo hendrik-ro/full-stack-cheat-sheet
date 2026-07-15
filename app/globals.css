@@ -3,7 +3,7 @@
   color: whitesmoke;
 }
 
-h1, h2, h3, h4, h5, h6, p, div {
+h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
@@ -15,18 +15,14 @@ h3, h4 {
   color: lightsteelblue;
 }
 
-a, .sidebarLink {
+a {
   color: steelblue;
   cursor: pointer;
   margin: 3px;
 }
 
-a:hover, .sidebar p:hover, .sidebarLink:hover {
+a:hover {
   color: lightsalmon;
-}
-
-.sidebarLink:hover {
-  background-color: darkslategray;
 }
 
 table {
@@ -49,9 +45,58 @@ ul {
     line-height: 1.5;
 }
 
-.footer {
-  position: fixed;
+/* Main grid */
+.grid {
+    display: grid;
+    grid-template: 25px 1fr 25px / 1fr;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.itemNav {
+  grid-row: 1;
+  border-bottom: 1px solid darkslategrey;
+}
+
+.itemMain {
+  grid-row: 2;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.itemFooter {
+  grid-row: 3;
+  position: sticky;
   bottom: 0;
+  text-align: right;
+}
+
+/* Nested grid */
+.gridLevelTwo {
+  display: grid;
+  grid-template: 1fr / 200px 1fr;
+  grid-auto-flow: column;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.5s grid-template ease; /* test this */
+}
+
+.itemSidebar {
+  grid-column: 1;
+  overflow-y: auto;
+  border-right: 2px solid darkslategray;
+}
+
+.itemContent {
+    grid-column: 2;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+/* Footer */
+.footer {
   width: 100%;
   z-index: 750;
   border-top: 2px solid darkslategray;
@@ -59,101 +104,7 @@ ul {
   color: hsl(0, 0%, 50%);
 }
 
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 5px 0;
-  z-index: 1000;
-  box-shadow: 0 2px darkslategray;
-  text-align: left;
-}
-
-.nav a {
-    margin: 5px;
-}
-
-.breadcrumb {
-    margin: 0;
-}
-
-.breadcrumb > li {
-    display: inline;
-}
-
-.breadcrumb li+li::before {
-    content: ">";
-    margin: 0 5px;
-}
-
-.breadcrumb a {
-	text-decoration: none;
-}
-
-.breadcrumb a:hover {
-	color: red;
-}
-
-.column-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.column-item {
-    color: black;
-  background-color: #f3f4f6;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
-  overflow: auto;
-  margin: 0px 0px 25px 200px;
-  transition: margin 0.3s ease;
-}
-
-.container-inline-flex {
-    display: inline-flex;
-    border: 1px solid grey;
-    width: 150px;
-}
-
-.box {
-  background-color: dodgerblue;
-  height: 75px;
-  width: 75px;
-  border: 1px solid turquoise;
-}
-
-.sidebar {
-  position: fixed;
-  top: 15px;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 500;
-  border-right: 2px solid darkslategray;
-  flex: 0 0 auto;
-  transition: width 0.3s ease;
-}
-
-.buttonRight {
-    float: right;
-    margin-right: 10px;
-    border: 1px solid darkslategray;
-    color: slategray;
-}
-
+/* Short code snippets */
 .codeSnippet {
   padding: 5px;
   display: inline-block;
@@ -165,107 +116,39 @@ ul {
   text-align: left !important;
 }
 
-.home {
-  position: relative;
-  top: 25px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.leftList {
-    text-align: left;
-}
-
-#sheet {
-  position: relative;
-  top: 25px;
-}
-
-#button, #button2 {
-  padding: 5px;
-  border: 1px solid steelblue;
-  border-radius: 5px;
-  text-decoration: none;
-  box-shadow: 0 5px;
-}
-
-#button:hover, #button2:hover {
-  cursor: pointer;
-  color: lightsalmon;
-}
-
-#button:active, #button2:active {
-  margin-top: 5px;
-  color: lightsalmon;
-  box-shadow: 0 0;
-}
-
-#button2:hover {
-  background-color: #fff;
-  transition: color 0.1s ease-in, background-color 0.1s ease-in;
-}
-
-#button2:active {
-  font-size: 18px;
-  transition: font-size 0.1s ease-in-out;
-}
-
+/* Media queries */
 @media (min-width: 640px) {
-  .column-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sidebar {
-    width: 50px;
+    .gridLevelTwo {
+        grid-template: 1fr / 50px 1fr;
+    }
+  .itemSidebar {
     overflow: hidden;
-  }
-
-  .content {
-    margin-left: 50px;
   }
 }
 
 @media (min-width: 768px) {
-  .column-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .sidebar {
-    width: 50px;
+    .gridLevelTwo {
+        grid-template: 1fr / 50px 1fr;
+    }
+  .itemSidebar {
     overflow: hidden;
-  }
-
-  .content {
-    margin-left: 50px;
   }
 }
 
 @media (min-width: 1024px) {
-  .column-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .sidebar {
-    width: 200px;
+    .gridLevelTwo {
+        grid-template: 1fr / 200px 1fr;
+    }
+  .itemSidebar {
     overflow: auto;
-  }
-
-  .content {
-    margin-left: 200px;
   }
 }
 
 @media (min-width: 1280px) {
-  .column-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .sidebar {
-    width: 200px;
+    .gridLevelTwo {
+        grid-template: 1fr / 200px 1fr;
+    }
+  .itemSidebar {
     overflow: auto;
-  }
-
-  .content {
-    margin-left: 200px;
   }
 }
