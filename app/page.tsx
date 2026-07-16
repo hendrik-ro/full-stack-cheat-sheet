@@ -17,7 +17,6 @@ function HomeContent() {
         <Link href="./front-end/html/">HTML</Link>
         <Link href="./front-end/css/">CSS</Link>
         <Link href="./front-end/react/">React</Link>
-        <Link href="./front-end/next-js/">NextJS</Link>
         <h2 id="back">Back End</h2>
         <Link href="./back-end/api/">APIs</Link>
         <Link href="./back-end/database/">Database</Link>

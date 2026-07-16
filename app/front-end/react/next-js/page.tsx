@@ -7,7 +7,7 @@ export default function Page() {
         <h1>NextJS</h1>
         <p><a target="_blank" href="https://nextjs.org/">NextJS</a> is a framework for <a href="/front-end/react">React</a>.</p>
     </div>
-    <div id="setup">
+    <div>
         <h2>Setup</h2>
         <p>If not done yet, install <em>pnpm</em> globally:</p>
         <SyntaxHighlighter language='bash' style={atomDark}>$ npm install -g pnpm</SyntaxHighlighter>

@@ -91,7 +91,6 @@ ul {
 
 .itemContent {
     grid-column: 2;
-    padding: 1.5rem;
     overflow-y: auto;
 }
 

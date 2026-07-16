@@ -10,7 +10,7 @@ export default function Page() {
       <p>It is widely used for single-page applications and dynamic web interfaces.</p>
       <p>For faster interactive development, use a framework such as <Link href="/front-end/next-js">Next.js</Link>.</p>
     </div>
-    <div id="dom">
+    <div>
       <h2>DOM</h2>
       <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> is the Document Object Model, a programming interface for web documents.</p>
       <p>It represents the structure of a web page as a tree of objects, allowing developers to manipulate the page`s content and structure.</p>
