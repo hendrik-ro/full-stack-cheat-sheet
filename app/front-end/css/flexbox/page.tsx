@@ -29,12 +29,12 @@ function FlexboxDisplay() {
   return (
     <div>
     <h3>Display</h3>
-  <p>A div with the declaration display: flex; will remain block level — no other elements will appear on the same line as it.</p>
+  <p>A div with the declaration display: flex; will remain block (column) level — no other elements will appear on the same line as it.</p>
   <p>However, it will change the behavior of its child elements. Child elements will not begin on new lines.</p>
   <SyntaxHighlighter language='css' style={atomDark}>{`div.container {
     display: flex;
   }`}</SyntaxHighlighter>
-  <p>With display property <em>inline-flex</em>, divs will display inline with each other if the page is wide enough.</p>
+  <p>With display property <em>inline-flex</em>, divs will display inline (row) with each other if the page is wide enough.</p>
   <p>The child containers` width will shrink to their parents` container`s width.</p>
   <SyntaxHighlighter language='css' style={atomDark}>{`.container {
     width: 150px;
@@ -110,7 +110,7 @@ function FlexboxJustifyContent() {
       <h3>Justify-content</h3>
       <p>This property will align items along the main axis within the parent container.</p>
       <p>To adjust a flex container`s content, we can use:</p>
-      <ul className={styles.leftList}>
+      <ul>
         <li><strong>flex-start</strong> — all items will be positioned in order, starting from the left of the parent container, with no extra space between or before them. </li>
         <li><strong>flex-end</strong> — all items will be positioned in order, with the last item starting on the right side of the parent container, with no extra space between or after them.</li>
         <li><strong>center</strong> — all items will be positioned in order, in the center of the parent container with no extra space before, between, or after them.</li>
@@ -126,7 +126,7 @@ function FlexboxAlignItems() {
     <div>
       <h3>Align-items</h3>
       <p>This property is used to align items within a single row or column along the cross axis.</p>
-      <ul className={styles.leftList}>
+      <ul>
         <li><strong>flex-start</strong> — all elements will be positioned at the top of the parent container.</li>
         <li><strong>flex-end</strong> — all elements will be positioned at the bottom of the parent container.</li>
         <li><strong>center</strong> — the center of all elements will be positioned halfway between the top and bottom of the parent container.</li>
@@ -196,7 +196,7 @@ function FlexboxFlexWrap() {
     <div>
       <h3>Flex-Wrap</h3>
       <p>Allows for child containers to wrap around lines rather than shrinking.</p>
-      <ul className={styles.leftList}>
+      <ul>
         <li><strong>wrap</strong> — child elements of a flex container that don`t fit into a row will move down to the next line</li>
         <li><strong>wrap-reverse</strong> — the same functionality as wrap, but the order of rows within a flex container is reversed (for example, in a 2-row flexbox, the first row from a wrap container will become the second in wrap-reverse and the second row from the wrap container will become the first in wrap-reverse)</li>
         <li><strong>nowrap</strong> — prevents items from wrapping; this is the default value and is only necessary to override a wrap value set by a different CSS rule.</li>
@@ -212,7 +212,7 @@ function FlexboxAlignContent() {
       <h3>Align-content</h3>
       <p>This property will align items along the cross axis within the parent container.</p>
       <p>align-items is for aligning elements within a single row. If a flex container has multiple rows of content, we can use align-content to space the rows from top to bottom.</p>
-      <ul className={styles.leftList}>
+      <ul>
         <li><strong>flex-start</strong> — all rows of elements will be positioned at the top of the parent container with no extra space between.</li>
         <li><strong>flex-end</strong> — all rows of elements will be positioned at the bottom of the parent container with no extra space between.</li>
         <li><strong>center</strong> — all rows of elements will be positioned at the center of the parent element with no extra space between.</li>
@@ -229,7 +229,7 @@ function FlexboxFlexDirection() {
     <div>
       <h3>Flex-direction</h3>
       <p>flex-direction determines the direction in which flex items are placed within a flex container. By default, it is set to <strong>row</strong>, which places items horizontally from left to right. However, we can change it to <strong>column</strong> to place items vertically from top to bottom, or to <strong>row-reverse</strong> or <strong>column-reverse</strong> to reverse the order of items.</p>
-      <ul className={styles.leftList}>
+      <ul>
         <li><strong>row</strong> — items are placed horizontally from left to right (default value).</li>
         <li><strong>column</strong> — items are placed vertically from top to bottom.</li>
         <li><strong>row-reverse</strong> — items are placed horizontally from right to left.</li>
@@ -244,7 +244,7 @@ function FlexboxFlexFlow() {
     <div>
       <h3>Flex-flow</h3>
       <p>flex-flow is a shorthand property that combines flex-direction and flex-wrap. It allows us to specify the direction in which flex items are placed within a flex container, as well as whether they should wrap onto multiple lines if there is not enough space.</p>
-      <ul className={styles.leftList}>
+      <ul>
         <li><strong>flex-direction</strong> — specifies the direction in which flex items are placed within a flex container.</li>
         <li><strong>flex-wrap</strong> — specifies whether flex items should wrap onto multiple lines if there is not enough space.</li>
       </ul>

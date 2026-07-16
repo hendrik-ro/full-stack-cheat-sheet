@@ -25,6 +25,10 @@ a:hover {
   color: lightsalmon;
 }
 
+ul {
+    text-align: left;
+}
+
 table {
   border: 2px solid darkslategrey;
   margin: 0 auto;

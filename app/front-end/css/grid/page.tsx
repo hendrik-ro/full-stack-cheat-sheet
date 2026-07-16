@@ -30,6 +30,7 @@ function Grid() {
       <p>The grid needs to have a variable width and/or height for minmax() to work.</p>
       <GridTable />
       <GridTemplateAreas />
+      <GridAlign />
     </div>
   );
 }
@@ -63,7 +64,7 @@ function GridTable() {
 }
 
 function GridTemplateAreas() {
-  return (<div>
+  return (<div id="gridTemplateAreas">
     <p>By defining grid template areas, you can assign grid items to specific areas of the grid.</p>
     <SyntaxHighlighter language='html' style={atomDark}>{`<div class="container">
       <header>Welcome!</header>
@@ -71,8 +72,7 @@ function GridTemplateAreas() {
       <section class="info">Info!</section>
       <section class="services">Services!</section>
       <footer>Contact us!</footer>
-    </div>
-`}</SyntaxHighlighter>
+    </div>`}</SyntaxHighlighter>
     <SyntaxHighlighter language='css' style={atomDark}>{`.container {
       display: grid;
       max-width: 900px;
@@ -104,8 +104,7 @@ function GridTemplateAreas() {
 
     footer {
       grid-area: footer;
-    }
-`}</SyntaxHighlighter>
+    }`}</SyntaxHighlighter>
     <p>Alternatively, you can use the grid-area property on individual grid items to assign them to areas manually:</p>
     <SyntaxHighlighter language='css' style={atomDark}>{`.left {
       background-color: dodgerblue;
@@ -124,5 +123,39 @@ function GridTemplateAreas() {
     }`}</SyntaxHighlighter>
     <p>This also allows for overlapping areas.</p>
   </div>
+  );
+}
+
+function GridAlign() {
+  return (
+    <div id="gridAlign">
+      <h3>Justify-Items</h3>
+      <p>You can align grid items along the inline or row axis using the justify-items property.</p>
+      <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+        display: grid;
+        justify-items: center;
+      }`}</SyntaxHighlighter>
+      <ul className="leftList">
+        <li><strong>center</strong> - center the item within its cell</li>
+        <li><strong>start</strong> - align the item to the start of its cell</li>
+        <li><strong>end</strong> - align the item to the end of its cell</li>
+        <li><strong>stretch</strong> - stretch the item to fill its cell</li>
+      </ul>
+      <h3>Justify-Content</h3>
+      <p>You can position the entire grid along the row axis. This property is declared on grid containers.</p>
+      <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+        display: grid;
+        align-items: center;
+      }`}</SyntaxHighlighter>
+      <ul className="leftList">
+        <li><strong>center</strong> - centers the grid horizontally in the grid container</li>
+        <li><strong>start</strong> - aligns the grid to the left side of the grid container</li>
+        <li><strong>end</strong> - aligns the grid to the right side of the grid container</li>
+        <li><strong>stretch</strong> - stretches the grid items to increase the size of the grid to expand horizontally across the container</li>
+        <li><strong>space-around</strong> - includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element </li>
+        <li><strong>space-between</strong> - includes an equal amount of space between grid items and no space at either end</li>
+        <li><strong>space-evenly</strong> -  places an even amount of space between grid items and at either end</li>
+      </ul>
+    </div>
   );
 }
