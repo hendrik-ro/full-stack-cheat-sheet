@@ -3,7 +3,7 @@ import SideNav from '@/app/ui/shared/sidenav';
 const htmlLinks = [
   {
     name: 'HTML',
-    href: '#',
+    href: '/front-end/html',
   },
   {
     name: 'Breadcrumbs',

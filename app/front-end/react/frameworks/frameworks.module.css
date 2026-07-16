@@ -1,0 +1,8 @@
+.gridFrameworks {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+.gridNav {
+    grid-row: 1 / 2;
+}
