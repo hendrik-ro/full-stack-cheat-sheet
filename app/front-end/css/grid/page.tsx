@@ -28,28 +28,101 @@ function Grid() {
   grid-row: 1fr minmax(50px, 100px) repeat(2, 1fr);
 }`}</SyntaxHighlighter>
       <p>The grid needs to have a variable width and/or height for minmax() to work.</p>
-      <table>
-        <tr>
-          <th>Property</th>
-          <th>Code example</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><span className='codeSnippet'>grid-row</span></td>
-          <td><span className='codeSnippet'>{`grid-row: 4 / 6;`}</span></td>
-          <td>Specifies the starting and ending row of a grid item.</td>
-        </tr>
-        <tr>
-          <td><span className='codeSnippet'>grid-column</span></td>
-          <td><span className='codeSnippet'>{`grid-column: 1 / span 3;`}</span></td>
-          <td>Specifies the starting and span (of 3) of a grid item.</td>
-        </tr>
-        <tr>
-          <td><span className='codeSnippet'>grid-area</span></td>
-          <td><span className='codeSnippet'>{`grid-area: 1 / 1 / span 2 / span 3;`}</span></td>
-          <td>Specifies grid-row-start, grid-column-start, grid-row-end, and grid-column-end.</td>
-        </tr>
-      </table>
+      <GridTable />
+      <GridTemplateAreas />
     </div>
+  );
+}
+
+function GridTable() {
+  return (<div>
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Code example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span className='codeSnippet'>grid-row</span></td>
+        <td><span className='codeSnippet'>{`grid-row: 4 / 6;`}</span></td>
+        <td>Specifies the starting and ending row of a grid item.</td>
+      </tr>
+      <tr>
+        <td><span className='codeSnippet'>grid-column</span></td>
+        <td><span className='codeSnippet'>{`grid-column: 1 / span 3;`}</span></td>
+        <td>Specifies the starting and span (of 3) of a grid item.</td>
+      </tr>
+      <tr>
+        <td><span className='codeSnippet'>grid-area</span></td>
+        <td><span className='codeSnippet'>{`grid-area: 1 / 1 / span 2 / span 3;`}</span></td>
+        <td>Specifies grid-row-start, grid-column-start, grid-row-end, and grid-column-end.</td>
+      </tr>
+    </table>
+  </div>
+  );
+}
+
+function GridTemplateAreas() {
+  return (<div>
+    <p>By defining grid template areas, you can assign grid items to specific areas of the grid.</p>
+    <SyntaxHighlighter language='html' style={atomDark}>{`<div class="container">
+      <header>Welcome!</header>
+      <nav>Links!</nav>
+      <section class="info">Info!</section>
+      <section class="services">Services!</section>
+      <footer>Contact us!</footer>
+    </div>
+`}</SyntaxHighlighter>
+    <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+      display: grid;
+      max-width: 900px;
+      position: relative;
+      margin: auto;
+      grid-template-areas: "header header"
+                           "nav nav"
+                           "info services"
+                           "footer footer";
+      grid-template-rows: 300px 120px 800px 120px;
+      grid-template-columns: 1fr 3fr;
+    }
+
+    header {
+      grid-area: header;
+    }
+
+    nav {
+      grid-area: nav;
+    }
+
+    .info {
+      grid-area: info;
+    }
+
+    .services {
+      grid-area: services;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+`}</SyntaxHighlighter>
+    <p>Alternatively, you can use the grid-area property on individual grid items to assign them to areas manually:</p>
+    <SyntaxHighlighter language='css' style={atomDark}>{`.left {
+      background-color: dodgerblue;
+      grid-area: 4 / 1 / 9 / 5;
+    }
+
+    .right {
+      background-color: beige;
+      grid-area: 4 / 5 / 9 / 7;
+    }
+
+    .overlap {
+      background-color: lightcoral;
+      grid-area: 6 / 4 / 8 / 6;
+      z-index: 5;
+    }`}</SyntaxHighlighter>
+    <p>This also allows for overlapping areas.</p>
+  </div>
   );
 }
