@@ -12,7 +12,7 @@ function Grid() {
   return (
     <div id="grid">
       <h2>Grid</h2>
-      <Image src="/assets/css_grid_diagram_2.jpg" alt="grid diagram" width={800} height={600} />
+      <Image style={{textAlign: 'center'}} src="/assets/css_grid_diagram_2.jpg" alt="grid diagram" width={800} height={600} />
       <p>Grid is a two-dimensional layout system that allows us to create complex layouts with rows and columns.</p>
       <p>To set up a grid, you need to have both a grid <em>container</em> and grid <em>items</em>.</p>
       <SyntaxHighlighter language='css' style={atomDark}>{`.container {

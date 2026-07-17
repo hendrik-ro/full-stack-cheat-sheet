@@ -25,10 +25,6 @@ a:hover {
   color: lightsalmon;
 }
 
-ul {
-    text-align: left;
-}
-
 table {
   border: 2px solid darkslategrey;
   margin: 0 auto;
@@ -64,7 +60,6 @@ ul {
 .itemMain {
   grid-row: 2;
   overflow-y: auto;
-  text-align: center;
 }
 
 .itemFooter {

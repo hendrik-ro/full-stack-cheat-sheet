@@ -22,7 +22,7 @@ interface NavLinksProps {
 
 function NavLinks({ links }: NavLinksProps) {
   return (
-    <div>
+    <div className={styles.sidebar}>
       <div style={{marginBottom: '5px'}}>
         <ButtonCollapse />
       </div>

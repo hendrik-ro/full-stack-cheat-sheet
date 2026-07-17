@@ -18,6 +18,14 @@ const cssLinks = [
     href: '/front-end/css/grid',
   },
   {
+    name: 'Images',
+    href: '/front-end/css/images',
+  },
+  {
+    name: 'Measurements',
+    href: '/front-end/css/measurements',
+  },
+  {
     name: 'Properties',
     href: '/front-end/css/properties',
   },

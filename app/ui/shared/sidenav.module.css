@@ -1,3 +1,7 @@
+.sidebar {
+    text-align: center;
+}
+
 .sidebarButton {
     float: right;
     margin-right: 10px;
