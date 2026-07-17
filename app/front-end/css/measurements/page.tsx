@@ -5,6 +5,43 @@ export default function Page() {
   return (
     <div>
       <h2>Measurements</h2>
+      <Units />
+      <Viewport />
+      <MediaQueries />
+    </div>
+  );
+}
+
+function MediaQueries() {
+  return (
+    <div id="mediaQueries">
+      <h3>Media Queries</h3>
+      <SyntaxHighlighter language="css" style={atomDark}>{`@media only screen and (max-width: 480px) {
+        body {
+          font-size: 12px;
+        }
+      }`}</SyntaxHighlighter>
+      <p><strong>only screen</strong> restricts the query to apply only to screen devices (opposed to <strong>print</strong> and <strong>speech</strong>).</p>
+      <p><strong>(max-width: 480px)</strong> restricts the query to apply only to devices with a maximum width of 480 pixels.</p>
+      <SyntaxHighlighter language="css" style={atomDark}>{`@media only screen and (min-width: 320px) {
+          /* ruleset for >= 320px */
+      }
+
+
+      @media only screen and (min-width: 480px) {
+          /* ruleset for >= 480px */
+      }`}</SyntaxHighlighter>
+      <SyntaxHighlighter language="css" style={atomDark}>{`@media only screen and (min-resolution: 300dpi) {
+          /* CSS for high resolution screens */
+      }`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function Units() {
+  return (
+    <div id="units">
+      <h3>Units</h3>
       <p>CSS supports absolute and relative measurements.</p>
       <ul>
         <li>Absolute measurements:</li>
@@ -29,6 +66,21 @@ export default function Page() {
         min-width: 300px;
         max-width: 600px;
       }`}</SyntaxHighlighter>
+    </div>
+  )
+}
+
+function Viewport() {
+  return (
+    <div id="viewport">
+      <h3>Viewport</h3>
+      <SyntaxHighlighter language="css" style={atomDark}>{`<!DOCTYPE html>
+      <html lang="en">
+        <head>
+          ...
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          ...
+        </head>`}</SyntaxHighlighter>
     </div>
   );
 }
