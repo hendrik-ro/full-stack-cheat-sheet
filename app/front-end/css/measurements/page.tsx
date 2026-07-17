@@ -15,6 +15,7 @@ export default function Page() {
 function MediaQueries() {
   return (
     <div id="mediaQueries">
+      <h3>Media Queries</h3>
       <SyntaxHighlighter language="css" style={atomDark}>{`@media only screen and (max-width: 480px) {
         body {
           font-size: 12px;
@@ -30,6 +31,9 @@ function MediaQueries() {
       @media only screen and (min-width: 480px) {
           /* ruleset for >= 480px */
       }`}</SyntaxHighlighter>
+      <SyntaxHighlighter language="css" style={atomDark}>{`@media only screen and (min-resolution: 300dpi) {
+          /* CSS for high resolution screens */
+      }`}</SyntaxHighlighter>
     </div>
   );
 }
@@ -37,6 +41,7 @@ function MediaQueries() {
 function Units() {
   return (
     <div id="units">
+      <h3>Units</h3>
       <p>CSS supports absolute and relative measurements.</p>
       <ul>
         <li>Absolute measurements:</li>
