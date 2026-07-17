@@ -6,13 +6,13 @@ const reactLinks = [
     href: '/front-end/react',
   },
   {
-    name: 'Frameworks',
-    href: '/front-end/react/frameworks',
-  },
-  {
     name: 'Next.js',
     href: '/front-end/react/next-js',
-  }
+  },
+  {
+    name: 'Vite',
+    href: '/front-end/react/vite',
+  },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {

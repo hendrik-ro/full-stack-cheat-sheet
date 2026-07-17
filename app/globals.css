@@ -96,6 +96,7 @@ ul {
     grid-column: 2;
     overflow-y: auto;
     height: 100%;
+    padding: 25px
 }
 
 /* Footer */
