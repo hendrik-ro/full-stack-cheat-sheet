@@ -16,7 +16,7 @@ function HomeContent() {
   return (
     <div className="home">
       <h1>Full Stack Engineer Cheat Sheet</h1>
-      <p style={{fontSize: '12px'}}>This cheat sheet is work in progress and is continuously updated.</p>
+      <p style={{textAlign: 'center', fontSize: '12px'}}>This cheat sheet is work in progress and is continuously updated.</p>
       <h2 id="front">Front End</h2>
       <div className={style.topics}>
         <Link href="./front-end/html/"><button className={style.topicsItem}>HTML</button></Link>
