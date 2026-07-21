@@ -5,6 +5,14 @@ const javascriptLinks = [
     name: 'JavaScript',
     href: '#',
   },
+  {
+    name: 'Arrays',
+    href: '/language/javascript/arrays',
+  },
+  {
+    name: 'Objects',
+    href: '/language/javascript/objects',
+  },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
