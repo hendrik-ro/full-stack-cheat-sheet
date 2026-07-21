@@ -6,6 +6,7 @@ export default function ArraysPage() {
     <div>
       <h2>Arrays</h2>
       <Methods />
+      <br />
     </div>
   );
 }
@@ -23,8 +24,7 @@ function Methods() {
 function MethodsSort() {
   return (
     <div>
-      <h3>Methods</h3>
-      <h2>.sort()</h2>
+      <h4>.sort()</h4>
       <p>Sorts the elements of an array in place and returns the sorted array.</p>
       <SyntaxHighlighter language="javascript" style={atomDark}>{`const speciesArray = [
         { speciesName: "shark", numTeeth: 50 },
@@ -51,7 +51,7 @@ function MethodsSort() {
 function MethodsIndexOf() {
   return (
     <div>
-      <h2>.indexOf()</h2>
+      <h4>.indexOf()</h4>
       <p>Returns the first index at which a given element can be found in the array, or -1 if it is not present.</p>
       <SyntaxHighlighter language="javascript" style={atomDark}>{`const findMyKeys = (things) => {
         return things.indexOf("keys");

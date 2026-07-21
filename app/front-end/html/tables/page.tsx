@@ -6,9 +6,9 @@ export default function Tables() {
       <table>
         <thead>
           <tr>
-            <th>Tag</th>
-            <th>Name</th>
-            <th>Description</th>
+            <td>Tag</td>
+            <td>Name</td>
+            <td>Description</td>
           </tr>
         </thead>
         <tbody>

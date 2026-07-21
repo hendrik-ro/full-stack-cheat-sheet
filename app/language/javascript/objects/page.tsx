@@ -5,12 +5,14 @@ export default function ObjectsPage() {
   return (
     <div>
       <h2>Objects</h2>
-      <Factory />
+      <ObjectsFactory />
+      <ObjectsMethods />
+      <br />
     </div>
   );
 }
 
-function Factory() {
+function ObjectsFactory() {
   return (
     <div>
       <h3>Object Factory</h3>
@@ -57,6 +59,52 @@ function Factory() {
           },
         };
       };`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function ObjectsMethods() {
+  return (
+    <div>
+      <h3>Built-in Object Methods</h3>
+      <p>Example object method <em>bark</em>:</p>
+      <ObjectsKeys />
+      <ObjectsValues />
+    </div>
+  );
+}
+
+function ObjectsKeys() {
+  return (
+    <div>
+      <h4>.keys()</h4>
+      <p>Example object method <em>keys</em>:</p>
+      <SyntaxHighlighter language="javascript" style={atomDark}>{`const car = {
+        make: 'Toyota',
+        model: 'Camry',
+        year: 2020,
+        color: 'blue',
+      };
+      console.log(Object.keys(car));
+      // Prints: ['make', 'model', 'year', 'color']`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+
+function ObjectsValues() {
+  return (
+    <div>
+      <h4>.values()</h4>
+      <p>Example object method <em>values</em>:</p>
+      <SyntaxHighlighter language="javascript" style={atomDark}>{`const car = {
+        make: 'Toyota',
+        model: 'Camry',
+        year: 2020,
+        color: 'blue',
+      };
+      console.log(Object.values(car));
+      // Prints: ['Toyota', 'Camry', 2020, 'blue']`}</SyntaxHighlighter>
     </div>
   );
 }

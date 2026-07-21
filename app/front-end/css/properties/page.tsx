@@ -13,9 +13,9 @@ function Properties() {
   <h2>Properties</h2>
   <table>
       <tr>
-          <th>Property</th>
-          <th>Code example</th>
-          <th>Description</th>
+          <td>Property</td>
+          <td>Code example</td>
+          <td>Description</td>
       </tr>
       <tbody>
           <tr>
