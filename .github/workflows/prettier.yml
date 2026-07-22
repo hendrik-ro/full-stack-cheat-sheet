@@ -17,6 +17,6 @@ jobs:
         with:
           version: 8
       - name: Check formatting
-        run: pnpm prettier --format:check
+        run: pnpm run format:check
       - name: Check linting
         run: pnpm run lint --max-warnings=0
