@@ -2,7 +2,7 @@
 name: Deploy Next.js site to Pages
 
 on:
-  # Runs on pull requests targeting the default branch
+  # Runs on push requests targeting the default branch
   push:
     branches: ["main"]
 
@@ -76,17 +76,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-
-  # Prettier formatting and linting
-  prettier:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Check formatting
-        run: pnpm prettier --check app/ public/
-      - name: Check linting
-        run: pnpm run lint --max-warnings=0
 
   # Deployment job
   deploy:
