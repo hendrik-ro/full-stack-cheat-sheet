@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint app",
-    "format:check": "pnpm prettier --check app/",
-    "format:write": "pnpm prettier --write app/"  },
+    "format:check": "npx prettier --check app/",
+    "format:write": "npx prettier --write app/"
+  },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "clsx": "^2.1.1",
