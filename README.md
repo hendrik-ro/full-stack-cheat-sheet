@@ -1,3 +1,5 @@
+![CI tests](https://github.com/hendrik-ro/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)
+
 # Full Stack Engineer Cheat Sheet
 
 A living document of a aspiring full stack engineer, serving as a quick reference guide for best practices and syntax.
