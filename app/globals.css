@@ -3,7 +3,12 @@
   color: whitesmoke;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-align: center;
 }
 
@@ -11,7 +16,8 @@ h2 {
   color: steelblue;
 }
 
-h3, h4 {
+h3,
+h4 {
   color: lightsteelblue;
 }
 
@@ -31,7 +37,8 @@ table {
   color: steelblue;
 }
 
-th, td {
+th,
+td {
   border: 1px solid darkslategray;
   padding: 0 5px;
 }
@@ -41,15 +48,15 @@ table code {
 }
 
 ul {
-    font-size: 14px;
-    line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* Main grid */
 .grid {
-    display: grid;
-    grid-template: 25px 1fr 25px / 1fr;
-    min-height: 100vh;
+  display: grid;
+  grid-template: 25px 1fr 25px / 1fr;
+  min-height: 100vh;
 }
 
 .itemNav {
@@ -79,19 +86,19 @@ ul {
 }
 
 .itemSidebar {
-    position: sticky;
-    top: 0;
-    height: 100%;
-    grid-column: 1;
-    overflow-y: auto;
-    border-right: 2px solid darkslategray;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  grid-column: 1;
+  overflow-y: auto;
+  border-right: 2px solid darkslategray;
 }
 
 .itemContent {
-    grid-column: 2;
-    overflow-y: auto;
-    height: 100%;
-    padding: 25px
+  grid-column: 2;
+  overflow-y: auto;
+  height: 100%;
+  padding: 25px;
 }
 
 /* Footer */
@@ -117,36 +124,36 @@ ul {
 
 /* Media queries */
 @media (min-width: 640px) {
-    .gridLevelTwo {
-        grid-template: 1fr / 50px 1fr;
-    }
+  .gridLevelTwo {
+    grid-template: 1fr / 50px 1fr;
+  }
   .itemSidebar {
     overflow: hidden;
   }
 }
 
 @media (min-width: 768px) {
-    .gridLevelTwo {
-        grid-template: 1fr / 50px 1fr;
-    }
+  .gridLevelTwo {
+    grid-template: 1fr / 50px 1fr;
+  }
   .itemSidebar {
     overflow: hidden;
   }
 }
 
 @media (min-width: 1024px) {
-    .gridLevelTwo {
-        grid-template: 1fr / 200px 1fr;
-    }
+  .gridLevelTwo {
+    grid-template: 1fr / 200px 1fr;
+  }
   .itemSidebar {
     overflow: auto;
   }
 }
 
 @media (min-width: 1280px) {
-    .gridLevelTwo {
-        grid-template: 1fr / 200px 1fr;
-    }
+  .gridLevelTwo {
+    grid-template: 1fr / 200px 1fr;
+  }
   .itemSidebar {
     overflow: auto;
   }

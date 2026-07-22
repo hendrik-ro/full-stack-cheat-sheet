@@ -10,7 +10,9 @@
   color: lightsalmon;
   cursor: pointer;
   background-color: #fff;
-  transition: color 0.1s ease-in, background-color 0.1s ease-in;
+  transition:
+    color 0.1s ease-in,
+    background-color 0.1s ease-in;
 }
 
 #button:active {

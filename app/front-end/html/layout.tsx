@@ -1,25 +1,25 @@
-import SideNav from '@/app/ui/shared/sidenav';
+import SideNav from "@/app/ui/shared/sidenav";
 
 const htmlLinks = [
   {
-    name: 'HTML',
-    href: '/front-end/html',
+    name: "HTML",
+    href: "/front-end/html",
   },
   {
-    name: 'Breadcrumbs',
-    href: '/front-end/html/breadcrumbs',
+    name: "Breadcrumbs",
+    href: "/front-end/html/breadcrumbs",
   },
   {
-    name: 'Column Grid',
-    href: '/front-end/html/grid',
+    name: "Column Grid",
+    href: "/front-end/html/grid",
   },
   {
-    name: 'Head',
-    href: '/front-end/html/head',
+    name: "Head",
+    href: "/front-end/html/head",
   },
   {
-    name: 'Tables',
-    href: '/front-end/html/tables',
+    name: "Tables",
+    href: "/front-end/html/tables",
   },
 ];
 

@@ -1,19 +1,24 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import styles from './button.module.css';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import styles from "./button.module.css";
 
 export default function SkeuomorphismPage() {
-  return (<div id="skeuomorphism-page">
-    <Skeuomorphism />
-  </div>);
+  return (
+    <div id="skeuomorphism-page">
+      <Skeuomorphism />
+    </div>
+  );
 }
 
 function Skeuomorphism() {
-    return (
-      <div id="skeuomorphism">
-          <h2>Skeuomorphism</h2>
-          <p>Skeuomorphic design imitates real life. This lowers the user`s learning curve and allows for intuitive design.</p>
-          <SyntaxHighlighter language="css" style={atomDark}>{`button {
+  return (
+    <div id="skeuomorphism">
+      <h2>Skeuomorphism</h2>
+      <p>
+        Skeuomorphic design imitates real life. This lowers the user`s learning
+        curve and allows for intuitive design.
+      </p>
+      <SyntaxHighlighter language="css" style={atomDark}>{`button {
      padding: 5px;
      border: 1px solid steelblue;
      border-radius: 5px;
@@ -32,8 +37,8 @@ function Skeuomorphism() {
      box-shadow: 0px 0px;
  }
 }`}</SyntaxHighlighter>
-          <p>The CSS above renders the following button.</p>
-          <button id={styles.button}>Button</button>
-      </div>
-    );
+      <p>The CSS above renders the following button.</p>
+      <button id={styles.button}>Button</button>
+    </div>
+  );
 }

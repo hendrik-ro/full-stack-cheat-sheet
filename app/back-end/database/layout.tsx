@@ -1,21 +1,21 @@
-import SideNav from '@/app/ui/shared/sidenav';
+import SideNav from "@/app/ui/shared/sidenav";
 
 const dbLinks = [
   {
-    name: 'Database',
-    href: '#',
+    name: "Database",
+    href: "#",
   },
   {
-    name: 'PostgreSQL',
-    href: '#postgres',
+    name: "PostgreSQL",
+    href: "#postgres",
   },
   {
-    name: 'SQLite',
-    href: '#sqlite',
+    name: "SQLite",
+    href: "#sqlite",
   },
   {
-    name: 'SQLi',
-    href: '#sqli',
+    name: "SQLi",
+    href: "#sqli",
   },
 ];
 

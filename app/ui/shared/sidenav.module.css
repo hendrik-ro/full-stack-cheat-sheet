@@ -1,22 +1,23 @@
 .sidebar {
-    text-align: center;
+  text-align: center;
 }
 
 .sidebarButton {
-    float: right;
-    margin-right: 10px;
-    border: 1px solid darkslategray;
-    color: slategray;
+  float: right;
+  margin-right: 10px;
+  border: 1px solid darkslategray;
+  color: slategray;
 }
 
 .sidebarLink {
-    color: steelblue;
-    cursor: pointer;
-    margin: 3px;
+  color: steelblue;
+  cursor: pointer;
+  margin: 3px;
 }
 
-.itemSidebar p:hover, .sidebarLink:hover {
-    color: lightsalmon;
+.itemSidebar p:hover,
+.sidebarLink:hover {
+  color: lightsalmon;
 }
 
 .sidebarLink:hover {

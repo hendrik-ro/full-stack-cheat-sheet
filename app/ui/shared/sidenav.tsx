@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -23,15 +23,12 @@ interface NavLinksProps {
 function NavLinks({ links }: NavLinksProps) {
   return (
     <div className={styles.sidebar}>
-      <div style={{marginBottom: '5px'}}>
+      <div style={{ marginBottom: "5px" }}>
         <ButtonCollapse />
       </div>
       {links.map((link) => {
         return (
-          <Link
-            key={link.name}
-            href={link.href}
-          >
+          <Link key={link.name} href={link.href}>
             <p className={styles.sidebarLink}>{link.name}</p>
           </Link>
         );
@@ -44,15 +41,19 @@ function ButtonCollapse() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
-    const gridLevelTwo = document.querySelector('.gridLevelTwo') as HTMLElement | null;
-    const itemSidebar = document.querySelector('.itemSidebar') as HTMLElement | null;
+    const gridLevelTwo = document.querySelector(
+      ".gridLevelTwo",
+    ) as HTMLElement | null;
+    const itemSidebar = document.querySelector(
+      ".itemSidebar",
+    ) as HTMLElement | null;
     if (gridLevelTwo && itemSidebar) {
       if (isSidebarOpen) {
-        gridLevelTwo.style.gridTemplate = '1fr / 50px 1fr';
-        itemSidebar.style.overflow = 'hidden';
+        gridLevelTwo.style.gridTemplate = "1fr / 50px 1fr";
+        itemSidebar.style.overflow = "hidden";
       } else {
-        gridLevelTwo.style.gridTemplate = '1fr / 200px 1fr';
-        itemSidebar.style.overflow = 'auto';
+        gridLevelTwo.style.gridTemplate = "1fr / 200px 1fr";
+        itemSidebar.style.overflow = "auto";
       }
       setIsSidebarOpen(!isSidebarOpen);
     }
@@ -60,7 +61,7 @@ function ButtonCollapse() {
 
   return (
     <button className={styles.sidebarButton} onClick={toggleSidebar}>
-      {isSidebarOpen ? '<<' : '>>'}
+      {isSidebarOpen ? "<<" : ">>"}
     </button>
   );
 }

@@ -1,17 +1,17 @@
-import SideNav from '@/app/ui/shared/sidenav';
+import SideNav from "@/app/ui/shared/sidenav";
 
 const javascriptLinks = [
   {
-    name: 'JavaScript',
-    href: '#',
+    name: "JavaScript",
+    href: "#",
   },
   {
-    name: 'Arrays',
-    href: '/language/javascript/arrays',
+    name: "Arrays",
+    href: "/language/javascript/arrays",
   },
   {
-    name: 'Objects',
-    href: '/language/javascript/objects',
+    name: "Objects",
+    href: "/language/javascript/objects",
   },
 ];
 

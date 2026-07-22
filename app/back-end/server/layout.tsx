@@ -1,13 +1,13 @@
-import SideNav from '@/app/ui/shared/sidenav';
+import SideNav from "@/app/ui/shared/sidenav";
 
 const serverLinks = [
   {
-    name: 'Server',
-    href: '#',
+    name: "Server",
+    href: "#",
   },
   {
-    name: 'Boiler Plate',
-    href: '#boiler-plate',
+    name: "Boiler Plate",
+    href: "#boiler-plate",
   },
 ];
 

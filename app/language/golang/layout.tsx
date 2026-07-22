@@ -1,9 +1,9 @@
-import SideNav from '@/app/ui/shared/sidenav';
+import SideNav from "@/app/ui/shared/sidenav";
 
 const golangLinks = [
   {
-    name: 'Golang',
-    href: '#',
+    name: "Golang",
+    href: "#",
   },
 ];
 

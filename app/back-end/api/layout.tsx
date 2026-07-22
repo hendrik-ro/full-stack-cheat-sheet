@@ -1,20 +1,19 @@
-import SideNav from '@/app/ui/shared/sidenav';
+import SideNav from "@/app/ui/shared/sidenav";
 
 const apiLinks = [
   {
-    name: 'APIs',
-    href: '#',
+    name: "APIs",
+    href: "#",
   },
   {
-    name: 'REST',
-    href: '#rest',
+    name: "REST",
+    href: "#rest",
   },
   {
-    name: 'WebSockets',
-    href: '#websockets',
+    name: "WebSockets",
+    href: "#websockets",
   },
 ];
-
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

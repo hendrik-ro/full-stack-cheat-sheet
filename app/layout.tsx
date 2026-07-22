@@ -30,9 +30,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="grid">
-        <div className="itemNav"><TopNav /></div>
+        <div className="itemNav">
+          <TopNav />
+        </div>
         <div className="itemMain">{children}</div>
-        <div className="itemFooter"><HomeFooter /></div>
+        <div className="itemFooter">
+          <HomeFooter />
+        </div>
       </body>
     </html>
   );

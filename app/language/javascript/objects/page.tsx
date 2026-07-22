@@ -17,7 +17,10 @@ function ObjectsFactory() {
     <div>
       <h3>Object Factory</h3>
       <p>Example factory function:</p>
-      <SyntaxHighlighter language="javascript" style={atomDark}>{`const dogFactory = (name, breed, weight) => {
+      <SyntaxHighlighter
+        language="javascript"
+        style={atomDark}
+      >{`const dogFactory = (name, breed, weight) => {
         // Type checking
         if (
           typeof name !== "string" ||
@@ -67,7 +70,9 @@ function ObjectsMethods() {
   return (
     <div>
       <h3>Built-in Object Methods</h3>
-      <p>Example object method <em>bark</em>:</p>
+      <p>
+        Example object method <em>bark</em>:
+      </p>
       <ObjectsKeys />
       <ObjectsValues />
     </div>
@@ -78,7 +83,9 @@ function ObjectsKeys() {
   return (
     <div>
       <h4>.keys()</h4>
-      <p>Example object method <em>keys</em>:</p>
+      <p>
+        Example object method <em>keys</em>:
+      </p>
       <SyntaxHighlighter language="javascript" style={atomDark}>{`const car = {
         make: 'Toyota',
         model: 'Camry',
@@ -91,12 +98,13 @@ function ObjectsKeys() {
   );
 }
 
-
 function ObjectsValues() {
   return (
     <div>
       <h4>.values()</h4>
-      <p>Example object method <em>values</em>:</p>
+      <p>
+        Example object method <em>values</em>:
+      </p>
       <SyntaxHighlighter language="javascript" style={atomDark}>{`const car = {
         make: 'Toyota',
         model: 'Camry',

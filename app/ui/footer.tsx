@@ -3,5 +3,5 @@ export default function HomeFooter() {
     <div className="footer">
       <p>&copy; {new Date().getFullYear()} Full-Stack Engineer Cheat Sheet</p>
     </div>
-  )
+  );
 }

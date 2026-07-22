@@ -10,7 +10,9 @@ export default function Head() {
         </thead>
         <tbody>
           <tr>
-            <td><span className="codeSnippet">&lt;link&gt;</span></td>
+            <td>
+              <span className="codeSnippet">&lt;link&gt;</span>
+            </td>
             <td>Link</td>
             <td>Links a reference sheet to the html document.</td>
           </tr>

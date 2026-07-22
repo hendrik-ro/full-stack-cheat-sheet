@@ -1,45 +1,45 @@
-import SideNav from '@/app/ui/shared/sidenav';
+import SideNav from "@/app/ui/shared/sidenav";
 
 const cssLinks = [
   {
-    name: 'CSS',
-    href: '/front-end/css',
+    name: "CSS",
+    href: "/front-end/css",
   },
   {
-    name: 'Breadcrumbs',
-    href: '/front-end/css/breadcrumbs',
+    name: "Breadcrumbs",
+    href: "/front-end/css/breadcrumbs",
   },
   {
-    name: 'Flexbox',
-    href: '/front-end/css/flexbox',
+    name: "Flexbox",
+    href: "/front-end/css/flexbox",
   },
   {
-    name: 'Grid',
-    href: '/front-end/css/grid',
+    name: "Grid",
+    href: "/front-end/css/grid",
   },
   {
-    name: 'Images',
-    href: '/front-end/css/images',
+    name: "Images",
+    href: "/front-end/css/images",
   },
   {
-    name: 'Measurements',
-    href: '/front-end/css/measurements',
+    name: "Measurements",
+    href: "/front-end/css/measurements",
   },
   {
-    name: 'Properties',
-    href: '/front-end/css/properties',
+    name: "Properties",
+    href: "/front-end/css/properties",
   },
   {
-    name: 'Selectors',
-    href: '/front-end/css/selectors',
+    name: "Selectors",
+    href: "/front-end/css/selectors",
   },
   {
-    name: 'Skeuomorphism',
-    href: '/front-end/css/skeuomorphism',
+    name: "Skeuomorphism",
+    href: "/front-end/css/skeuomorphism",
   },
   {
-    name: 'Transitions',
-    href: '/front-end/css/transitions',
+    name: "Transitions",
+    href: "/front-end/css/transitions",
   },
 ];
 

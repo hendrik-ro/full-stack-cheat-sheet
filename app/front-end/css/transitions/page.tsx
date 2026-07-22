@@ -1,18 +1,20 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import styles from './button.module.css';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import styles from "./button.module.css";
 
 export default function TransitionsPage() {
-  return (<div id="transitions-page">
-    <Transitions />
-  </div>);
+  return (
+    <div id="transitions-page">
+      <Transitions />
+    </div>
+  );
 }
 
 function Transitions() {
-    return (
-      <div id="transitions">
-          <h2>Transitions</h2>
-          <SyntaxHighlighter language="css" style={atomDark}>{`
+  return (
+    <div id="transitions">
+      <h2>Transitions</h2>
+      <SyntaxHighlighter language="css" style={atomDark}>{`
 .button {
      padding: 5px;
      border: 1px solid steelblue;
@@ -36,8 +38,8 @@ function Transitions() {
      transition: font-size .1s ease-in-out;
  }
 }`}</SyntaxHighlighter>
-          <button id={styles.button}>Button</button>
-          <p></p>
-      </div>
-    );
+      <button id={styles.button}>Button</button>
+      <p></p>
+    </div>
+  );
 }

@@ -25,8 +25,13 @@ function MethodsSort() {
   return (
     <div>
       <h4>.sort()</h4>
-      <p>Sorts the elements of an array in place and returns the sorted array.</p>
-      <SyntaxHighlighter language="javascript" style={atomDark}>{`const speciesArray = [
+      <p>
+        Sorts the elements of an array in place and returns the sorted array.
+      </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={atomDark}
+      >{`const speciesArray = [
         { speciesName: "shark", numTeeth: 50 },
         { speciesName: "dog", numTeeth: 42 },
         { speciesName: "alligator", numTeeth: 80 },
@@ -52,8 +57,14 @@ function MethodsIndexOf() {
   return (
     <div>
       <h4>.indexOf()</h4>
-      <p>Returns the first index at which a given element can be found in the array, or -1 if it is not present.</p>
-      <SyntaxHighlighter language="javascript" style={atomDark}>{`const findMyKeys = (things) => {
+      <p>
+        Returns the first index at which a given element can be found in the
+        array, or -1 if it is not present.
+      </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={atomDark}
+      >{`const findMyKeys = (things) => {
         return things.indexOf("keys");
       };
 
@@ -69,6 +80,6 @@ function MethodsIndexOf() {
 
       console.log(findMyKeys(randomStuff));
       // Should print 4`}</SyntaxHighlighter>
-  </div>
+    </div>
   );
 }

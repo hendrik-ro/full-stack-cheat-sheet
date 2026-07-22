@@ -1,24 +1,24 @@
 .nav a {
-    margin: 5px;
+  margin: 5px;
 }
 
 .breadcrumb {
-    margin: 0;
+  margin: 0;
 }
 
 .breadcrumb > li {
-    display: inline;
+  display: inline;
 }
 
-.breadcrumb li+li::before {
-    content: ">";
-    margin: 0 5px;
+.breadcrumb li + li::before {
+  content: ">";
+  margin: 0 5px;
 }
 
 .breadcrumb a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .breadcrumb a:hover {
-	color: red;
+  color: red;
 }
