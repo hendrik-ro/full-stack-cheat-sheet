@@ -16,7 +16,7 @@ function Grid() {
       <h2>Grid</h2>
       <Image
         style={{ textAlign: "center" }}
-        src="/assets/css_grid_diagram_2.jpg"
+        src={process.env.NODE_ENV === 'development' ? "/assets/css_grid_diagram_2.jpg" : "full-stack-cheat-sheet/assets/css_grid_diagram_2.jpg"}
         alt="grid diagram"
         width={800}
         height={600}
