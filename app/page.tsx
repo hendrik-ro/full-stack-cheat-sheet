@@ -29,6 +29,9 @@ function HomeContent() {
         <Link href="./front-end/react/">
           <button className={style.topicsItem}>React</button>
         </Link>
+        <Link href="./front-end/dom/">
+          <button className={style.topicsItem}>DOM</button>
+        </Link>
       </div>
       <h2 id="back">Back End</h2>
       <div className={style.topics}>
