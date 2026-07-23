@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import styles from "./grid.module.css";
 
@@ -15,7 +15,7 @@ export default function ColumnGridTemplate() {
       <p>Column grids ensure consistency, improve readability.</p>
       <SyntaxHighlighter
         language="React"
-        style={atomDark}
+        style={dracula}
       >{`<div className="column-grid">
       {Array.from({ length: 12 }).map((_, index) => (
         <div key={index} className="column-item">
@@ -23,7 +23,7 @@ export default function ColumnGridTemplate() {
         </div>
       ))}
     </div>`}</SyntaxHighlighter>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.column-grid {
+      <SyntaxHighlighter language="css" style={dracula}>{`.column-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;

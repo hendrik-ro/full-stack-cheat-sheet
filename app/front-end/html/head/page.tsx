@@ -4,9 +4,11 @@ export default function Head() {
       <h2>Head</h2>
       <table>
         <thead>
-          <th>Tag</th>
-          <th>Name</th>
-          <th>Description</th>
+          <tr>
+            <td>Tag</td>
+            <td>Name</td>
+            <td>Description</td>
+          </tr>
         </thead>
         <tbody>
           <tr>

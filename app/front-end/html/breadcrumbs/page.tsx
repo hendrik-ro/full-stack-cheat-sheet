@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function BreadcrumbsHTML() {
   return (
@@ -11,7 +11,7 @@ export default function BreadcrumbsHTML() {
       </p>
       <SyntaxHighlighter
         language="html"
-        style={atomDark}
+        style={dracula}
       >{`<ul class="breadcrumb">
           <li>
             <a href="shoes.html">Shoes</a>

@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function SelectorsPage() {
   return (
@@ -15,9 +15,11 @@ function Selectors() {
       <h2>Selectors</h2>
       <table>
         <thead>
-          <th>Selector</th>
-          <th>Code example</th>
-          <th>Description</th>
+          <tr>
+            <td>Selector</td>
+            <td>Code example</td>
+            <td>Description</td>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -25,7 +27,7 @@ function Selectors() {
               <span className="codeSnippet">a</span>
             </td>
             <td>
-              <SyntaxHighlighter language="css" style={atomDark}>{`a {
+              <SyntaxHighlighter language="css" style={dracula}>{`a {
 color: blue;
 }`}</SyntaxHighlighter>
             </td>
@@ -36,7 +38,7 @@ color: blue;
               <span className="codeSnippet">div p</span>
             </td>
             <td>
-              <SyntaxHighlighter language="css" style={atomDark}>{`div p {
+              <SyntaxHighlighter language="css" style={dracula}>{`div p {
 border: 1px solid white;
 }`}</SyntaxHighlighter>
             </td>
@@ -49,7 +51,7 @@ border: 1px solid white;
               <span className="codeSnippet">h1, h2, h3</span>
             </td>
             <td>
-              <SyntaxHighlighter language="css" style={atomDark}>{`h1, h2, h3 {
+              <SyntaxHighlighter language="css" style={dracula}>{`h1, h2, h3 {
 text-transform: capitalize;
 }`}</SyntaxHighlighter>
             </td>
@@ -60,7 +62,7 @@ text-transform: capitalize;
               <span className="codeSnippet">.class</span>
             </td>
             <td>
-              <SyntaxHighlighter language="css" style={atomDark}>{`
+              <SyntaxHighlighter language="css" style={dracula}>{`
 .class {
   background-color: lightblue;
 }
@@ -73,7 +75,7 @@ text-transform: capitalize;
               <span className="codeSnippet">#id</span>
             </td>
             <td>
-              <SyntaxHighlighter language="css" style={atomDark}>{`#id {
+              <SyntaxHighlighter language="css" style={dracula}>{`#id {
 text-align: center;
 }`}</SyntaxHighlighter>
             </td>

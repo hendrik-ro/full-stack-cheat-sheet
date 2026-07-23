@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import styles from "./button.module.css";
 
 export default function SkeuomorphismPage() {
@@ -18,7 +18,7 @@ function Skeuomorphism() {
         Skeuomorphic design imitates real life. This lowers the user`s learning
         curve and allows for intuitive design.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`button {
+      <SyntaxHighlighter language="css" style={dracula}>{`button {
      padding: 5px;
      border: 1px solid steelblue;
      border-radius: 5px;

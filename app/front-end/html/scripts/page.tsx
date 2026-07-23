@@ -1,5 +1,5 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function ScriptPage() {
   return (
@@ -22,7 +22,7 @@ function ScriptsAttributes() {
           </p>
           <SyntaxHighlighter
             language="html"
-            style={atomDark}
+            style={dracula}
           >{`<script src="example.js" async></script>`}</SyntaxHighlighter>
           <p>
             This can be used for API calls, timed scripts or continuously
@@ -37,7 +37,7 @@ function ScriptsAttributes() {
           </p>
           <SyntaxHighlighter
             language="html"
-            style={atomDark}
+            style={dracula}
           >{`<script src="example.js" defer></script>`}</SyntaxHighlighter>
         </li>
       </ul>

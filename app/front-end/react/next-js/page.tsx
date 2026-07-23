@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Page() {
   return (
@@ -18,11 +18,11 @@ export default function Page() {
         <p>
           If not done yet, install <em>pnpm</em> globally:
         </p>
-        <SyntaxHighlighter language="bash" style={atomDark}>
+        <SyntaxHighlighter language="bash" style={dracula}>
           $ npm install -g pnpm
         </SyntaxHighlighter>
         <p>1. Create a new NextJS app:</p>
-        <SyntaxHighlighter language="bash" style={atomDark}>
+        <SyntaxHighlighter language="bash" style={dracula}>
           $ npx create-next-app@latest project-name
         </SyntaxHighlighter>
         <p style={{ fontSize: "15px" }}>
@@ -31,7 +31,7 @@ export default function Page() {
         <p>2. Customize settings or use defaults:</p>
         <SyntaxHighlighter
           language="bash"
-          style={atomDark}
+          style={dracula}
         >{`? Would you like to use the recommended Next.js defaults? › - Use arrow-keys. Return to submit.
 ❯   Yes, use recommended defaults
 // TypeScript, ESLint, No React Compiler, Tailwind CSS, No src/ directory, App
@@ -40,11 +40,11 @@ No, reuse previous settings
 No, customize settings`}</SyntaxHighlighter>
         <h3>Run development server locally</h3>
         <p>Install the project`s dependencies:</p>
-        <SyntaxHighlighter language="bash" style={atomDark}>
+        <SyntaxHighlighter language="bash" style={dracula}>
           $ pnpm i
         </SyntaxHighlighter>
         <p>Start development server on localhost:3000:</p>
-        <SyntaxHighlighter language="bash" style={atomDark}>
+        <SyntaxHighlighter language="bash" style={dracula}>
           $ pnpm dev
         </SyntaxHighlighter>
         <p>

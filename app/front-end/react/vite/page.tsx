@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Page() {
   return (
@@ -18,25 +18,25 @@ export default function Page() {
         <p>
           If not done yet, install <em>pnpm</em> globally:
         </p>
-        <SyntaxHighlighter language="bash" style={atomDark}>
+        <SyntaxHighlighter language="bash" style={dracula}>
           $ npm install -g pnpm
         </SyntaxHighlighter>
         <p>1. Create a new Vite app:</p>
-        <SyntaxHighlighter language="bash" style={atomDark}>
+        <SyntaxHighlighter language="bash" style={dracula}>
           $ pnpm create vite
         </SyntaxHighlighter>
         <p>Or use template flags:</p>
-        <SyntaxHighlighter language="bash" style={atomDark}>
+        <SyntaxHighlighter language="bash" style={dracula}>
           $ pnpm create vite test-project --template react-ts
         </SyntaxHighlighter>
         <p>2. Customize settings in the interactive prompts.</p>
         <h3>Run development server locally</h3>
         <p>Install the project`s dependencies if needed:</p>
-        <SyntaxHighlighter language="bash" style={atomDark}>
+        <SyntaxHighlighter language="bash" style={dracula}>
           $ pnpm i
         </SyntaxHighlighter>
         <p>Start development server on localhost:3000:</p>
-        <SyntaxHighlighter language="bash" style={atomDark}>
+        <SyntaxHighlighter language="bash" style={dracula}>
           $ pnpm dev
         </SyntaxHighlighter>
         <p>

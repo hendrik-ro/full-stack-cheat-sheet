@@ -1,5 +1,5 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function ImagesPage() {
   return (
@@ -9,11 +9,11 @@ export default function ImagesPage() {
       <p>Basic image container using CSS overflow and max-width:</p>
       <SyntaxHighlighter
         language="html"
-        style={atomDark}
+        style={dracula}
       >{`<div class="image-container">
         <img src="image.jpg" alt="Image" />
       </div>`}</SyntaxHighlighter>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.image-container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.image-container {
         overflow: hidden;
       }
 
@@ -23,7 +23,7 @@ export default function ImagesPage() {
         display: block;
       }`}</SyntaxHighlighter>
       <h3>Scaling Background Images</h3>
-      <SyntaxHighlighter language="css" style={atomDark}>{`body {
+      <SyntaxHighlighter language="css" style={dracula}>{`body {
         background-image: url('#');
         background-repeat: no-repeat;
         background-position: center;

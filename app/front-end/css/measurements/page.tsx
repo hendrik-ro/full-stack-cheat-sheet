@@ -1,5 +1,5 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Page() {
   return (
@@ -18,7 +18,7 @@ function MediaQueries() {
       <h3>Media Queries</h3>
       <SyntaxHighlighter
         language="css"
-        style={atomDark}
+        style={dracula}
       >{`@media only screen and (max-width: 480px) {
         body {
           font-size: 12px;
@@ -34,7 +34,7 @@ function MediaQueries() {
       </p>
       <SyntaxHighlighter
         language="css"
-        style={atomDark}
+        style={dracula}
       >{`@media only screen and (min-width: 320px) {
           /* ruleset for >= 320px */
       }
@@ -45,7 +45,7 @@ function MediaQueries() {
       }`}</SyntaxHighlighter>
       <SyntaxHighlighter
         language="css"
-        style={atomDark}
+        style={dracula}
       >{`@media only screen and (min-resolution: 300dpi) {
           /* CSS for high resolution screens */
       }`}</SyntaxHighlighter>
@@ -90,7 +90,7 @@ function Units() {
         <code>min-height</code>, <code>max-height</code>, <code>min-width</code>
         , <code>max-width</code>:
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`p {
+      <SyntaxHighlighter language="css" style={dracula}>{`p {
         min-width: 300px;
         max-width: 600px;
       }`}</SyntaxHighlighter>
@@ -102,7 +102,7 @@ function Viewport() {
   return (
     <div id="viewport">
       <h3>Viewport</h3>
-      <SyntaxHighlighter language="css" style={atomDark}>{`<!DOCTYPE html>
+      <SyntaxHighlighter language="css" style={dracula}>{`<!DOCTYPE html>
       <html lang="en">
         <head>
           ...
