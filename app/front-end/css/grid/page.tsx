@@ -19,7 +19,7 @@ function Grid() {
         src={
           process.env.NODE_ENV === "development"
             ? "/assets/css_grid_diagram_2.jpg"
-            : "full-stack-cheat-sheet/assets/css_grid_diagram_2.jpg"
+            : "../assets/css_grid_diagram_2.jpg"
         }
         alt="grid diagram"
         width={800}

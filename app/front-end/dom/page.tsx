@@ -18,7 +18,7 @@ export default function Page() {
           src={
             process.env.NODE_ENV === "development"
               ? "/assets/dom.png"
-              : "full-stack-cheat-sheet/assets/dom.png"
+              : "../assets/dom.png"
           }
           alt="dom_structure"
           width={800}
