@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Page() {
   return (
     <div>
@@ -11,10 +13,12 @@ export default function Page() {
         </a>{" "}
         is the Document Object Model, a programming interface for web documents.
       </p>
+      <Image src={"/assets/dom.png"} alt="dom_structure" width={800} height={600} style={{ justifyContent: "center"}}/>
       <p>
-        It represents the structure of a web page as a tree of objects, allowing
+        It represents the tree-like structure of a web page as a tree of objects, allowing
         developers to manipulate the page`s content and structure.
       </p>
+      <p>It allows for a hierachy within a web page and allows JavaScript to access, modify and update its structure.</p>
     </div>
   );
 }
