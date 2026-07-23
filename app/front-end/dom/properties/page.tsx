@@ -6,10 +6,12 @@ export default function PropertiesPage() {
     <div>
       <h1>Properties</h1>
       <p>
-        The <code>document</code>`s properties allow you to access and modify the DOM.
+        The <code>document</code>`s properties allow you to access and modify
+        the DOM.
       </p>
       <p>
-        <code>body</code> refers to the <code>&lt;body&gt;</code> element of the document.
+        <code>body</code> refers to the <code>&lt;body&gt;</code> element of the
+        document.
       </p>
       <SyntaxHighlighter
         language="javascript"
@@ -19,7 +21,6 @@ export default function PropertiesPage() {
     </div>
   );
 }
-
 
 function PropertiesInnerHTML() {
   return (

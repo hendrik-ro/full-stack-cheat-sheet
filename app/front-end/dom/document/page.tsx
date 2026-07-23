@@ -5,8 +5,13 @@ export default function DocumentPage() {
   return (
     <div id="document">
       <h1>Document</h1>
-      <p>The <code>document</code> object represents the HTML document itself.</p>
-      <p>To manipulate the document in JavaScript, you can use the <code>document</code> object`s methods and properties.</p>
+      <p>
+        The <code>document</code> object represents the HTML document itself.
+      </p>
+      <p>
+        To manipulate the document in JavaScript, you can use the{" "}
+        <code>document</code> object`s methods and properties.
+      </p>
       <DocumentMethods />
       <DocumentMethodsCreate />
       <br />
@@ -43,8 +48,8 @@ function DocumentMethods() {
         style={dracula}
       >{`document.getElementById('');`}</SyntaxHighlighter>
       <p>
-        <code>.getElementById()</code> returns the element that has the specified
-        ID.
+        <code>.getElementById()</code> returns the element that has the
+        specified ID.
       </p>
       <br />
       <SyntaxHighlighter
@@ -62,8 +67,8 @@ function DocumentMethods() {
         style={dracula}
       >{`document.getElementsByClassName('users')[0].innerHTML = '<p>New User</p>';`}</SyntaxHighlighter>
       <p>
-        <code>.getElementsByClassName()</code> returns <em>all elements</em> that
-        have the specified class name.
+        <code>.getElementsByClassName()</code> returns <em>all elements</em>{" "}
+        that have the specified class name.
       </p>
       <br />
       <h3>document.getElementsByTagName()</h3>
@@ -89,7 +94,8 @@ function DocumentMethodsCreate() {
         style={dracula}
       >{`let element = document.createElement('div');`}</SyntaxHighlighter>
       <p>
-        <code>.createElement()</code> creates a new element with the specified tag name.
+        <code>.createElement()</code> creates a new element with the specified
+        tag name.
       </p>
       <SyntaxHighlighter
         language="javascript"
@@ -105,7 +111,8 @@ element.innerHTML = '<p>New paragraph inside the new element</p>';`}</SyntaxHigh
         style={dracula}
       >{`document.body.appendChild(element);`}</SyntaxHighlighter>
       <p>
-        <code>.appendChild()</code> adds the new element to the end of the <code>body</code> element.
+        <code>.appendChild()</code> adds the new element to the end of the{" "}
+        <code>body</code> element.
       </p>
       <h3>.removeChild()</h3>
       <SyntaxHighlighter
@@ -113,7 +120,8 @@ element.innerHTML = '<p>New paragraph inside the new element</p>';`}</SyntaxHigh
         style={dracula}
       >{`document.body.removeChild(element);`}</SyntaxHighlighter>
       <p>
-        <code>.removeChild()</code> removes the new element from the <code>body</code> element.
+        <code>.removeChild()</code> removes the new element from the{" "}
+        <code>body</code> element.
       </p>
     </div>
   );

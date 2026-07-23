@@ -16,15 +16,16 @@ function Traversing() {
     <div id="manipulation-traversing">
       <h2>Traversing</h2>
       <p>With the following HTML:</p>
-      <SyntaxHighlighter
-        language="javascript"
-        style={dracula}
-      >{`<ul id='list'>
+      <SyntaxHighlighter language="javascript" style={dracula}>{`<ul id='list'>
         <li id='firstItem'>Item 1</li>
         <li id='secondItem'>Item 2</li>
         <li id='thirdItem'>Item 3</li>
       </ul>`}</SyntaxHighlighter>
-      <p><code>.parentNode</code> returns the parent node of the element and <code>.children</code> returns a collection of the element`s child nodes:</p>
+      <p>
+        <code>.parentNode</code> returns the parent node of the element and{" "}
+        <code>.children</code> returns a collection of the element`s child
+        nodes:
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
