@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function BreadcrumbsPage() {
   return (
@@ -17,7 +17,7 @@ function BreadcrumbCSS() {
         Breadcrumbs are a navigation aid that show the user`s current location
         within the site.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.breadcrumb > li {
+      <SyntaxHighlighter language="css" style={dracula}>{`.breadcrumb > li {
           display: inline;
 
         }

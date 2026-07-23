@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function PropertiesPage() {
   return (
@@ -25,7 +25,7 @@ function Properties() {
               <span className="codeSnippet">color</span>
             </td>
             <td>
-              <SyntaxHighlighter language="css" style={atomDark}>{`a {
+              <SyntaxHighlighter language="css" style={dracula}>{`a {
 color: blue;
 }`}</SyntaxHighlighter>
             </td>

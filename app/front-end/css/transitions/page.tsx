@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import styles from "./button.module.css";
 
 export default function TransitionsPage() {
@@ -14,7 +14,7 @@ function Transitions() {
   return (
     <div id="transitions">
       <h2>Transitions</h2>
-      <SyntaxHighlighter language="css" style={atomDark}>{`
+      <SyntaxHighlighter language="css" style={dracula}>{`
 .button {
      padding: 5px;
      border: 1px solid steelblue;

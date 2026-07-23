@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Image from "next/image";
 
 export default function GridPage() {
@@ -16,7 +16,11 @@ function Grid() {
       <h2>Grid</h2>
       <Image
         style={{ textAlign: "center" }}
-        src="/assets/css_grid_diagram_2.jpg"
+        src={
+          process.env.NODE_ENV === "development"
+            ? "/assets/css_grid_diagram_2.jpg"
+            : "full-stack-cheat-sheet/assets/css_grid_diagram_2.jpg"
+        }
         alt="grid diagram"
         width={800}
         height={600}
@@ -29,7 +33,7 @@ function Grid() {
         To set up a grid, you need to have both a grid <em>container</em> and
         grid <em>items</em>.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
   display: grid; /* for block-level grid layout or 'inline-grid' for an inline grid layout */
   grid-template-columns: 250px repeat(3, 1fr); /* 250px for the first column, then 1 'fraction' for the rest */
   grid-template-rows: repeat(2, 1fr); /* 1 'fraction' for each row */
@@ -43,7 +47,7 @@ function Grid() {
         <em>minmax()</em> is a function that allows you to specify a minimum and
         maximum size for a grid item.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.item {
+      <SyntaxHighlighter language="css" style={dracula}>{`.item {
   grid-column: 100px minmax(100px, 200px) 1fr;
   grid-row: 1fr minmax(50px, 100px) repeat(2, 1fr);
 }`}</SyntaxHighlighter>
@@ -63,11 +67,13 @@ function GridTable() {
   return (
     <div>
       <table>
-        <tr>
-          <th>Property</th>
-          <th>Code example</th>
-          <th>Description</th>
-        </tr>
+        <thead>
+          <tr>
+            <td>Property</td>
+            <td>Code example</td>
+            <td>Description</td>
+          </tr>
+        </thead>
         <tr>
           <td>
             <span className="codeSnippet">grid-row</span>
@@ -112,7 +118,7 @@ function GridTemplateAreas() {
       </p>
       <SyntaxHighlighter
         language="html"
-        style={atomDark}
+        style={dracula}
       >{`<div class="container">
       <header>Welcome!</header>
       <nav>Links!</nav>
@@ -120,7 +126,7 @@ function GridTemplateAreas() {
       <section class="services">Services!</section>
       <footer>Contact us!</footer>
     </div>`}</SyntaxHighlighter>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
       display: grid;
       max-width: 900px;
       position: relative;
@@ -156,7 +162,7 @@ function GridTemplateAreas() {
         Alternatively, you can use the grid-area property on individual grid
         items to assign them to areas manually:
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.left {
+      <SyntaxHighlighter language="css" style={dracula}>{`.left {
       background-color: dodgerblue;
       grid-area: 4 / 1 / 9 / 5;
     }
@@ -184,7 +190,7 @@ function GridAlign() {
         You can align grid items along the inline or row axis using the
         justify-items property.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
         display: grid;
         justify-items: center;
       }`}</SyntaxHighlighter>
@@ -207,7 +213,7 @@ function GridAlign() {
         You can position the entire grid along the row axis. This property is
         declared on grid containers.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
         display: grid;
         justify-content: center;
       }`}</SyntaxHighlighter>
@@ -248,7 +254,7 @@ function GridAlign() {
         You can align grid items along the block or column axis using the
         align-items property.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
         display: grid;
         align-items: center;
       }`}</SyntaxHighlighter>
@@ -271,7 +277,7 @@ function GridAlign() {
         You can position the entire grid along the row axis. This property is
         declared on grid containers.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
         display: grid;
         align-content: center;
       }`}</SyntaxHighlighter>
@@ -325,7 +331,7 @@ function GridAuto() {
         are used to define the size of grid rows and columns when there is no
         explicit grid template defined.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
         display: grid;
         grid: repeat(2, 100px) / repeat(2, 150px);
         grid-auto-rows: 50px;
@@ -340,7 +346,7 @@ function GridAuto() {
         <strong>grid-auto-flow</strong> is used to define how grid items are
         placed when there is no explicit grid template defined.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
         display: grid;
         grid-auto-flow: row /* row or column or dense */;
       }`}</SyntaxHighlighter>

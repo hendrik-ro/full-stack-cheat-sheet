@@ -1,5 +1,5 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Page() {
   return (
@@ -32,11 +32,7 @@ export default function Page() {
           specific needs.
         </p>
         <p>JavaScript</p>
-        <SyntaxHighlighter
-          language="javascript"
-          style={atomDark}
-          customStyle={{ width: "650px", margin: "auto" }}
-        >
+        <SyntaxHighlighter language="javascript" style={dracula}>
           {`const express = require('express');
 const app = express();
 
@@ -49,11 +45,7 @@ app.listen(3000, () => {
 });`}
         </SyntaxHighlighter>
         <p>Golang</p>
-        <SyntaxHighlighter
-          language="go"
-          style={atomDark}
-          customStyle={{ width: "650px", margin: "auto" }}
-        >
+        <SyntaxHighlighter language="go" style={dracula}>
           {`package main
 
 import "fmt"

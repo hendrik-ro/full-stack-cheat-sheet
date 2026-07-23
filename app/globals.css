@@ -52,6 +52,10 @@ ul {
   line-height: 1.5;
 }
 
+code {
+  background-color: hsl(195, 100%, 20%);
+}
+
 /* Main grid */
 .grid {
   display: grid;

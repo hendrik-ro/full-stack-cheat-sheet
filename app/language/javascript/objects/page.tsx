@@ -1,5 +1,5 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function ObjectsPage() {
   return (
@@ -19,7 +19,7 @@ function ObjectsFactory() {
       <p>Example factory function:</p>
       <SyntaxHighlighter
         language="javascript"
-        style={atomDark}
+        style={dracula}
       >{`const dogFactory = (name, breed, weight) => {
         // Type checking
         if (
@@ -86,7 +86,7 @@ function ObjectsKeys() {
       <p>
         Example object method <em>keys</em>:
       </p>
-      <SyntaxHighlighter language="javascript" style={atomDark}>{`const car = {
+      <SyntaxHighlighter language="javascript" style={dracula}>{`const car = {
         make: 'Toyota',
         model: 'Camry',
         year: 2020,
@@ -105,7 +105,7 @@ function ObjectsValues() {
       <p>
         Example object method <em>values</em>:
       </p>
-      <SyntaxHighlighter language="javascript" style={atomDark}>{`const car = {
+      <SyntaxHighlighter language="javascript" style={dracula}>{`const car = {
         make: 'Toyota',
         model: 'Camry',
         year: 2020,

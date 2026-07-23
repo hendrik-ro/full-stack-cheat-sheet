@@ -1,5 +1,5 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function ArraysPage() {
   return (
@@ -30,7 +30,7 @@ function MethodsSort() {
       </p>
       <SyntaxHighlighter
         language="javascript"
-        style={atomDark}
+        style={dracula}
       >{`const speciesArray = [
         { speciesName: "shark", numTeeth: 50 },
         { speciesName: "dog", numTeeth: 42 },
@@ -63,7 +63,7 @@ function MethodsIndexOf() {
       </p>
       <SyntaxHighlighter
         language="javascript"
-        style={atomDark}
+        style={dracula}
       >{`const findMyKeys = (things) => {
         return things.indexOf("keys");
       };

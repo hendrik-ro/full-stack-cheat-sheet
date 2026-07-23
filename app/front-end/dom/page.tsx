@@ -15,7 +15,11 @@ export default function Page() {
       </p>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Image
-          src={"/assets/dom.png"}
+          src={
+            process.env.NODE_ENV === "development"
+              ? "/assets/dom.png"
+              : "full-stack-cheat-sheet/assets/dom.png"
+          }
           alt="dom_structure"
           width={800}
           height={600}

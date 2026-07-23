@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import styles from "./flexbox.module.css";
 
@@ -39,7 +39,7 @@ function FlexboxDisplay() {
         However, it will change the behavior of its child elements. Child
         elements will not begin on new lines.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`div.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`div.container {
     display: flex;
   }`}</SyntaxHighlighter>
       <p>
@@ -50,7 +50,7 @@ function FlexboxDisplay() {
         The child containers` width will shrink to their parents` container`s
         width.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
     width: 150px;
     border: 1px solid grey;
     display: inline-flex;
@@ -64,7 +64,7 @@ function FlexboxDisplay() {
   }`}</SyntaxHighlighter>
       <SyntaxHighlighter
         language="React"
-        style={atomDark}
+        style={dracula}
       >{`<div className='container-inline-flex'>
       <div className='box'>
         <h3>1</h3>
@@ -119,7 +119,7 @@ function FlexboxDisplay() {
         To position the items from left to right, we use a property called
         justify-content.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
     display: flex;
     justify-content: flex-end;
   }`}</SyntaxHighlighter>
@@ -212,7 +212,7 @@ function FlexboxFlex() {
     <div>
       <h3>Flex-grow</h3>
       <p>Allows child containers to grow into a bigger parent container.</p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
       display: flex;
       width: 500px;
     }
@@ -243,7 +243,7 @@ function FlexboxFlex() {
         <em>flex-basis</em> allows us to specify the width of an item before it
         stretches or shrinks.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
       display: flex;
     }
 
@@ -275,7 +275,7 @@ function FlexboxFlex() {
         <strong>Note:</strong> The flex property is different from the flex
         value used for the display property.
       </p>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.big {
+      <SyntaxHighlighter language="css" style={dracula}>{`.big {
   flex: 2 1 150px; /* flex-grow: 2; flex-shrink: 1; flex-basis: 150px; */
 }
 
@@ -424,7 +424,7 @@ function FlexboxFlexFlow() {
           onto multiple lines if there is not enough space.
         </li>
       </ul>
-      <SyntaxHighlighter language="css" style={atomDark}>{`.container {
+      <SyntaxHighlighter language="css" style={dracula}>{`.container {
   flex-flow: column wrap; /* flex-direction: column; flex-wrap: wrap; */
 }`}</SyntaxHighlighter>
     </div>
