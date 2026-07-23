@@ -18,6 +18,10 @@ const htmlLinks = [
     href: "/front-end/html/head",
   },
   {
+    name: "Scripts",
+    href: "/front-end/html/scripts",
+  },
+  {
     name: "Tables",
     href: "/front-end/html/tables",
   },
