@@ -7,7 +7,11 @@ export default function Page() {
       <div id="nextjs">
         <h1>NextJS</h1>
         <p>
-          <a target="_blank" href="https://nextjs.org/">
+          <a
+            target="_blank"
+            href="https://nextjs.org/"
+            rel="noopener norefferer"
+          >
             NextJS
           </a>{" "}
           is a framework for <a href="/front-end/react">React</a>.

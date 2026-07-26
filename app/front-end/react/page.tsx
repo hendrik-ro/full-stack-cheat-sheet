@@ -6,7 +6,11 @@ export default function Page() {
       <div id="react">
         <h1>React</h1>
         <p>
-          <a target="_blank" href="https://react.dev/">
+          <a
+            target="_blank"
+            href="https://react.dev/"
+            rel="noopener norefferer"
+          >
             React
           </a>{" "}
           is a JavaScript library for building user interfaces.

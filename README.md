@@ -6,7 +6,7 @@ A living document of a aspiring full stack engineer, serving as a quick referenc
 
 ## Access
 
-Github Pages: [Cheat Sheet](https://hendrik-ro.github.io/full-stack-engineer-cheat-sheet/)
+Github Pages: [Cheat Sheet](https://hendrik-ro.github.io/full-stack-cheat-sheet/)
 
 ## Features
 
