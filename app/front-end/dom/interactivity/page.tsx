@@ -9,8 +9,8 @@ export default function Page() {
   return (
     <div>
       <h1>Interactivity</h1>
-
       <InteractivityOnClick />
+      <InteractivityAddEventListener />
     </div>
   );
 }
@@ -43,4 +43,65 @@ element.onclick = function() {
         };`}</SyntaxHighlighter>
     </div>
   );
+}
+
+function InteractivityAddEventListener() {
+  const hiddenElement = useRef<HTMLParagraphElement>(null);
+
+  const showMore = () => {
+    if (hiddenElement.current) {
+      hiddenElement.current.style.display =
+        hiddenElement.current.style.display === "none" ? "block" : "none";
+    }
+  }
+
+  return (
+    <div>
+      <h2>.addEventListener</h2>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`let buttonShow = document.getElementById("button-show");
+let hiddenElement = document.getElementById("hidden-element");
+
+const showMore = () => {
+  hiddenElement.style.display = "block";
+};
+
+buttonShow.addEventListener('click', showMore);`}</SyntaxHighlighter>
+      <section id="event-hidden">
+        <p
+          ref={hiddenElement}
+          id={styles.hiddenElement}>This hidden element is shown after clicking the button.</p>
+        <button
+          id={styles.button}
+          onClick={showMore}
+        >Show hidden element</button>
+      </section>
+      <p><strong>Note: </strong>This does not work in React/Next.js. Use <em>useRef</em> instead:</p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`const hiddenElement = useRef<HTMLParagraphElement>(null);
+
+const showMore = () => {
+  if (hiddenElement.current) {
+    hiddenElement.current.style.display =
+      hiddenElement.current.style.display === "none" ? "block" : "none";
+  }
+}`}</SyntaxHighlighter>
+      <SyntaxHighlighter
+        language="react"
+        style={dracula}
+      >{`<section id="event-hidden">
+        <p
+          ref={hiddenElement}
+          id={styles.hiddenElement}>This hidden element is shown after clicking the button.</p>
+        <button
+          id={styles.button}
+          onClick={showMore}
+        >Show hidden element</button>
+      </section>`}</SyntaxHighlighter>
+    </div>
+  )
 }

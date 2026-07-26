@@ -17,3 +17,13 @@
   color: lightsalmon;
   box-shadow: 0px 0px;
 }
+
+#event-hidden {
+    display: block;
+    margin: 0 auto;
+}
+
+#hiddenElement {
+    color: darkred;
+    display: none;
+}
