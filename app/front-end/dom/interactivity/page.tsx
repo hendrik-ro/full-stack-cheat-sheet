@@ -14,6 +14,15 @@ export default function Page() {
       <InteractivityAddEventListener />
       <InteractivityEventObject />
       <InteractivityEventTypes />
+      <p>
+        <Link
+          href={"/static/interactivity/index.html"}
+          target="_blank"
+          rel="noopener noreferrence"
+        >
+          Example of an interactive page
+        </Link>
+      </p>
       <br />
     </div>
   );
