@@ -1,6 +1,6 @@
 ![CI tests](https://github.com/hendrik-ro/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)
 
-# Full Stack Engineer Cheat Sheet
+# Full Stack Cheat Sheet
 
 A living document of a aspiring full stack engineer, serving as a quick reference guide for best practices and syntax.
 
@@ -15,6 +15,7 @@ Github Pages: [Cheat Sheet](https://hendrik-ro.github.io/full-stack-engineer-che
 - **HTML**
 - **CSS**
 - **React**
+- **DOM**
 
 ### Back End
 
@@ -30,7 +31,7 @@ Github Pages: [Cheat Sheet](https://hendrik-ro.github.io/full-stack-engineer-che
 ## Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Styling**: CSS Modules / Tailwind CSS
+- **Styling**: CSS Modules
 - **Deployment**: GitHub Pages
 
 ## Project Structure
@@ -40,7 +41,8 @@ app/
 ├── front-end/          # Front-end technologies
 │   ├── html/
 │   ├── css/
-│   └── react/
+│   ├── react/
+│   └── dom/
 ├── back-end/           # Back-end technologies
 │   ├── api/
 │   ├── server/
