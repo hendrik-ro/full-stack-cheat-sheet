@@ -4,6 +4,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useRef } from "react";
 import styles from "./button.module.css";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -11,6 +12,7 @@ export default function Page() {
       <h1>Interactivity</h1>
       <InteractivityOnClick />
       <InteractivityAddEventListener />
+      <InteractivityEventObject />
       <br />
     </div>
   );
@@ -128,6 +130,72 @@ const showMore = () => {
           onClick={showMore}
         >Show hidden element</button>
       </section>`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function InteractivityEventObject() {
+  return (
+    <div>
+      <h2>Event Object</h2>
+      <p>
+        The JavaScript <code>event</code> object has properties that can be
+        accessed:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <td>Propery</td>
+            <td>Example</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.target</code>
+            </td>
+            <td>
+              <code>{`event.target.style.display = 'none'`}</code>
+            </td>
+            <td>
+              Targets the listeners of <code>event</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.type</code>
+            </td>
+            <td>
+              <code>{`console.log(event.type)`}</code>
+            </td>
+            <td>
+              Returns the <code>event</code> name
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.timeStamp</code>
+            </td>
+            <td>
+              <code>{`console.log(event.timeStamp)`}</code>
+            </td>
+            <td>
+              Prints the ms between page load and <code>event</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        More properties can be found{" "}
+        <Link
+          href={"https://developer.mozilla.org/en-US/docs/Web/API/Event"}
+          target="_blank"
+          rel="noopener norefferer"
+        >
+          here
+        </Link>
+      </p>
     </div>
   );
 }

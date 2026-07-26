@@ -7,7 +7,11 @@ export default function Page() {
       <div id="vite">
         <h1>Vite</h1>
         <p>
-          <a target="_blank" href="https://vitejs.dev/">
+          <a
+            target="_blank"
+            href="https://vitejs.dev/"
+            rel="noopener norefferer"
+          >
             Vite
           </a>{" "}
           is a build tool for <a href="/front-end/react">React</a>.

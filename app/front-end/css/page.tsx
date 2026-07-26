@@ -9,6 +9,7 @@ export default function Page() {
           <a
             target="_blank"
             href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            rel="noopener norefferer"
           >
             Cascading Style Sheets
           </a>{" "}
