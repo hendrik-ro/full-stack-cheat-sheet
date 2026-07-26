@@ -46,7 +46,7 @@ element.onclick = function() {
         };`}</SyntaxHighlighter>
       <p>
         <strong>Note: </strong>This does not work in React/Next.js. Use element
-        property <em>onClick</em> instead:
+        property <code>onClick</code> instead:
       </p>
       <SyntaxHighlighter language="jsx" style={dracula}>{`<section id="onclick">
   <p>
@@ -85,7 +85,11 @@ const showMore = () => {
 
 buttonShow.addEventListener('click', showMore);`}</SyntaxHighlighter>
       <section id="event-hidden">
-        <p ref={hiddenElement} id={styles.hiddenElement}>
+        <p
+          ref={hiddenElement}
+          style={{ display: "none" }}
+          id={styles.hiddenElement}
+        >
           This hidden element is shown after clicking the button.
         </p>
         <button id={styles.button} onClick={showMore}>
@@ -93,8 +97,12 @@ buttonShow.addEventListener('click', showMore);`}</SyntaxHighlighter>
         </button>
       </section>
       <p>
+        To remove the event listener <code>.removeEventListener</code> can be
+        used.
+      </p>
+      <p>
         <strong>Note: </strong>This does not work in React/Next.js. Use{" "}
-        <em>useRef</em> instead:
+        <code>useRef</code> instead:
       </p>
       <SyntaxHighlighter
         language="jsx"
@@ -113,6 +121,7 @@ const showMore = () => {
       >{`<section id="event-hidden">
         <p
           ref={hiddenElement}
+          style={{ display: "none" }}
           id={styles.hiddenElement}>This hidden element is shown after clicking the button.</p>
         <button
           id={styles.button}
