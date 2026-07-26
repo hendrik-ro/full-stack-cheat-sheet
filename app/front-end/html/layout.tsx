@@ -25,6 +25,10 @@ const htmlLinks = [
     name: "Tables",
     href: "/front-end/html/tables",
   },
+  {
+    name: "Validation",
+    href: "/front-end/html/validation",
+  },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {

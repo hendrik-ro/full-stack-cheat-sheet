@@ -13,6 +13,16 @@ export default function Page() {
       <InteractivityOnClick />
       <InteractivityAddEventListener />
       <InteractivityEventObject />
+      <InteractivityEventTypes />
+      <p>
+        <Link
+          href={"/static/interactivity/index.html"}
+          target="_blank"
+          rel="noopener noreferrence"
+        >
+          Example of an interactive page
+        </Link>
+      </p>
       <br />
     </div>
   );
@@ -196,6 +206,38 @@ function InteractivityEventObject() {
           here
         </Link>
       </p>
+    </div>
+  );
+}
+
+function InteractivityEventTypes() {
+  return (
+    <div>
+      <h2>Event Types</h2>
+      <p>
+        There are numerous events built into the DOM. A full list can be found
+        on the{" "}
+        <Link
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events"
+          target="_blank"
+          rel="noopener noreferrence"
+        >
+          MDN event index
+        </Link>
+      </p>
+      <p>
+        Example for <code>mouseover</code>:
+      </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`let element = document.getElementById('element');
+
+function increaseWidth() {
+  itemOne.style.width = '450px';
+}
+
+itemOne.addEventListener('mouseover', increaseWidth);`}</SyntaxHighlighter>
     </div>
   );
 }
