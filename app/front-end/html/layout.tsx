@@ -28,7 +28,7 @@ const htmlLinks = [
   {
     name: "Validation",
     href: "/front-end/html/validation",
-  }
+  },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
