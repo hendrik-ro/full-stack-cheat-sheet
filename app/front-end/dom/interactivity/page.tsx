@@ -11,6 +11,7 @@ export default function Page() {
       <h1>Interactivity</h1>
       <InteractivityOnClick />
       <InteractivityAddEventListener />
+      <br />
     </div>
   );
 }
@@ -27,13 +28,15 @@ function InteractivityOnClick() {
   return (
     <div>
       <h2>.onClick</h2>
-      <p>
-        The parameter <code>.onClick</code> can be used to add interactivity to
-        a component.
-      </p>
-      <button id={styles.button} ref={buttonRef} onClick={handleClick}>
-        Click me
-      </button>
+      <section id="onclick">
+        <p>
+          The parameter <code>.onclick</code> can be used to add interactivity
+          to a component.
+        </p>
+        <button id={styles.button} ref={buttonRef} onClick={handleClick}>
+          Click me
+        </button>
+      </section>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
@@ -41,6 +44,18 @@ function InteractivityOnClick() {
 element.onclick = function() {
       element.style.backgroundColor = 'blue'
         };`}</SyntaxHighlighter>
+      <p>
+        <strong>Note: </strong>This does not work in React/Next.js. Use element
+        property <em>onClick</em> instead:
+      </p>
+      <SyntaxHighlighter language="jsx" style={dracula}>{`<section id="onclick">
+  <p>
+    The parameter <code>.onclick</code> can be used to add interactivity to a component.
+  </p>
+  <button id={styles.button} ref={buttonRef} onClick={handleClick}>
+    Click me
+  </button>
+</section>`}</SyntaxHighlighter>
     </div>
   );
 }
@@ -53,7 +68,7 @@ function InteractivityAddEventListener() {
       hiddenElement.current.style.display =
         hiddenElement.current.style.display === "none" ? "block" : "none";
     }
-  }
+  };
 
   return (
     <div>
@@ -70,15 +85,17 @@ const showMore = () => {
 
 buttonShow.addEventListener('click', showMore);`}</SyntaxHighlighter>
       <section id="event-hidden">
-        <p
-          ref={hiddenElement}
-          id={styles.hiddenElement}>This hidden element is shown after clicking the button.</p>
-        <button
-          id={styles.button}
-          onClick={showMore}
-        >Show hidden element</button>
+        <p ref={hiddenElement} id={styles.hiddenElement}>
+          This hidden element is shown after clicking the button.
+        </p>
+        <button id={styles.button} onClick={showMore}>
+          Show hidden element
+        </button>
       </section>
-      <p><strong>Note: </strong>This does not work in React/Next.js. Use <em>useRef</em> instead:</p>
+      <p>
+        <strong>Note: </strong>This does not work in React/Next.js. Use{" "}
+        <em>useRef</em> instead:
+      </p>
       <SyntaxHighlighter
         language="jsx"
         style={dracula}
@@ -103,5 +120,5 @@ const showMore = () => {
         >Show hidden element</button>
       </section>`}</SyntaxHighlighter>
     </div>
-  )
+  );
 }
