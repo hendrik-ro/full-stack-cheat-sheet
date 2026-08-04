@@ -26,8 +26,8 @@ const htmlLinks = [
     href: "/front-end/html/tables",
   },
   {
-    name: "Validation",
-    href: "/front-end/html/validation",
+    name: "Form",
+    href: "/front-end/html/form",
   },
 ];
 
