@@ -116,22 +116,26 @@ export function FormLogin() {
     <div>
       <h2>Login Form</h2>
       <p>A simple login form can be created with the jsx element <code>form</code>:</p>
-      <SyntaxHighlighter language="jsx" style={dracula}>{`<form>
-  <h3>Login form</h3>
+      <SyntaxHighlighter language="jsx" style={dracula}>{`<form style={{display: "flex", flexDirection: "column", border: "1px solid white", padding: "10px", width: "20rem"}}>
+  <h3 style={{textAlign: "left"}}>Login form</h3>
   <label htmlFor="username">Username:</label>
-  <input type="text" name="username" id="username" />
-  <br />
+  <input type="text" name="username" id="username" minLength={4} maxLength={16} pattern="[a-zA-Z]*$" required/>
+  <br style={{marginTop: "0.5rem"}} />
   <label htmlFor="user-pw">Password:</label>
-  <input type="password" name="user-pw" id="user-pw" />
+  <input type="password" name="user-pw" id="user-pw" minLength={8} maxLength={32} pattern="[a-zA-Z0-9]*$" required />
+  <br />
+  <input style={{width: "4rem", alignSelf: "center", marginTop: "1rem"}} type="submit" name="submit" value="submit" />
 </form>`}</SyntaxHighlighter>
       <div>
-        <form style={{border: "1px solid white", padding: "10px", width: "20rem"}}>
+        <form style={{display: "flex", flexDirection: "column", border: "1px solid white", padding: "10px", width: "20rem"}}>
           <h3 style={{textAlign: "left"}}>Login form</h3>
           <label htmlFor="username">Username:</label>
-      		<input type="text" name="username" id="username" />
-          <br />
+      		<input type="text" name="username" id="username" minLength={4} maxLength={16} pattern="[a-zA-Z]*$" required/>
+          <br style={{marginTop: "0.5rem"}} />
           <label htmlFor="user-pw">Password:</label>
-          <input type="password" name="user-pw" id="user-pw" />
+          <input type="password" name="user-pw" id="user-pw" minLength={8} maxLength={32} pattern="[a-zA-Z0-9]*$" required />
+          <br />
+          <input style={{width: "4rem", alignSelf: "center", marginTop: "1rem"}} type="submit" name="submit" value="submit" />
         </form>
       </div>
     </div>
