@@ -59,6 +59,9 @@ function HomeContent() {
         <Link href="./testing/tdd">
           <button className={style.topicsItem}>TDD</button>
         </Link>
+        <Link href="./testing/lib">
+          <button className={style.topicsItem}>Resources</button>
+        </Link>
       </div>
     </div>
   );
