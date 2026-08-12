@@ -4,7 +4,7 @@ const testingLinks = [
   {
     name: "TDD",
     href: "/testing/tdd",
-  }
+  },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -15,5 +15,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
       <div className="itemContent">{children}</div>
     </div>
-  )
+  );
 }
