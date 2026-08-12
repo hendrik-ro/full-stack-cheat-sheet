@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
 import { useRef } from "react";
 
 export default function Page() {
@@ -16,10 +16,9 @@ export default function Page() {
   );
 }
 
-
 export function FormValidation() {
-  const hiddenElement = useRef<HTMLParagraphElement>(null)
-  const buttonElement = useRef<HTMLButtonElement>(null)
+  const hiddenElement = useRef<HTMLParagraphElement>(null);
+  const buttonElement = useRef<HTMLButtonElement>(null);
   const toggleVisibility = () => {
     if (hiddenElement.current) {
       hiddenElement.current.style.display =
@@ -27,9 +26,11 @@ export function FormValidation() {
     }
     if (buttonElement.current) {
       buttonElement.current.innerHTML =
-        buttonElement.current.innerHTML === "Show HTML for mockup form" ? "Hide HTML for mockup form" : "Show HTML for mockup form";
+        buttonElement.current.innerHTML === "Show HTML for mockup form"
+          ? "Hide HTML for mockup form"
+          : "Show HTML for mockup form";
     }
-  }
+  };
 
   return (
     <div>
@@ -42,12 +43,14 @@ export function FormValidation() {
         </Link>{" "}
         for reference.
       </p>
-      <button
-        ref={buttonElement}
-        id={styles.button}
-        onClick={toggleVisibility}
-      >Show HTML for mockup form</button>
-      <section id={styles.staticCode} ref={hiddenElement} style={{display: "none"}}>
+      <button ref={buttonElement} id={styles.button} onClick={toggleVisibility}>
+        Show HTML for mockup form
+      </button>
+      <section
+        id={styles.staticCode}
+        ref={hiddenElement}
+        style={{ display: "none" }}
+      >
         <SyntaxHighlighter language="html" style={dracula}>{`<!DOCTYPE html>
         <html lang="en" dir="ltr">
           <body style="color: white; background-color: rgb(15, 15, 15); width: 600px; border: 1px solid white; padding: 15px; margin: 30px auto;">
@@ -107,16 +110,21 @@ export function FormValidation() {
         </html>`}</SyntaxHighlighter>
       </section>
     </div>
-  )
+  );
 }
-
 
 export function FormLogin() {
   return (
     <div>
       <h2>Login Form</h2>
-      <p>A simple login form can be created with the jsx element <code>form</code>:</p>
-      <SyntaxHighlighter language="jsx" style={dracula}>{`<form style={{display: "flex", flexDirection: "column", border: "1px solid white", padding: "10px", width: "20rem"}}>
+      <p>
+        A simple login form can be created with the jsx element{" "}
+        <code>form</code>:
+      </p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`<form style={{display: "flex", flexDirection: "column", border: "1px solid white", padding: "10px", width: "20rem"}}>
   <h3 style={{textAlign: "left"}}>Login form</h3>
   <label htmlFor="username">Username:</label>
   <input type="text" name="username" id="username" minLength={4} maxLength={16} pattern="[a-zA-Z]*$" required/>
@@ -127,17 +135,46 @@ export function FormLogin() {
   <input style={{width: "4rem", alignSelf: "center", marginTop: "1rem"}} type="submit" name="submit" value="submit" />
 </form>`}</SyntaxHighlighter>
       <div>
-        <form style={{display: "flex", flexDirection: "column", border: "1px solid white", padding: "10px", width: "20rem"}}>
-          <h3 style={{textAlign: "left"}}>Login form</h3>
+        <form
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            border: "1px solid white",
+            padding: "10px",
+            width: "20rem",
+          }}
+        >
+          <h3 style={{ textAlign: "left" }}>Login form</h3>
           <label htmlFor="username">Username:</label>
-      		<input type="text" name="username" id="username" minLength={4} maxLength={16} pattern="[a-zA-Z]*$" required/>
-          <br style={{marginTop: "0.5rem"}} />
+          <input
+            type="text"
+            name="username"
+            id="username"
+            minLength={4}
+            maxLength={16}
+            pattern="[a-zA-Z]*$"
+            required
+          />
+          <br style={{ marginTop: "0.5rem" }} />
           <label htmlFor="user-pw">Password:</label>
-          <input type="password" name="user-pw" id="user-pw" minLength={8} maxLength={32} pattern="[a-zA-Z0-9]*$" required />
+          <input
+            type="password"
+            name="user-pw"
+            id="user-pw"
+            minLength={8}
+            maxLength={32}
+            pattern="[a-zA-Z0-9]*$"
+            required
+          />
           <br />
-          <input style={{width: "4rem", alignSelf: "center", marginTop: "1rem"}} type="submit" name="submit" value="submit" />
+          <input
+            style={{ width: "4rem", alignSelf: "center", marginTop: "1rem" }}
+            type="submit"
+            name="submit"
+            value="submit"
+          />
         </form>
       </div>
     </div>
-  )
+  );
 }

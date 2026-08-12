@@ -11,7 +11,7 @@ export default function Classes() {
       <ClassesInheritance />
       <br />
     </div>
-  )
+  );
 }
 
 export function ClassesConstructor() {
@@ -25,7 +25,7 @@ export function ClassesConstructor() {
   }
 }`}</SyntaxHighlighter>
     </div>
-  )
+  );
 }
 
 export function ClassesGettersSetters() {
@@ -47,9 +47,12 @@ export function ClassesGettersSetters() {
     this._color = newColor;
   }
 }`}</SyntaxHighlighter>
-    <p>The <code>_name</code> marks the property as private. The <code>get</code> method allows read-access to it.</p>
+      <p>
+        The <code>_name</code> marks the property as private. The{" "}
+        <code>get</code> method allows read-access to it.
+      </p>
     </div>
-  )
+  );
 }
 
 export function ClassesMethods() {
@@ -68,14 +71,17 @@ export function ClassesMethods() {
 const duck = new Animal("duck", "quack");
 duck.makeSound(); //prints "duck makes a quack sound"`}</SyntaxHighlighter>
     </div>
-  )
+  );
 }
 
 export function ClassesInheritance() {
   return (
     <div>
       <h3>Inheritance</h3>
-      <SyntaxHighlighter language="javascript" style={dracula}>{`class Dog extends Animal {
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`class Dog extends Animal {
   constructor(name, color, breed) {
     super(name, color);
     this._breed = breed;
@@ -85,5 +91,5 @@ export function ClassesInheritance() {
   }
 }`}</SyntaxHighlighter>
     </div>
-  )
+  );
 }

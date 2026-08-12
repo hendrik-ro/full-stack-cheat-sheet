@@ -17,6 +17,10 @@ const javascriptLinks = [
     name: "Objects",
     href: "/language/javascript/objects",
   },
+  {
+    name: "Testing",
+    href: "/language/javascript/testing",
+  },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
