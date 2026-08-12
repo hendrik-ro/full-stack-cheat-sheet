@@ -54,6 +54,12 @@ function HomeContent() {
           <button className={style.topicsItem}>JavaScript</button>
         </Link>
       </div>
+      <h2 id="Testing">Testing</h2>
+      <div className={style.topics}>
+        <Link href="./testing/tdd">
+          <button className={style.topicsItem}>TDD</button>
+        </Link>
+      </div>
     </div>
   );
 }

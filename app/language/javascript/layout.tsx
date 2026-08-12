@@ -3,7 +3,7 @@ import SideNav from "@/app/ui/shared/sidenav";
 const javascriptLinks = [
   {
     name: "JavaScript",
-    href: "#",
+    href: "/language/javascript",
   },
   {
     name: "Arrays",
