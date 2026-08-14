@@ -1,4 +1,5 @@
-![CI tests](https://github.com/hendrik-ro/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)
+![CI tests](https://github.com/hendrik-ro/full-stack-cheat-sheet/actions/workflows/ci.yml/badge.svg)
+![CD GitHub Pages](https://github.com/hendrik-ro/full-stack-cheat-sheet/actions/workflows/cd.yml/badge.svg)
 
 # Full Stack Cheat Sheet
 
@@ -27,6 +28,11 @@ Github Pages: [Cheat Sheet](https://hendrik-ro.github.io/full-stack-cheat-sheet/
 
 - **Golang**
 - **JavaScript**
+
+### Testing
+
+- **TDD**
+- **Resources**
 
 ## Tech Stack
 

@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy Next.js site to Pages
+name: CD GitHub Pages
 
 on:
   # Runs on push requests targeting the default branch
