@@ -88,5 +88,5 @@ function TestingGo() {
         </li>
       </ul>
     </div>
-  )
+  );
 }

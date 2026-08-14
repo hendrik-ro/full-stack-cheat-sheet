@@ -58,14 +58,17 @@ const result = () => {
   return new Promise(myExecutor);
 };`}</SyntaxHighlighter>
     </div>
-  )
+  );
 }
 
 function AsyncTimeout() {
   return (
     <div>
       <h2>Timeout example</h2>
-      <p><strong>Node</strong>`s API <code>setTimeout()</code> returns a <code>Promise</code>:</p>
+      <p>
+        <strong>Node</strong>`s API <code>setTimeout()</code> returns a{" "}
+        <code>Promise</code>:
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
@@ -85,5 +88,5 @@ console.log("This is the last line of code.");`}</SyntaxHighlighter>
       >{`This is the first line of code.\nThis is the last line of code.\nThis is the second line of code.`}</SyntaxHighlighter>
       <p>Due to the timeout set to 500ms.</p>
     </div>
-  )
+  );
 }
