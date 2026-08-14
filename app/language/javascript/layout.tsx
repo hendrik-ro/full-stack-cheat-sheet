@@ -10,6 +10,10 @@ const javascriptLinks = [
     href: "/language/javascript/arrays",
   },
   {
+    name: "Asynchronous",
+    href: "/language/javascript/async",
+  },
+  {
     name: "Classes",
     href: "/language/javascript/classes",
   },
