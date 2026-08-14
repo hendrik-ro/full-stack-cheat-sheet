@@ -29,6 +29,11 @@ Github Pages: [Cheat Sheet](https://hendrik-ro.github.io/full-stack-cheat-sheet/
 - **Golang**
 - **JavaScript**
 
+### Testing
+
+- **TDD**
+- **Resources**
+
 ## Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
