@@ -4,14 +4,16 @@ export default function Page() {
   return (
     <div>
       <h1>Testing Libraries</h1>
-      <TestingChai />
+      <TestingJS />
+      <TestingGo />
     </div>
   );
 }
 
-function TestingChai() {
+function TestingJS() {
   return (
     <div>
+      <h2>JavaScript</h2>
       <ul style={{ fontSize: "1rem" }}>
         <li>
           <Link
@@ -47,4 +49,44 @@ function TestingChai() {
       </ul>
     </div>
   );
+}
+
+function TestingGo() {
+  return (
+    <div>
+      <h2>Go</h2>
+      <ul style={{ fontSize: "1rem" }}>
+        <li>
+          <Link
+            target="_blank"
+            rel="noopener noreference"
+            href="https://github.com/stretchr/testify"
+          >
+            Testify
+          </Link>{" "}
+          - testing library for Go
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            rel="noopener noreference"
+            href="https://golangci-lint.run/"
+          >
+            Golangci-lint
+          </Link>{" "}
+          - linter for go
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            rel="noopener noreference"
+            href="https://pkg.go.dev/testing"
+          >
+            Testing
+          </Link>{" "}
+          - built-in testing package
+        </li>
+      </ul>
+    </div>
+  )
 }
