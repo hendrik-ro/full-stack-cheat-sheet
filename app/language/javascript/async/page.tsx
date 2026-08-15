@@ -8,6 +8,7 @@ export default function AsyncPage() {
       <AsyncPromise />
       <AsyncFunction />
       <AsyncThen />
+      <AsyncPromiseAll />
       <AsyncTimeout />
       <br />
     </div>
@@ -120,6 +121,25 @@ result().then(handleSuccess).catch(handleError);`}</SyntaxHighlighter>
   })
   .then((secondResolveVal) => {
     console.log(secondResolveVal);
+  })
+  .catch((rejectionReason) => {
+    console.log(rejectionReason);
+  });`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function AsyncPromiseAll() {
+  return (
+    <div>
+      <h2>Promise.all()</h2>
+      <p><code>Promise.all()</code> is a method that takes an array of promises and returns a single promise that resolves when all of the promises in the array have resolved, or rejects when any of the promises in the array have rejected.</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`Promise.all([promise1, promise2, promise3])
+  .then((resolvedValues) => {
+    console.log(resolvedValues);
   })
   .catch((rejectionReason) => {
     console.log(rejectionReason);
