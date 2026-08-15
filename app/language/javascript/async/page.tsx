@@ -7,6 +7,7 @@ export default function AsyncPage() {
       <h1>Asynchronous code</h1>
       <AsyncPromise />
       <AsyncFunction />
+      <AsyncThen />
       <AsyncTimeout />
       <br />
     </div>
@@ -87,6 +88,42 @@ console.log("This is the last line of code.");`}</SyntaxHighlighter>
         style={dracula}
       >{`This is the first line of code.\nThis is the last line of code.\nThis is the second line of code.`}</SyntaxHighlighter>
       <p>Due to the timeout set to 500ms.</p>
+    </div>
+  );
+}
+
+function AsyncThen() {
+  return (
+    <div>
+      <h2>Handling Promises</h2>
+      <p><code>.then()</code> is a method that takes two callback functions to be executed when the promise is resolved or rejected.</p>
+      <p>Conventionally, we use <code>.then()</code> to handle the resolved value and <code>.catch()</code> to handle the rejected value.</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`const handleSuccess = (resolved) => {
+  console.log(resolved);
+};
+
+const handleError = (rejected) => {
+  console.error(rejected);
+};
+
+result().then(handleSuccess).catch(handleError);`}</SyntaxHighlighter>
+      <p>Promises can be chained together using <code>.then()</code> and <code>.catch()</code>.</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`firstPromiseFunction()
+  .then((firstResolveVal) => {
+    return secondPromiseFunction(firstResolveVal);
+  })
+  .then((secondResolveVal) => {
+    console.log(secondResolveVal);
+  })
+  .catch((rejectionReason) => {
+    console.log(rejectionReason);
+  });`}</SyntaxHighlighter>
     </div>
   );
 }
