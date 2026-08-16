@@ -10,9 +10,15 @@ export default function Page() {
           href="https://developer.mozilla.org/en-US/docs/Glossary/REST"
         >
           REST
-        </Link> or Representational State Transfer is an architectural style for designing networked applications.
+        </Link>{" "}
+        or Representational State Transfer is an architectural style for
+        designing networked applications.
       </p>
-      <p>A REST API is <em>stateless</em>, meaning the server does not store any client state between requests and vise versa. Client and server are unaware of each other.</p>
+      <p>
+        A REST API is <em>stateless</em>, meaning the server does not store any
+        client state between requests and vise versa. Client and server are
+        unaware of each other.
+      </p>
     </div>
   );
 }
