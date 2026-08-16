@@ -99,8 +99,14 @@ function AsyncThen() {
   return (
     <div>
       <h2>Handling Promises</h2>
-      <p><code>.then()</code> is a method that takes two callback functions to be executed when the promise is resolved or rejected.</p>
-      <p>Conventionally, we use <code>.then()</code> to handle the resolved value and <code>.catch()</code> to handle the rejected value.</p>
+      <p>
+        <code>.then()</code> is a method that takes two callback functions to be
+        executed when the promise is resolved or rejected.
+      </p>
+      <p>
+        Conventionally, we use <code>.then()</code> to handle the resolved value
+        and <code>.catch()</code> to handle the rejected value.
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
@@ -113,7 +119,10 @@ const handleError = (rejected) => {
 };
 
 result().then(handleSuccess).catch(handleError);`}</SyntaxHighlighter>
-      <p>Promises can be chained together using <code>.then()</code> and <code>.catch()</code>.</p>
+      <p>
+        Promises can be chained together using <code>.then()</code> and{" "}
+        <code>.catch()</code>.
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
@@ -135,7 +144,12 @@ function AsyncPromiseAll() {
   return (
     <div>
       <h2>Promise.all()</h2>
-      <p><code>Promise.all()</code> is a method that takes an array of promises and returns a single promise that resolves when all of the promises in the array have resolved, or rejects when any of the promises in the array have rejected.</p>
+      <p>
+        <code>Promise.all()</code> is a method that takes an array of promises
+        and returns a single promise that resolves when all of the promises in
+        the array have resolved, or rejects when any of the promises in the
+        array have rejected.
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
@@ -154,7 +168,11 @@ function AsyncAwait() {
   return (
     <div>
       <h2>Async/Await</h2>
-      <p><code>async</code> and <code>await</code> are a syntactic sugar for working with promises. They allow you to write asynchronous code that looks synchronous, making it easier to read and understand.</p>
+      <p>
+        <code>async</code> and <code>await</code> are a syntactic sugar for
+        working with promises. They allow you to write asynchronous code that
+        looks synchronous, making it easier to read and understand.
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
@@ -166,7 +184,10 @@ function AsyncAwait() {
     console.log(error);
   }
 }`}</SyntaxHighlighter>
-      <p>The <code>await</code> call is wrapped in a <code>try</code>...<code>catch</code> block to handle any errors that may occur.</p>
+      <p>
+        The <code>await</code> call is wrapped in a <code>try</code>...
+        <code>catch</code> block to handle any errors that may occur.
+      </p>
     </div>
   );
 }
@@ -190,10 +211,24 @@ async function concurrent() {
   console.log(await firstPromise, await secondPromise);
 }
 `}</SyntaxHighlighter>
-      <p>In the <code>waiting</code> function, the second call to <code>secondAsyncThing</code> is dependent on the result of the first call, so it must wait for the first promise to resolve before it can execute.</p>
-      <p>In the <code>concurrent</code> function, the two calls to <code>firstAsyncThing</code> and <code>secondAsyncThing</code> are executed concurrently, so they can both start executing at the same time.</p>
+      <p>
+        In the <code>waiting</code> function, the second call to{" "}
+        <code>secondAsyncThing</code> is dependent on the result of the first
+        call, so it must wait for the first promise to resolve before it can
+        execute.
+      </p>
+      <p>
+        In the <code>concurrent</code> function, the two calls to{" "}
+        <code>firstAsyncThing</code> and <code>secondAsyncThing</code> are
+        executed concurrently, so they can both start executing at the same
+        time.
+      </p>
       <h3>Promise.all</h3>
-      <p>Alternatively, <code>Promise.all</code> can be used to execute multiple promises concurrently and wait for all of them to resolve before continuing.</p>
+      <p>
+        Alternatively, <code>Promise.all</code> can be used to execute multiple
+        promises concurrently and wait for all of them to resolve before
+        continuing.
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
