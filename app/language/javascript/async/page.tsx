@@ -10,6 +10,8 @@ export default function AsyncPage() {
       <AsyncThen />
       <AsyncPromiseAll />
       <AsyncTimeout />
+      <AsyncAwait />
+      <AsyncConcurrent />
       <br />
     </div>
   );
@@ -144,6 +146,63 @@ function AsyncPromiseAll() {
   .catch((rejectionReason) => {
     console.log(rejectionReason);
   });`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function AsyncAwait() {
+  return (
+    <div>
+      <h2>Async/Await</h2>
+      <p><code>async</code> and <code>await</code> are a syntactic sugar for working with promises. They allow you to write asynchronous code that looks synchronous, making it easier to read and understand.</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`async function asyncFunction() {
+  try {
+    const result = await promiseFunction();
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}`}</SyntaxHighlighter>
+      <p>The <code>await</code> call is wrapped in a <code>try</code>...<code>catch</code> block to handle any errors that may occur.</p>
+    </div>
+  );
+}
+
+function AsyncConcurrent() {
+  return (
+    <div>
+      <h2>Waiting vs Concurrent</h2>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`async function waiting() {
+  const firstValue = await firstAsyncThing();
+  const secondValue = await secondAsyncThing(firstValue);
+  console.log(firstValue, secondValue);
+}
+
+async function concurrent() {
+  const firstPromise = firstAsyncThing();
+  const secondPromise = secondAsyncThing();
+  console.log(await firstPromise, await secondPromise);
+}
+`}</SyntaxHighlighter>
+      <p>In the <code>waiting</code> function, the second call to <code>secondAsyncThing</code> is dependent on the result of the first call, so it must wait for the first promise to resolve before it can execute.</p>
+      <p>In the <code>concurrent</code> function, the two calls to <code>firstAsyncThing</code> and <code>secondAsyncThing</code> are executed concurrently, so they can both start executing at the same time.</p>
+      <h3>Promise.all</h3>
+      <p>Alternatively, <code>Promise.all</code> can be used to execute multiple promises concurrently and wait for all of them to resolve before continuing.</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`async function asyncPromAll() {
+  const resultArray = await Promise.all([asyncTask1(), asyncTask2(), asyncTask3(), asyncTask4()]);
+  for (let i = 0; i<resultArray.length; i++){
+    console.log(resultArray[i]);
+  }
+}`}</SyntaxHighlighter>
     </div>
   );
 }
