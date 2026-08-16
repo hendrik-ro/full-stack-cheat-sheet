@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -18,9 +19,62 @@ export default function HTTP() {
           <a href="#post">POST</a>
         </nav>
       </div>
+      <Request />
+      <Response />
       <GET />
       <POST />
       <br />
+    </div>
+  );
+}
+
+
+function Request() {
+  return (
+    <div>
+      <h2>Request Object</h2>
+      <p>The <code>Request</code> object represents a request to a server.</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`type Request = {
+  url: string,
+  headers: {
+    [key: string]: string, // e.g. "Content-Type": "application/json"
+  },
+  body: string | null,
+};`}</SyntaxHighlighter>
+      <p>See <Link
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Request</Link> for more properties and methods.</p>
+    </div>
+  );
+}
+
+function Response() {
+  return (
+    <div>
+      <h2>Response Object</h2>
+      <p>The <code>Response</code> object represents a response from a server.</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`type Response = {
+  ok: boolean,
+  status: number,
+  headers: {
+    [key: string]: string, // e.g. "Content-Type": "application/json"
+  },
+  body: string | null,
+};`}</SyntaxHighlighter>
+      <p>The <code>.json()</code> method returns a promise that resolves to the parsed JSON body of the response.</p>
+      <p>See <Link
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Response</Link> for more properties and methods.</p>
     </div>
   );
 }
