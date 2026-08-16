@@ -18,6 +18,10 @@ const javascriptLinks = [
     href: "/language/javascript/classes",
   },
   {
+    name: "HTTP",
+    href: "/language/javascript/http",
+  },
+  {
     name: "Node",
     href: "/language/javascript/node",
   },
