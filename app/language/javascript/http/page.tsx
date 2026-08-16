@@ -28,12 +28,13 @@ export default function HTTP() {
   );
 }
 
-
 function Request() {
   return (
     <div>
       <h2>Request Object</h2>
-      <p>The <code>Request</code> object represents a request to a server.</p>
+      <p>
+        The <code>Request</code> object represents a request to a server.
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
@@ -44,11 +45,17 @@ function Request() {
   },
   body: string | null,
 };`}</SyntaxHighlighter>
-      <p>See <Link
-        href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Request</Link> for more properties and methods.</p>
+      <p>
+        See{" "}
+        <Link
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Request
+        </Link>{" "}
+        for more properties and methods.
+      </p>
     </div>
   );
 }
@@ -57,7 +64,9 @@ function Response() {
   return (
     <div>
       <h2>Response Object</h2>
-      <p>The <code>Response</code> object represents a response from a server.</p>
+      <p>
+        The <code>Response</code> object represents a response from a server.
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={dracula}
@@ -69,12 +78,21 @@ function Response() {
   },
   body: string | null,
 };`}</SyntaxHighlighter>
-      <p>The <code>.json()</code> method returns a promise that resolves to the parsed JSON body of the response.</p>
-      <p>See <Link
-        href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Response</Link> for more properties and methods.</p>
+      <p>
+        The <code>.json()</code> method returns a promise that resolves to the
+        parsed JSON body of the response.
+      </p>
+      <p>
+        See{" "}
+        <Link
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Response
+        </Link>{" "}
+        for more properties and methods.
+      </p>
     </div>
   );
 }
