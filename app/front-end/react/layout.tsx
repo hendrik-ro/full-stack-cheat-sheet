@@ -6,12 +6,16 @@ const reactLinks = [
     href: "/front-end/react",
   },
   {
-    name: "Next.js",
-    href: "/front-end/react/next-js",
+    name: "Frameworks",
+    href: "/front-end/react/frameworks",
   },
   {
-    name: "Vite",
-    href: "/front-end/react/vite",
+    name: "JSX",
+    href: "/front-end/react/jsx",
+  },
+  {
+    name: "vDOM",
+    href: "/front-end/react/vDOM",
   },
 ];
 
