@@ -28,18 +28,7 @@ export default function Page() {
           interfaces.
         </p>
         <p>
-          For faster interactive development, use a framework such as{" "}
-          <Link href="/front-end/next-js">Next.js</Link>.
-        </p>
-      </div>
-      <div id="react-frameworks">
-        <h2>React Frameworks</h2>
-        <p>To speed up development, you can use a React framework.</p>
-        <p>
-          <Link href="/front-end/react/next-js">Next.js</Link>
-        </p>
-        <p>
-          <Link href="/front-end/react/vite">Vite</Link>
+          For faster interactive development, use a <Link href="/front-end/react/frameworks">framework</Link>.
         </p>
       </div>
     </div>
