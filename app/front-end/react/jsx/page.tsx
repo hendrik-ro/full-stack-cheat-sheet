@@ -19,6 +19,7 @@ export default function JSXPage() {
       <JSXNesting />
       <JSXRendering />
       <JSXInjectingJS />
+      <JSXEventListeners />
       <br />
     </div>
   );
@@ -113,6 +114,83 @@ root.render(<p>{n + m}</p>); // renders: 5`}</SyntaxHighlighter>
       <p>
         The value inside the curly braces is evaluated as JavaScript and its result is rendered.
       </p>
+      <JSXInjectingJSConditional />
+      <JSXInjectingJSMethods />
     </div>
   );
+}
+
+function JSXInjectingJSConditional() {
+  return (
+    <div>
+      <h3>Conditional rendering</h3>
+      <p><strong>Note: </strong>You cannot add <code>if</code> statements inside JSX:</p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`const img = (
+  <h1>
+    {
+      if (purchase.complete) {
+        'Thank you for placing an order!'
+      }
+    }
+  </h1>
+)`}</SyntaxHighlighter>
+      <p>The above code block will break. Instead, reverse JavaScript and JSX and inject the latter:</p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`let msg;
+if (purchase.complete) {
+  msg = <h1>'Thank you for placing an order!'</h1>;
+}`}</SyntaxHighlighter>
+      <p>Or use ternary expressions:</p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`const img = <h1>{purchase.complete ? 'Thank you for placing an order!' : 'Thank you for your interest!'}</h1>;`}</SyntaxHighlighter>
+      <p>Finally, <code>&&</code> can be used to conditionally render content based on a value:</p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`const img = <h1>{purchase.complete && 'Thank you for placing an order!'}</h1>; // renders only if purchase.complete evaluates to true`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function JSXInjectingJSMethods() {
+  return (
+    <div>
+      <h3><code>.map()</code> array method</h3>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`const words = ["cat", "dog", "horse", "elephant"];
+const listWords = words.map((word, index) => <li key={"word_" + index}>{word}</li>);
+<ul>{listWords}</ul>
+/* Renders:
+- cat
+- dog
+- horse
+- elephant */`}</SyntaxHighlighter>
+      <p><strong>Note: </strong> the <code>li</code> elements have a <code>key</code> attribute to help React identify which items have changed, are added, or are removed.</p>
+    </div>
+  );
+}
+
+function JSXEventListeners() {
+  return (
+    <div>
+      <h2>Event Listeners</h2>
+      <p>
+        You can add event listeners to JSX elements using special attributes such as <code>onClick</code>.
+      </p>
+      <p>Find a list of event listener attributes in the <Link
+        href="https://react.dev/reference/react-dom/components/common#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >React common components documentation</Link>.</p>
+    </div>
+  )
 }

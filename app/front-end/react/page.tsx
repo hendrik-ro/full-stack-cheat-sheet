@@ -1,19 +1,21 @@
 import Link from "next/link";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Page() {
   return (
     <div>
       <div id="react">
         <h1>React</h1>
+        <section id="overview">
         <p>
-          <a
+          <Link
             target="_blank"
             href="https://react.dev/"
             rel="noopener norefferer"
           >
             React
-          </a>{" "}
-          is a JavaScript library for building user interfaces.
+          </Link> is a JavaScript library for building user interfaces.
         </p>
         <p>
           It is component-based, allowing developers to create reusable UI
@@ -28,9 +30,27 @@ export default function Page() {
           interfaces.
         </p>
         <p>
-          For faster interactive development, use a{" "}
-          <Link href="/front-end/react/frameworks">framework</Link>.
-        </p>
+          For faster interactive development, use a <Link
+            href="/front-end/react/frameworks"
+          >framework</Link>.
+          </p>
+        </section>
+        <br />
+        <section id="syntax">
+          <p>
+            React uses <Link href="/front-end/react/jsx">JSX</Link> syntax which allows you to write HTML-like code in JavaScript.
+          </p>
+          <SyntaxHighlighter
+            language="jsx"
+            style={dracula}
+          >{`const h1 = <h1>React</h1>;`}</SyntaxHighlighter>
+          <p>However, you could write React without JSX:</p>
+          <SyntaxHighlighter
+            language="javascript"
+            style={dracula}
+          >{`const h1 = React.createElement("h1", null, "React");`}</SyntaxHighlighter>
+        </section>
+        <br />
       </div>
     </div>
   );
