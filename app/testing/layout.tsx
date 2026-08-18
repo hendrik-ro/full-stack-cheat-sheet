@@ -2,8 +2,16 @@ import SideNav from "@/app/ui/shared/sidenav";
 
 const testingLinks = [
   {
+    name: "Testing",
+    href: "/testing/",
+  },
+  {
     name: "TDD",
     href: "/testing/tdd",
+  },
+  {
+    name: "Resources",
+    href: "/testing/lib",
   },
 ];
 
