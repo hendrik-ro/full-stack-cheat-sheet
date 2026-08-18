@@ -3,15 +3,15 @@ import SideNav from "@/app/ui/shared/sidenav";
 const testingLinks = [
   {
     name: "Testing",
-    href: "/testing/",
+    href: "/development/testing/",
   },
   {
     name: "TDD",
-    href: "/testing/tdd",
+    href: "/development/testing/tdd",
   },
   {
     name: "Resources",
-    href: "/testing/lib",
+    href: "/development/testing/lib",
   },
 ];
 
