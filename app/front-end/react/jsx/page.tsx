@@ -15,15 +15,16 @@ export default function JSXPage() {
         JSX needs to be compiled into JavaScript before it can be used in a
         browser.
       </p>
-      <JSXAttribues />
+      <JSXAttributes />
       <JSXNesting />
       <JSXRendering />
+      <JSXInjectingJS />
       <br />
     </div>
   );
 }
 
-function JSXAttribues() {
+function JSXAttributes() {
   return (
     <div>
       <h2>Attributes</h2>
@@ -37,6 +38,13 @@ function JSXAttribues() {
       >{`const paragraph = <p id="paragraph">foo</p>;
 // or:
 const link = <Link href="https://example.com">Example</Link>;`}</SyntaxHighlighter>
+      <p>To inject JavaScript variables to JSX attributes, use curly braces:</p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`const id = "paragraph";
+<p id="{id}">foo</p>`}</SyntaxHighlighter>
+      <p>See <a href="/front-end/react/jsx#injectingJS">Injecting regular JavaScript</a></p>
     </div>
   );
 }
@@ -84,6 +92,26 @@ root.render(element);`}</SyntaxHighlighter>
         The <code>.render()</code> method only updates updates the DOM elements
         that have changed, using the{" "}
         <Link href="../react/vDOM">virtual DOM</Link>.
+      </p>
+    </div>
+  );
+}
+
+function JSXInjectingJS() {
+  return (
+    <div id="injectingJS">
+      <h2>Injecting regular JavaScript</h2>
+      <p>
+        You can inject regular JavaScript expressions into JSX using curly braces.
+      </p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`const n = 2;
+const m = 3;
+root.render(<p>{n + m}</p>); // renders: 5`}</SyntaxHighlighter>
+      <p>
+        The value inside the curly braces is evaluated as JavaScript and its result is rendered.
       </p>
     </div>
   );
