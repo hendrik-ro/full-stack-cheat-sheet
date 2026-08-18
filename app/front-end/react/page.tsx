@@ -28,7 +28,8 @@ export default function Page() {
           interfaces.
         </p>
         <p>
-          For faster interactive development, use a <Link href="/front-end/react/frameworks">framework</Link>.
+          For faster interactive development, use a{" "}
+          <Link href="/front-end/react/frameworks">framework</Link>.
         </p>
       </div>
     </div>

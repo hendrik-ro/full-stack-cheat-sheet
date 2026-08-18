@@ -9,7 +9,7 @@ export default function FrameWorks() {
       <FrameWorksVite />
       <br />
     </div>
-  )
+  );
 }
 
 function FrameWorksNext() {
