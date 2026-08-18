@@ -10,6 +10,10 @@ const reactLinks = [
     href: "/front-end/react/frameworks",
   },
   {
+    name: "JSX",
+    href: "/front-end/react/jsx",
+  },
+  {
     name: "vDOM",
     href: "/front-end/react/vDOM",
   },
