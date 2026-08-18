@@ -5,7 +5,17 @@ export default function GithubPage() {
   return (
     <div>
       <h1>Github Workflows</h1>
-      <p>For detailed information about Github Workflows, visit the <a href="https://docs.github.com/en/actions" target="_blank" rel="noopener noreferrer">Github Actions documentation</a>.</p>
+      <p>
+        For detailed information about Github Workflows, visit the{" "}
+        <a
+          href="https://docs.github.com/en/actions"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github Actions documentation
+        </a>
+        .
+      </p>
       <GithubSetup />
       <GithubCI />
       <GithubCD />
@@ -18,11 +28,11 @@ function GithubSetup() {
   return (
     <div>
       <h2>Setup</h2>
-      <p>To run CI/CD on your Github repository, add /.github/workflows/ to your repository.</p>
-      <SyntaxHighlighter
-        language="bash"
-        style={dracula}
-      >{`.github/
+      <p>
+        To run CI/CD on your Github repository, add /.github/workflows/ to your
+        repository.
+      </p>
+      <SyntaxHighlighter language="bash" style={dracula}>{`.github/
 └── workflows/
   ├── cd.yml
   └── ci.yml`}</SyntaxHighlighter>
@@ -34,11 +44,11 @@ function GithubCI() {
   return (
     <div>
       <h3>CI Example</h3>
-      <p>The following ci.yml file runs Prettier and linting on pull requests and workflow dispatches for a Node.js project.</p>
-      <SyntaxHighlighter
-        language="yaml"
-        style={dracula}
-      >{`name: Prettier
+      <p>
+        The following ci.yml file runs Prettier and linting on pull requests and
+        workflow dispatches for a Node.js project.
+      </p>
+      <SyntaxHighlighter language="yaml" style={dracula}>{`name: Prettier
 
 on:
   pull_request:
@@ -72,10 +82,7 @@ function GithubCD() {
     <div>
       <h3>CD Example</h3>
       <p>The following cd.yml file deploys your application to Github Pages.</p>
-      <SyntaxHighlighter
-        language="yaml"
-        style={dracula}
-      >{`name: GitHub Pages
+      <SyntaxHighlighter language="yaml" style={dracula}>{`name: GitHub Pages
 
 on:
   # Runs on push requests targeting the default branch

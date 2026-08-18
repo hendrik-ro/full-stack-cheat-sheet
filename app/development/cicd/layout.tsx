@@ -8,10 +8,14 @@ const cicdLinks = [
   {
     name: "Github Workflows",
     href: "/development/cicd/github/",
-  }
-]
+  },
+];
 
-export default function CicdLayout({ children }: { children: React.ReactNode }) {
+export default function CicdLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="gridLevelTwo">
       <div className="itemSidebar">

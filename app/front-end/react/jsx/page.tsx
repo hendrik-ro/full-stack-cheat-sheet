@@ -45,7 +45,12 @@ const link = <Link href="https://example.com">Example</Link>;`}</SyntaxHighlight
         style={dracula}
       >{`const id = "paragraph";
 <p id="{id}">foo</p>`}</SyntaxHighlighter>
-      <p>See <a href="/front-end/react/jsx#injectingJS">Injecting regular JavaScript</a></p>
+      <p>
+        See{" "}
+        <a href="/front-end/react/jsx#injectingJS">
+          Injecting regular JavaScript
+        </a>
+      </p>
     </div>
   );
 }
@@ -103,16 +108,15 @@ function JSXInjectingJS() {
     <div id="injectingJS">
       <h2>Injecting regular JavaScript</h2>
       <p>
-        You can inject regular JavaScript expressions into JSX using curly braces.
+        You can inject regular JavaScript expressions into JSX using curly
+        braces.
       </p>
-      <SyntaxHighlighter
-        language="jsx"
-        style={dracula}
-      >{`const n = 2;
+      <SyntaxHighlighter language="jsx" style={dracula}>{`const n = 2;
 const m = 3;
 root.render(<p>{n + m}</p>); // renders: 5`}</SyntaxHighlighter>
       <p>
-        The value inside the curly braces is evaluated as JavaScript and its result is rendered.
+        The value inside the curly braces is evaluated as JavaScript and its
+        result is rendered.
       </p>
       <JSXInjectingJSConditional />
       <JSXInjectingJSMethods />
@@ -124,11 +128,11 @@ function JSXInjectingJSConditional() {
   return (
     <div>
       <h3>Conditional rendering</h3>
-      <p><strong>Note: </strong>You cannot add <code>if</code> statements inside JSX:</p>
-      <SyntaxHighlighter
-        language="jsx"
-        style={dracula}
-      >{`const img = (
+      <p>
+        <strong>Note: </strong>You cannot add <code>if</code> statements inside
+        JSX:
+      </p>
+      <SyntaxHighlighter language="jsx" style={dracula}>{`const img = (
   <h1>
     {
       if (purchase.complete) {
@@ -137,11 +141,11 @@ function JSXInjectingJSConditional() {
     }
   </h1>
 )`}</SyntaxHighlighter>
-      <p>The above code block will break. Instead, reverse JavaScript and JSX and inject the latter:</p>
-      <SyntaxHighlighter
-        language="jsx"
-        style={dracula}
-      >{`let msg;
+      <p>
+        The above code block will break. Instead, reverse JavaScript and JSX and
+        inject the latter:
+      </p>
+      <SyntaxHighlighter language="jsx" style={dracula}>{`let msg;
 if (purchase.complete) {
   msg = <h1>'Thank you for placing an order!'</h1>;
 }`}</SyntaxHighlighter>
@@ -150,7 +154,10 @@ if (purchase.complete) {
         language="jsx"
         style={dracula}
       >{`const img = <h1>{purchase.complete ? 'Thank you for placing an order!' : 'Thank you for your interest!'}</h1>;`}</SyntaxHighlighter>
-      <p>Finally, <code>&&</code> can be used to conditionally render content based on a value:</p>
+      <p>
+        Finally, <code>&&</code> can be used to conditionally render content
+        based on a value:
+      </p>
       <SyntaxHighlighter
         language="jsx"
         style={dracula}
@@ -162,7 +169,9 @@ if (purchase.complete) {
 function JSXInjectingJSMethods() {
   return (
     <div>
-      <h3><code>.map()</code> array method</h3>
+      <h3>
+        <code>.map()</code> array method
+      </h3>
       <SyntaxHighlighter
         language="jsx"
         style={dracula}
@@ -174,7 +183,11 @@ const listWords = words.map((word, index) => <li key={"word_" + index}>{word}</l
 - dog
 - horse
 - elephant */`}</SyntaxHighlighter>
-      <p><strong>Note: </strong> the <code>li</code> elements have a <code>key</code> attribute to help React identify which items have changed, are added, or are removed.</p>
+      <p>
+        <strong>Note: </strong> the <code>li</code> elements have a{" "}
+        <code>key</code> attribute to help React identify which items have
+        changed, are added, or are removed.
+      </p>
     </div>
   );
 }
@@ -184,13 +197,20 @@ function JSXEventListeners() {
     <div>
       <h2>Event Listeners</h2>
       <p>
-        You can add event listeners to JSX elements using special attributes such as <code>onClick</code>.
+        You can add event listeners to JSX elements using special attributes
+        such as <code>onClick</code>.
       </p>
-      <p>Find a list of event listener attributes in the <Link
-        href="https://react.dev/reference/react-dom/components/common#"
-        target="_blank"
-        rel="noopener noreferrer"
-      >React common components documentation</Link>.</p>
+      <p>
+        Find a list of event listener attributes in the{" "}
+        <Link
+          href="https://react.dev/reference/react-dom/components/common#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          React common components documentation
+        </Link>
+        .
+      </p>
     </div>
-  )
+  );
 }
