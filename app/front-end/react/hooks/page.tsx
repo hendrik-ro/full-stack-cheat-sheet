@@ -27,7 +27,7 @@ export default function Page() {
     if (count > 10) {
       setCount(0);
     } else {
-      setCount(count + 1);
+      setCount(prevCount => prevCount + 1);
     }
   };
   return (
@@ -37,6 +37,7 @@ export default function Page() {
     </div>
   );
 }`}</SyntaxHighlighter>
+      <p><strong>Note: </strong> it is safer to use <code>setCount(prevCount =&gt; prevCount + 1)</code> when updating state based on the previous value.</p>
     </div>
   );
 }
