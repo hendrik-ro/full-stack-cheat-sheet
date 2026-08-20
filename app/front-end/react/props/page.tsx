@@ -6,6 +6,9 @@ export default function PropsPage() {
     <div>
       <h1>Props</h1>
       <PropsPassing />
+      <PropsChildren />
+      <PropsDefaultValues />
+      <br />
     </div>
   );
 }
@@ -47,4 +50,62 @@ function handleClick() {
 }`}</SyntaxHighlighter>
     </div>
   );
+}
+
+function PropsChildren() {
+  return (
+    <div>
+      <h2>Children</h2>
+      <p>Every props object has a property called <code>children</code>.</p>
+      <p><code>children</code> contains everything between the opening and closing tags of a component:</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`export default function App() {
+  return (
+    <div>
+    // children are the <li> elements passed between the opening and closing tags of the List component
+      <List type="Bands">
+        <li>Sodom</li>
+        <li>Kreator</li>
+      </List>
+    </div>
+  );
+}
+
+function List(props) {
+  return (
+    <div>
+      <h1>Favorite {props.type}</h1>
+      <ul>
+        {props.children} // renders the <li> elements passed between the opening and closing tags of the List component
+      </ul>
+    </div>
+  );
+}`}</SyntaxHighlighter>
+    </div>
+  )
+}
+
+function PropsDefaultValues() {
+  return (
+    <div>
+      <h2>Default Values</h2>
+      <p>You can use default values for props to avoid passing undefined values.</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`function Button(props) {
+  const { label = "Click me" } = props;
+  return <button>{label}</button>
+}`}</SyntaxHighlighter>
+      <p>Alternatively, you can use destructuring to set default values for props.</p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`function Button({ label = "Click me" }) {
+  return <button>{label}</button>
+}`}</SyntaxHighlighter>
+    </div>
+  )
 }
