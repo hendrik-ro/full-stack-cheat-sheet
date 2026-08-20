@@ -14,7 +14,10 @@ function HooksUseState() {
   return (
     <div>
       <h2>useState</h2>
-      <p><code>useState(initialState)</code> can be used to declare a state variable within a component:</p>
+      <p>
+        <code>useState(initialState)</code> can be used to declare a state
+        variable within a component:
+      </p>
       <SyntaxHighlighter
         language="jsx"
         style={dracula}
@@ -37,7 +40,11 @@ export default function Page() {
     </div>
   );
 }`}</SyntaxHighlighter>
-      <p><strong>Note: </strong> it is safer to use <code>setCount(prevCount =&gt; prevCount + 1)</code> when updating state based on the previous value.</p>
+      <p>
+        <strong>Note: </strong> it is safer to use{" "}
+        <code>setCount(prevCount =&gt; prevCount + 1)</code> when updating state
+        based on the previous value.
+      </p>
     </div>
   );
 }
