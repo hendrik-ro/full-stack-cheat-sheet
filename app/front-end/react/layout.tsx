@@ -10,6 +10,10 @@ const reactLinks = [
     href: "/front-end/react/frameworks",
   },
   {
+    name: "Hooks",
+    href: "/front-end/react/hooks",
+  },
+  {
     name: "JSX",
     href: "/front-end/react/jsx",
   },
