@@ -6,6 +6,8 @@ export default function Page() {
     <div>
       <h1>Hooks</h1>
       <HooksUseState />
+      <HooksSetPrev />
+      <br />
     </div>
   );
 }
@@ -45,6 +47,47 @@ export default function Page() {
         <code>setCount(prevCount =&gt; prevCount + 1)</code> when updating state
         based on the previous value.
       </p>
+    </div>
+  );
+}
+
+function HooksSetPrev() {
+  return (
+    <div>
+      <h2>Set Previous State</h2>
+      <p>In this example, <code>setQuestionIndex</code> is called with a function that takes the previous value and returns the updated value.</p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`import React, { useState } from "react";
+
+export default function NavBar({ questions }) {
+  const [questionIndex, setQuestionIndex] = useState(0);
+
+  const goBack = () => {
+    setQuestionIndex((prevQuestionIndex) => prevQuestionIndex - 1);
+  };
+  const goToNext = () => {
+    setQuestionIndex((prevQuestionIndex) => prevQuestionIndex + 1);
+  };
+
+  const onFirstQuestion = questionIndex === 0;
+  const onLastQuestion = questionIndex === questions.length - 1;
+
+  return (
+    <nav>
+      <span>Question #{questionIndex + 1}</span>
+      <div>
+        <button onClick={goBack} disabled={onFirstQuestion}>
+          Go Back
+        </button>
+        <button onClick={goToNext} disabled={onLastQuestion}>
+          Next Question
+        </button>
+      </div>
+    </nav>
+  );
+}`}</SyntaxHighlighter>
     </div>
   );
 }
