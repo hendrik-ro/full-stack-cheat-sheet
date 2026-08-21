@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -5,6 +6,16 @@ export default function Page() {
   return (
     <div>
       <h1>Hooks</h1>
+      <p><Link
+        href="https://react.dev/reference/react/hooks"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Hooks</Link> are functions that let you use state and other React features without writing a class.</p>
+      <p>There are two rules to follow when using hooks:</p>
+      <ol>
+        <li>Only call hooks at the top level of a component.</li>
+        <li>Only call hooks from React function components.</li>
+      </ol>
       <HooksUseState />
       <HooksUseEffect />
       <br />
