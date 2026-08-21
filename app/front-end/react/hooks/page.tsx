@@ -170,14 +170,30 @@ function HooksUseEffect() {
   return (
     <div>
       <h2>useEffect</h2>
-      <p><code>useEffect()</code> allows for fetching of data from an API and updating the component state.</p>
-      <p>The effect hook can be used at three different points in the component lifecycle:</p>
+      <p>
+        <code>useEffect()</code> allows for fetching of data from an API and
+        updating the component state.
+      </p>
+      <p>
+        The effect hook can be used at three different points in the component
+        lifecycle:
+      </p>
       <ul>
-      <li><em>Mounting</em>: the effect is called after the component is mounted to the DOM.</li>
-      <li><em>Updating</em>: the effect is called after the component is updated.</li>
-      <li><em>Unmounting</em>: the effect is called before the component is unmounted from the DOM.</li>
+        <li>
+          <em>Mounting</em>: the effect is called after the component is mounted
+          to the DOM.
+        </li>
+        <li>
+          <em>Updating</em>: the effect is called after the component is
+          updated.
+        </li>
+        <li>
+          <em>Unmounting</em>: the effect is called before the component is
+          unmounted from the DOM.
+        </li>
       </ul>
       <EffectCleanup />
+      <EffectDependencyArray />
     </div>
   );
 }
@@ -186,7 +202,10 @@ function EffectCleanup() {
   return (
     <div>
       <h3>Effect Cleanup</h3>
-      <p>When the component is unmounted, the effect cleanup function is called to clean up any resources used by the effect.</p>
+      <p>
+        When the component is unmounted, the effect cleanup function is called
+        to clean up any resources used by the effect.
+      </p>
       <SyntaxHighlighter
         language="jsx"
         style={dracula}
@@ -209,5 +228,45 @@ export default function Counter() {
   return <h1>Clicks: {count}</h1>;
 }`}</SyntaxHighlighter>
     </div>
-  )
+  );
+}
+
+function EffectDependencyArray() {
+  return (
+    <div>
+      <h3>Effect Dependency Array</h3>
+      <p>
+        <code>useEffect()</code> can be used with a dependency array to only run
+        the effect when a specific value changes.
+      </p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`import React, { useState, useEffect } from "react";
+
+export default function Timer() {
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime((prev) => prev + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []); // pass an empty array to run the effect only once
+
+  return (
+    <>
+      <h1>Time: {time}</h1>
+    </>
+  );
+}`}</SyntaxHighlighter>
+      <p>
+        Here, the effect runs only once when the component mounts, and the
+        cleanup function is called when the component unmounts.
+      </p>
+    </div>
+  );
 }
