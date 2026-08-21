@@ -5,6 +5,10 @@ const golangLinks = [
     name: "Golang",
     href: "/language/golang",
   },
+  {
+    name: "API",
+    href: "/language/golang/api",
+  },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
