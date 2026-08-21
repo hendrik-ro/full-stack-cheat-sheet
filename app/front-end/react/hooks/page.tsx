@@ -55,7 +55,10 @@ function HooksSetPrev() {
   return (
     <div>
       <h2>Set Previous State</h2>
-      <p>In this example, <code>setQuestionIndex</code> is called with a function that takes the previous value and returns the updated value.</p>
+      <p>
+        In this example, <code>setQuestionIndex</code> is called with a function
+        that takes the previous value and returns the updated value.
+      </p>
       <SyntaxHighlighter
         language="jsx"
         style={dracula}
