@@ -7,6 +7,7 @@ export default function Page() {
       <h1>Hooks</h1>
       <HooksUseState />
       <HooksSetPrev />
+      <HooksArraysInState />
       <br />
     </div>
   );
@@ -89,6 +90,52 @@ export default function NavBar({ questions }) {
         </button>
       </div>
     </nav>
+  );
+}`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function HooksArraysInState() {
+  return (
+    <div>
+      <h2>Arrays in State</h2>
+      <p>
+        The following example demonstrates how to manipulate arrays in state:
+      </p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`import React, { useState } from "react";
+import ItemList from "./ItemList";
+import { items } from "./storeItems";
+
+export default function ShoppingCart() {
+  const [cart, setCart] = useState([]);
+
+  const addItem = (item) => {
+    setCart((prev) => (prev = [item, ...prev]));
+  };
+
+  const removeItem = (targetIndex) => {
+    setCart((prev) => {
+      return prev.filter((item, index) => index !== targetIndex);
+    });
+  };
+
+  return (
+    <div>
+      <h1>Shopping Cart</h1>
+      <ul>
+        {cart.map((item, index) => (
+          <li onClick={() => removeItem(index)} key={index}>
+            {item}
+          </li>
+        ))}
+      </ul>
+      <h2>Items</h2>
+      <ItemList items={items} onItemClick={addItem} />
+    </div>
   );
 }`}</SyntaxHighlighter>
     </div>
