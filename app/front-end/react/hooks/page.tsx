@@ -220,6 +220,7 @@ function HooksUseEffect() {
       </ul>
       <EffectCleanup />
       <EffectDependencyArray />
+      <EffectUseEffectEvent />
     </div>
   );
 }
@@ -300,6 +301,34 @@ export default function Timer() {
       <SyntaxHighlighter language="jsx" style={dracula}>{`useEffect(() => {
   document.title = \`You clicked \${count} times\`;
 }, [count]); // Only re-run the effect if the value stored by count changes`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function EffectUseEffectEvent() {
+  return (
+    <div>
+      <h3>useEffectEvent</h3>
+      <p>
+        <code>useEffectEvent</code> lets you run an effect only when a specific
+        event occurs.
+      </p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`const log = useEffectEvent(() => {
+  console.log(Date.now(), "Event occurred");
+});
+
+useEffect(() => {
+  function handleClick() {
+    log();
+  }
+  window.addEventListener("click", handleClick);
+  return () => {
+    window.removeEventListener("click", handleClick);
+  };
+});`}</SyntaxHighlighter>
     </div>
   );
 }
