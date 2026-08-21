@@ -6,16 +6,31 @@ export default function Page() {
   return (
     <div>
       <h1>Hooks</h1>
-      <p><Link
-        href="https://react.dev/reference/react/hooks"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Hooks</Link> are functions that let you use state and other React features without writing a class.</p>
+      <p>
+        <Link
+          href="https://react.dev/reference/react/hooks"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hooks
+        </Link>{" "}
+        are functions that let you use state and other React features without
+        writing a class.
+      </p>
       <p>There are two rules to follow when using hooks:</p>
       <ol>
         <li>Only call hooks at the top level of a component.</li>
         <li>Only call hooks from React function components.</li>
       </ol>
+      <p>
+        Never call hooks from inside of loops, conditions, or nested functions.
+        Instead, start with <code>useEffect</code> or similar hooks:
+      </p>
+      <SyntaxHighlighter language="jsx" style={dracula}>{`useEffect(() => {
+  if (userName === '') {
+    setUserName('guest');
+  }
+}, [userName]);`}</SyntaxHighlighter>
       <HooksUseState />
       <HooksUseEffect />
       <br />
