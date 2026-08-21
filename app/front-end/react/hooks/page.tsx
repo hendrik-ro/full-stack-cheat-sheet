@@ -6,9 +6,7 @@ export default function Page() {
     <div>
       <h1>Hooks</h1>
       <HooksUseState />
-      <HooksSetPrev />
-      <HooksArraysInState />
-      <HooksObjInState />
+      <HooksUseEffect />
       <br />
     </div>
   );
@@ -49,14 +47,17 @@ export default function Page() {
         <code>setCount(prevCount =&gt; prevCount + 1)</code> when updating state
         based on the previous value.
       </p>
+      <StateSetPrev />
+      <StateArraysInState />
+      <StateObjInState />
     </div>
   );
 }
 
-function HooksSetPrev() {
+function StateSetPrev() {
   return (
     <div>
-      <h2>Set Previous State</h2>
+      <h3>Set Previous State</h3>
       <p>
         In this example, <code>setQuestionIndex</code> is called with a function
         that takes the previous value and returns the updated value.
@@ -97,10 +98,10 @@ export default function NavBar({ questions }) {
   );
 }
 
-function HooksArraysInState() {
+function StateArraysInState() {
   return (
     <div>
-      <h2>Arrays in State</h2>
+      <h3>Arrays in State</h3>
       <p>
         The following example demonstrates how to manipulate arrays in state:
       </p>
@@ -143,10 +144,10 @@ export default function ShoppingCart() {
   );
 }
 
-function HooksObjInState() {
+function StateObjInState() {
   return (
     <div>
-      <h2>Objects in State</h2>
+      <h3>Objects in State</h3>
       <p>Similarly, you can use objects in state to store structured data:</p>
       <SyntaxHighlighter
         language="jsx"
@@ -163,4 +164,50 @@ function HooksObjInState() {
 }`}</SyntaxHighlighter>
     </div>
   );
+}
+
+function HooksUseEffect() {
+  return (
+    <div>
+      <h2>useEffect</h2>
+      <p><code>useEffect()</code> allows for fetching of data from an API and updating the component state.</p>
+      <p>The effect hook can be used at three different points in the component lifecycle:</p>
+      <ul>
+      <li><em>Mounting</em>: the effect is called after the component is mounted to the DOM.</li>
+      <li><em>Updating</em>: the effect is called after the component is updated.</li>
+      <li><em>Unmounting</em>: the effect is called before the component is unmounted from the DOM.</li>
+      </ul>
+      <EffectCleanup />
+    </div>
+  );
+}
+
+function EffectCleanup() {
+  return (
+    <div>
+      <h3>Effect Cleanup</h3>
+      <p>When the component is unmounted, the effect cleanup function is called to clean up any resources used by the effect.</p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`import React, { useState, useEffect } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount((prev) => prev + 1);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", increment);
+    return () => {
+      document.removeEventListener("mousedown", increment);
+    };
+  });
+
+  return <h1>Clicks: {count}</h1>;
+}`}</SyntaxHighlighter>
+    </div>
+  )
 }
