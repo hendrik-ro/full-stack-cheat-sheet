@@ -8,6 +8,7 @@ export default function Page() {
       <HooksUseState />
       <HooksSetPrev />
       <HooksArraysInState />
+      <HooksObjInState />
       <br />
     </div>
   );
@@ -137,6 +138,28 @@ export default function ShoppingCart() {
       <ItemList items={items} onItemClick={addItem} />
     </div>
   );
+}`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function HooksObjInState() {
+  return (
+    <div>
+      <h2>Objects in State</h2>
+      <p>Similarly, you can use objects in state to store structured data:</p>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+      >{`export default function ObjectInState() {
+  const [object, setObject] = useState({});
+  const handleChange = ({ target }) => {
+    const { property, value } = target;
+    setObject((prev) => ({
+      ...prev,
+      [property]: value,
+    }));
+  };
 }`}</SyntaxHighlighter>
     </div>
   );
