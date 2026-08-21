@@ -267,6 +267,13 @@ export default function Timer() {
         Here, the effect runs only once when the component mounts, and the
         cleanup function is called when the component unmounts.
       </p>
+      <p>
+        To run the effect on every render, pass a dependency array with the
+        value to watch:
+      </p>
+      <SyntaxHighlighter language="jsx" style={dracula}>{`useEffect(() => {
+  document.title = \`You clicked \${count} times\`;
+}, [count]); // Only re-run the effect if the value stored by count changes`}</SyntaxHighlighter>
     </div>
   );
 }
