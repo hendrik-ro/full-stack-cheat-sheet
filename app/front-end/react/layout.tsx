@@ -6,6 +6,10 @@ const reactLinks = [
     href: "/front-end/react",
   },
   {
+    name: "Components",
+    href: "/front-end/react/components",
+  },
+  {
     name: "Frameworks",
     href: "/front-end/react/frameworks",
   },
