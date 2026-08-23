@@ -8,10 +8,12 @@ export default function Page() {
       <p>Containers and components are the building blocks of React.</p>
       <ul>
         <li>
-          <strong>Containers: </strong>are stateful
+          <strong>Containers: </strong>are <em>stateful</em> and hold the
+          different states of the application
         </li>
         <li>
-          <strong>Components: </strong>are stateless
+          <strong>Components: </strong>are <em>stateless</em> and hold the UI
+          logic such as HTML-like JSX
         </li>
       </ul>
       <SyntaxHighlighter
