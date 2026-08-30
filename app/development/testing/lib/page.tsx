@@ -18,7 +18,7 @@ function TestingJS() {
         <li>
           <Link
             target="_blank"
-            rel="noopener noreference"
+            rel="noopener noreferrer"
             href="https://www.chaijs.com/"
           >
             Chai
@@ -28,7 +28,27 @@ function TestingJS() {
         <li>
           <Link
             target="_blank"
-            rel="noopener noreference"
+            rel="noopener noreferrer"
+            href="https://enzymejs.github.io/enzyme/"
+          >
+            Enzyme
+          </Link>{" "}
+          - testing framework for React
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.jestjs.io/"
+          >
+            Jest
+          </Link>{" "}
+          - testing framework for JavaScript
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
             href="https://mochajs.org/"
           >
             Mocha
@@ -38,7 +58,7 @@ function TestingJS() {
         <li>
           <Link
             target="_blank"
-            rel="noopener noreference"
+            rel="noopener noreferrer"
             href="https://sinonjs.org/"
           >
             Sinon
@@ -59,7 +79,7 @@ function TestingGo() {
         <li>
           <Link
             target="_blank"
-            rel="noopener noreference"
+            rel="noopener noreferrer"
             href="https://github.com/stretchr/testify"
           >
             Testify
@@ -69,7 +89,7 @@ function TestingGo() {
         <li>
           <Link
             target="_blank"
-            rel="noopener noreference"
+            rel="noopener noreferrer"
             href="https://golangci-lint.run/"
           >
             Golangci-lint
@@ -79,7 +99,7 @@ function TestingGo() {
         <li>
           <Link
             target="_blank"
-            rel="noopener noreference"
+            rel="noopener noreferrer"
             href="https://pkg.go.dev/testing"
           >
             Testing
