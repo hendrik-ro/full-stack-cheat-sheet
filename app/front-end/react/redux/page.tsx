@@ -9,6 +9,7 @@ export default function Page() {
       <Redux />
       <ReduxConcepts />
       <ReduxStore />
+      <ReduxSyntax />
       <br />
     </div>
   );
@@ -145,6 +146,91 @@ function ReduxStore() {
         <li>The store`s reducer determines the next state.</li>
         <li>The user interface is updated.</li>
       </ol>
+    </div>
+  );
+}
+
+function ReduxSyntax() {
+  return (
+    <div>
+      <h2>Syntax</h2>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`import { createStore } from 'redux';
+
+const initialState = 0;
+const countReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    default:
+      return state;
+  }
+}`}</SyntaxHighlighter>
+      <p>
+        The method <code>.dispatch</code> allows us to alternate the stored
+        state:
+      </p>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`const store = createStore(countReducer);
+
+store.dispatch({ type: 'increment' });
+console.log(store.getState()); // prints 1
+store.dispatch({ type: 'increment' });
+console.log(store.getState()); // prints 2
+store.dispatch({ type: 'decrement' });
+console.log(store.getState()); // prints 1`}</SyntaxHighlighter>
+      <p>
+        <strong>Action creators</strong> can be used to simplify calling
+        actions:
+      </p>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`export const increment = () => {
+  return { type: 'increment' };
+}
+
+export const decrement = () => {
+  return { type: 'decrement' };
+  }
+store.dispatch(increment());`}</SyntaxHighlighter>
+      <h3>Subscription</h3>
+      <p>
+        The method <code>.subscribe</code> adds event listener and returns an
+        unsubscribe function:
+      </p>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`// lightSwitchReducer(), toggle(), and store omitted...
+
+        const reactToChange = () => {
+          console.log(\`The light was switched \${store.getState()}!\`);
+        }
+        const unsubscribe = store.subscribe(reactToChange);
+
+        store.dispatch(toggle());
+        // reactToChange() is called, printing:
+        // 'The light was switched off!'
+
+        store.dispatch(toggle());
+        // reactToChange() is called, printing:
+        // 'The light was switched on!'
+
+        unsubscribe();
+        // reactToChange() is now unsubscribed
+
+        store.dispatch(toggle());
+        // no print statement!
+
+        console.log(store.getState()); // Prints 'off'
+`}</SyntaxHighlighter>
     </div>
   );
 }
