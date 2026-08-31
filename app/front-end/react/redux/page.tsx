@@ -10,6 +10,7 @@ export default function Page() {
       <ReduxConcepts />
       <ReduxStore />
       <ReduxSyntax />
+      <ReduxReact />
       <br />
     </div>
   );
@@ -229,8 +230,90 @@ store.dispatch(increment());`}</SyntaxHighlighter>
         store.dispatch(toggle());
         // no print statement!
 
-        console.log(store.getState()); // Prints 'off'
-`}</SyntaxHighlighter>
+        console.log(store.getState()); // Prints 'off'`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function ReduxReact() {
+  return (
+    <div>
+      <h2>Redux in React</h2>
+      <h3>store.js</h3>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`import { createStore } from 'redux';
+
+export function increment() {
+  return {type: 'increment'}
+}
+
+export function decrement() {
+  return {type: 'decrement'}
+}
+
+const initialState = 0;
+
+const countReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'increment':
+      return state + 1;
+    case 'decrement':
+      return state - 1;
+    default:
+      return state;
+  }
+};
+
+export const store = createStore(countReducer);`}</SyntaxHighlighter>
+      <h3>index.js</h3>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.js";
+import { store } from "./store.js";
+
+const root = createRoot(document.getElementById("app"));
+
+const render = () => {
+  root.render(<App state={store.getState()} dispatch={store.dispatch} />);
+};
+
+render();
+
+store.subscribe(render);`}</SyntaxHighlighter>
+      <h3>App.js</h3>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`import React from "react";
+import { increment, decrement } from "./store";
+
+export default function App({ state, dispatch }) {
+  // Dispatchers:
+  const incrementerClicked = () => {
+    dispatch(increment());
+  };
+
+  const decrementerClicked = () => {
+    dispatch(decrement())
+  };
+
+  return (
+    <main>
+      <p id="counter">{state}</p>
+      <button id="incrementer" onClick={incrementerClicked}>
+        +
+      </button>
+      <button id="decrementer" onClick={decrementerClicked}>
+        -
+      </button>
+    </main>
+  );
+}`}</SyntaxHighlighter>
     </div>
   );
 }
