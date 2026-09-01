@@ -328,7 +328,11 @@ function ReduxReducerComposition() {
         becomes increasingly difficult to handle. The solution is a{" "}
         <em>reducer composition</em>:
       </p>
-      <SyntaxHighlighter language="js" style={dracula}>{`const intitalTodos = [
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`import { createStore, combineReducers } from "redux";
+const intitalTodos = [
     { id: 0, name: "clean bathroom", done: false },
     { id: 1, name: "grocery shopping", done: true },
   ];
@@ -368,15 +372,25 @@ const appointmentsReducer = (appointments = initialAppointments, action) => {
   }
 };
 
-const rootReducer = (state = {}, action) => {
-  const nextState = {
-    todos: todosReducer(state.todos, action),
-    appointments: appointmentsReducer(state.appointments, action)
-  };
-  return nextState;
+const reducers = {
+  todos: todosReducer,
+  appointments: appointmentsReducer,
 };
 
+const rootReducer = combineReducers(reducers);
+
 const store = createStore(rootReducer);`}</SyntaxHighlighter>
+      <p>
+        In the above example, <code>combineReducers</code> is used. We can
+        further shorten this to:
+      </p>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`const store = createStore(combineReducers({
+  todos: todosReducer,
+  appointments: appointmentsReducer,
+}));`}</SyntaxHighlighter>
     </div>
   );
 }
