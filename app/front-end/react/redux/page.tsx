@@ -11,6 +11,8 @@ export default function Page() {
       <ReduxStore />
       <ReduxSyntax />
       <ReduxReact />
+      <ReduxReducerComposition />
+      <ReduxFileStructure />
       <br />
     </div>
   );
@@ -314,6 +316,108 @@ export default function App({ state, dispatch }) {
     </main>
   );
 }`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function ReduxReducerComposition() {
+  return (
+    <div>
+      <h2>Reducer Composition</h2>
+      <p>
+        With a growing <code>store</code> a single <strong>reducer</strong>{" "}
+        becomes increasingly difficult to handle. The solution is a{" "}
+        <em>reducer composition</em>:
+      </p>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`import { createStore, combineReducers } from "redux";
+const intitalTodos = [
+    { id: 0, name: "clean bathroom", done: false },
+    { id: 1, name: "grocery shopping", done: true },
+  ];
+
+const todosReducer = (todos = initialTodos, action) => {
+  switch (action.type) {
+    case 'todos/addTodo':
+      return [...todos, action.payload]
+    case 'todos/toggleTodo':
+      return todos.map(todo => {
+        return (todo.id === action.payload.id) ?
+          { ...todo, completed: !todo.completed } :
+          {...todo};
+      });
+    default:
+      return todos;
+  }
+};
+
+const initialAppointments = [
+  { id: 0, name: "dentist", done: false },
+  { id: 1, name: "pick up kids", done: false },
+];
+
+const appointmentsReducer = (appointments = initialAppointments, action) => {
+  switch (action.type) {
+    case 'appointments/addAppointment':
+    return [...appointments, action.payload]
+    case 'appointments/toggleAppointment':
+    return appointments.map(appointment => {
+        return (appointment.id === action.payload.id) ?
+        { ...appointment, completed: !appointment.completed } :
+        {...appointments};
+      });
+    default:
+      return appointments;
+  }
+};
+
+const reducers = {
+  todos: todosReducer,
+  appointments: appointmentsReducer,
+};
+
+const rootReducer = combineReducers(reducers);
+
+export const store = createStore(rootReducer);`}</SyntaxHighlighter>
+      <p>
+        In the above example, <code>combineReducers</code> is used. We can
+        further shorten this to:
+      </p>
+      <SyntaxHighlighter
+        language="js"
+        style={dracula}
+      >{`export const store = createStore(combineReducers({
+  todos: todosReducer,
+  appointments: appointmentsReducer,
+}));`}</SyntaxHighlighter>
+      <p>
+        <strong>Important: </strong> <code>store</code> needs to be exported!
+      </p>
+    </div>
+  );
+}
+
+function ReduxFileStructure() {
+  return (
+    <div>
+      <h2>File Structure</h2>
+      <SyntaxHighlighter language="bash" style={dracula}>{`src/
+|-- index.js
+|-- app/
+  |-- App.js
+  |-- store.js
+|-- components/
+  |-- componentA.js
+  |-- componentB.js
+|-- features/
+  |-- featureA/
+    |-- featureA.js
+    |-- featureASlice.js
+  |-- featureB/
+    |-- featureB.js
+    |-- featureBSlice.js`}</SyntaxHighlighter>
     </div>
   );
 }
