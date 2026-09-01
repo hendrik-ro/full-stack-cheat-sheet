@@ -406,11 +406,17 @@ function ReduxFileStructure() {
       <SyntaxHighlighter language="bash" style={dracula}>{`src/
 |-- index.js
 |-- app/
+  |-- App.js
   |-- store.js
+|-- components/
+  |-- componentA.js
+  |-- componentB.js
 |-- features/
   |-- featureA/
+    |-- featureA.js
     |-- featureASlice.js
   |-- featureB/
+    |-- featureB.js
     |-- featureBSlice.js`}</SyntaxHighlighter>
     </div>
   );
