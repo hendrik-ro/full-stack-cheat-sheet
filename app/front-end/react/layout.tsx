@@ -34,6 +34,10 @@ const reactLinks = [
     href: "/front-end/react/redux",
   },
   {
+    name: "Redux Toolkit",
+    href: "/front-end/react/redux_toolkit",
+  },
+  {
     name: "vDOM",
     href: "/front-end/react/vDOM",
   },
