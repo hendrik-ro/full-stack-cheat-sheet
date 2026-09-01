@@ -12,6 +12,7 @@ export default function Page() {
       <ReduxSyntax />
       <ReduxReact />
       <ReduxReducerComposition />
+      <ReduxFileStructure />
       <br />
     </div>
   );
@@ -379,7 +380,7 @@ const reducers = {
 
 const rootReducer = combineReducers(reducers);
 
-const store = createStore(rootReducer);`}</SyntaxHighlighter>
+export const store = createStore(rootReducer);`}</SyntaxHighlighter>
       <p>
         In the above example, <code>combineReducers</code> is used. We can
         further shorten this to:
@@ -387,10 +388,30 @@ const store = createStore(rootReducer);`}</SyntaxHighlighter>
       <SyntaxHighlighter
         language="js"
         style={dracula}
-      >{`const store = createStore(combineReducers({
+      >{`export const store = createStore(combineReducers({
   todos: todosReducer,
   appointments: appointmentsReducer,
 }));`}</SyntaxHighlighter>
+      <p>
+        <strong>Important: </strong> <code>store</code> needs to be exported!
+      </p>
+    </div>
+  );
+}
+
+function ReduxFileStructure() {
+  return (
+    <div>
+      <h2>File Structure</h2>
+      <SyntaxHighlighter language="bash" style={dracula}>{`src/
+|-- index.js
+|-- app/
+  |-- store.js
+|-- features/
+  |-- featureA/
+    |-- featureASlice.js
+  |-- featureB/
+    |-- featureBSlice.js`}</SyntaxHighlighter>
     </div>
   );
 }
