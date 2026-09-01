@@ -7,6 +7,7 @@ export default function Page() {
     <div>
       <h1>Redux</h1>
       <Redux />
+      <ReduxSetup />
       <ReduxConcepts />
       <ReduxStore />
       <ReduxSyntax />
@@ -39,6 +40,25 @@ function Redux() {
         by requiring the state to be managed by a single source of truth.
       </p>
     </>
+  );
+}
+
+function ReduxSetup() {
+  return (
+    <div>
+      <h2>Prerequisits</h2>
+      <p>
+        Install <strong>Redux</strong> and its toolkit:
+      </p>
+      <SyntaxHighlighter
+        language="bash"
+        style={dracula}
+      >{`npm install react-redux @reduxjs/toolkit`}</SyntaxHighlighter>
+      <p>
+        <Link href="/front-end/react/redux_toolkit">Redux Toolkit</Link> has
+        built-in TS type definitions.
+      </p>
+    </div>
   );
 }
 
