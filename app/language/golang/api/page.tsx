@@ -1,5 +1,5 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export default function Page() {
   return (

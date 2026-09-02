@@ -10,6 +10,10 @@ const reduxLinks = [
     href: "/front-end/redux/core",
   },
   {
+    name: "Middleware",
+    href: "/front-end/redux/middleware",
+  },
+  {
     name: "Reducer Composition",
     href: "/front-end/redux/composition",
   },
