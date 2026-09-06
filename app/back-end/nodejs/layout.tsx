@@ -2,12 +2,12 @@ import SideNav from "@/app/ui/shared/sidenav";
 
 const frameworkLinks = [
   {
-    name: "Frameworks",
-    href: "/back-end/frameworks",
+    name: "Node.js",
+    href: "/back-end/nodejs",
   },
   {
-    name: "Node.js",
-    href: "/back-end/frameworks/nodejs",
+    name: "Modules",
+    href: "/back-end/nodejs/modules",
   },
 ];
 

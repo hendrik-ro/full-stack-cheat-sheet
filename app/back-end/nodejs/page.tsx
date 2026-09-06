@@ -1,6 +1,6 @@
 import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function Page() {
   return (
@@ -26,7 +26,7 @@ export default function Page() {
 function NodeREPL() {
   return (
     <div>
-      <h2>REPL</h2>
+      <h1>REPL</h1>
       <p>
         <em>Node</em> come with a built-in REPL that can be started in the
         console with <code>node</code>.
@@ -49,6 +49,10 @@ console.log(Object.keys(global))
   'navigator',       'sessionStorage'
 ]
 undefined`}</SyntaxHighlighter>
+      <p>
+        Typing <code>require(`module`).builtinModules</code> in the Node REPL
+        returns a list of modules shipped with Node.js.
+      </p>
     </div>
   );
 }
