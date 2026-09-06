@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
@@ -8,6 +9,7 @@ export default function NodeModules() {
       <NodeConsole />
       <NodeProcess />
       <NodeOS />
+      <NodeUtil />
       <br />
     </div>
   );
@@ -157,12 +159,55 @@ function NodeOS() {
 const local = {
 'home': os.homedir(),
 'os': os.type(),
+'arch': os.arch(),
 'uptime': os.uptime(),
 }
 console.log(local)
 
 // prints:
-{ home: '/home/user', os: 'Linux', uptime: 6992.08 }`}</SyntaxHighlighter>
+{ home: '/home/user', os: 'Linux', arch: 'x64', uptime: 7199.97 }`}</SyntaxHighlighter>
+    </div>
+  );
+}
+
+function NodeUtil() {
+  return (
+    <div>
+      <h2>Util</h2>
+      <p>
+        The <code>util</code> module needs to be imported:{" "}
+        <code>const util = require(`util`);</code>
+      </p>
+      <p>
+        E.g. <code>util.promisify()</code> turns callback functions into
+        promises:
+      </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={dracula}
+      >{`const util = require('util');
+
+const getPromise = util.promisify(getData);
+
+async function fetchData(url) {
+  try {
+    const respone = await getPromise(url); // mocks an http request
+    console.log('success');
+  } catch(e) {
+    console.error('failed');
+  }
+}`}</SyntaxHighlighter>
+      <p>
+        A full list of properties can be found{" "}
+        <Link
+          href="https://nodejs.org/docs/latest/api/util.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </Link>
+        .
+      </p>
     </div>
   );
 }
