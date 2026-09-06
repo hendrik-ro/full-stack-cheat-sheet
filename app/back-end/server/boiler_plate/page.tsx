@@ -1,14 +1,13 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 export default function Page() {
   return (
     <div id="boiler-plate">
       <h1>Boiler Plate</h1>
       <p>
-        A boiler plate is a starting point or template for a project,
-        providing a basic structure and code that can be customized for
-        specific needs.
+        A boiler plate is a starting point or template for a project, providing
+        a basic structure and code that can be customized for specific needs.
       </p>
       <h2>JavaScript</h2>
       <SyntaxHighlighter language="javascript" style={dracula}>
@@ -40,5 +39,5 @@ http.ListenAndServe(":3000", mux)
       `}
       </SyntaxHighlighter>
     </div>
-  )
+  );
 }
