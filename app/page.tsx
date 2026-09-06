@@ -44,6 +44,9 @@ function HomeContent() {
         <Link href="./back-end/database/">
           <button className={style.topicsItem}>Database</button>
         </Link>
+        <Link href="./back-end/nodejs/">
+          <button className={style.topicsItem}>Node.js</button>
+        </Link>
         <Link href="./back-end/server/">
           <button className={style.topicsItem}>Server</button>
         </Link>

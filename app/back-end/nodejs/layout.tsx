@@ -1,13 +1,13 @@
 import SideNav from "@/app/ui/shared/sidenav";
 
-const serverLinks = [
+const frameworkLinks = [
   {
-    name: "Server",
-    href: "/back-end/server",
+    name: "Node.js",
+    href: "/back-end/nodejs",
   },
   {
-    name: "Boiler Plate",
-    href: "/back-end/server/boiler_plate",
+    name: "Modules",
+    href: "/back-end/nodejs/modules",
   },
 ];
 
@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="gridLevelTwo">
       <div className="itemSidebar">
-        <SideNav links={serverLinks} />
+        <SideNav links={frameworkLinks} />
       </div>
       <div className="itemContent">{children}</div>
     </div>
