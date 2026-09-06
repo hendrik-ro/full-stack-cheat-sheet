@@ -1,66 +1,22 @@
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
-
 export default function Page() {
   return (
     <div>
       <div id="server">
         <h1>Server</h1>
         <p>
-          A back end server is the part of a web application that handles data
-          processing, storage, and business logic.
+          A server provides services to clients over a network. An example is a web server where a client requests a page from the server to the browser.
         </p>
-        <p>
-          It operates behind the scenes, separate from the user-facing front
-          end.
-        </p>
-        <p>
-          The server receives requests from clients (e.g., web browsers or
-          mobile apps), processes them, interacts with databases or other
-          services, and returns responses, often in the form of JSON or HTML.
-        </p>
-        <p>
-          It manages authentication, data validation, and core application
-          functionality, ensuring the system operates securely and efficiently.
-        </p>
+        <h2>Server types</h2>
+        <ul>
+          <li><strong>File server</strong> - stores files usually on a local network</li>
+          <li><strong>Application server</strong> - provides software without clients downloading the application</li>
+          <li><strong>Mail server</strong> - stores and deliver email</li>
+          <li><strong>Database server</strong> - stores data</li>
+          <li><strong>Web server</strong> - delivers we pages</li>
+          <li><strong>Proxy server</strong> - sends client requests to websites and their response back to the client</li>
+        </ul>
       </div>
-      <div id="boiler-plate">
-        <h2>Boiler Plate</h2>
-        <p>
-          A boiler plate is a starting point or template for a project,
-          providing a basic structure and code that can be customized for
-          specific needs.
-        </p>
-        <p>JavaScript</p>
-        <SyntaxHighlighter language="javascript" style={dracula}>
-          {`const express = require('express');
-const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});`}
-        </SyntaxHighlighter>
-        <p>Golang</p>
-        <SyntaxHighlighter language="go" style={dracula}>
-          {`package main
-
-import "fmt"
-
-func main() {
-  mux := http.NewServeMux()
-  mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintln(w, "Hello World!")
-  })
-
-  http.ListenAndServe(":3000", mux)
-}
-        `}
-        </SyntaxHighlighter>
-      </div>
     </div>
   );
 }
